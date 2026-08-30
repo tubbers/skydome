@@ -55,17 +55,43 @@
   #msg{position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:5;max-width:74%;
     background:rgba(18,4,2,.94);border:1px solid var(--edge);border-radius:3px;padding:9px 13px;
     font-family:var(--mono);font-size:11px;color:var(--hot);line-height:1.55;display:none}
+
+  /* ---- mobile: canvas full screen, a thin bar at the bottom, rest in a sheet ---- */
+  #more{display:none}
+  #now{display:none;font-family:var(--mono);font-size:12px;color:var(--pick);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:2px 1px}
+  #now b{font-weight:600}#now span{color:var(--ink-dim)}
+  body.mobile #app{display:block}
+  body.mobile main{position:absolute;inset:0}
+  body.mobile aside{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:10;
+    flex:none;width:auto;border-right:0;border-top:1px solid var(--edge);
+    padding:8px 12px calc(8px + env(safe-area-inset-bottom));gap:8px;
+    background:rgba(18,4,2,.94);overflow:hidden;max-height:none}
+  body.mobile h1,body.mobile #panelTop,body.mobile #panelBottom{display:none}
+  body.mobile #now{display:block}
+  body.mobile #more{display:block;width:100%;font:inherit;font-size:11px;
+    font-family:var(--mono);color:var(--ink-dim);background:transparent;
+    border:1px solid var(--edge);border-radius:2px;padding:5px;cursor:pointer}
+  body.mobile .tour button{padding:11px 6px;font-size:12px}
+  body.mobile.sheet aside{max-height:86vh;overflow-y:auto}
+  body.mobile.sheet #panelTop,body.mobile.sheet #panelBottom{display:flex;
+    flex-direction:column;gap:11px}
+  body.mobile.sheet #list{max-height:34vh}
+  @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <div id="app">
   <aside>
     <h1>Sky dome · solved images</h1>
-    <div class="note">Drag to look, scroll to zoom. Click an image to fly to it, shift-click to select
-      without moving. Arrow keys step targets, Esc clears.</div>
-
+    <div id="panelTop">
+    <div class="note">Drag to look, pinch or scroll to zoom. Tap an image to fly to it.
+      Arrow keys step targets, Esc clears.</div>
     <hr>
     <div id="list"></div>
+    </div>
+
+    <div id="now"></div>
     <div class="fld"><label>Move speed <span class="val" id="spdV">1.0&times;</span></label>
       <input type="range" id="spd" min="25" max="300" value="100" step="5"></div>
     <div class="tour">
@@ -74,6 +100,9 @@
       <button id="next" title="Next target">next &#9656;</button>
     </div>
 
+    <button id="more">&#9679;&#9679;&#9679;  settings</button>
+
+    <div id="panelBottom">
     <hr>
     <div id="sel">No image selected.</div>
 
@@ -100,6 +129,7 @@
       <div class="seg"><button id="hOn" class="on">on</button><button id="hOff">off</button></div></div>
 
     <div class="note" id="cal">look &mdash;</div>
+    </div>
   </aside>
   <main>
     <canvas id="gl"></canvas>
@@ -112,6 +142,13 @@
 "use strict";
 const D=Math.PI/180,R2D=180/Math.PI,$=id=>document.getElementById(id);
 const REDUCED=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const MQ=matchMedia("(max-width: 760px), (pointer: coarse)");
+function applyMode(){
+  document.body.classList.toggle("mobile",MQ.matches);
+  if(!MQ.matches) document.body.classList.remove("sheet");
+  render();
+}
+MQ.addEventListener?.("change",applyMode);
 
 /* backdrop calibration, measured against sky.jpg */
 const SKY={file:"sky.jpg", mode:0 /*celestial*/, raOffset:180, flip:-1};
@@ -518,8 +555,9 @@ function pick(clientX,clientY){
 }
 function selectImage(im){
   S.sel=im; syncList();
-  const box=$("sel");
-  if(!im){box.innerHTML="No image selected.";render();return;}
+  const box=$("sel"), now=$("now");
+  if(!im){box.innerHTML="No image selected.";now.textContent="\u2014";render();return;}
+  now.innerHTML=`<b>${im.label}</b> <span>${im.fov_w_deg.toFixed(2)}\u00d7${im.fov_h_deg.toFixed(2)}\u00b0</span>`;
   const hh=im.ra_deg/15, dd=Math.abs(im.dec_deg);
   box.innerHTML=`<b>${im.label}</b><br>`
    +`centre <span class="v">${Math.floor(hh)}h ${((hh%1)*60).toFixed(1)}m &nbsp; `
@@ -591,6 +629,7 @@ seg("skFollow","skHold",v=>S.followSky=v);
 
 $("prev").onclick=()=>step(-1);
 $("next").onclick=()=>step(1);
+$("more").onclick=()=>document.body.classList.toggle("sheet");
 $("play").onclick=()=>{
   S.playing=!S.playing;
   $("play").classList.toggle("on",S.playing);
@@ -599,21 +638,54 @@ $("play").onclick=()=>{
   if(S.playing){step(1);playTimer=setInterval(()=>step(1),7000);}
 };
 
-let drag=false,moved=0,lx=0,ly=0;
+/* Pointer events cover mouse, touch and pen in one path: one finger looks around,
+   two fingers pinch to zoom, a tap that barely moves is a selection. */
 ov.style.pointerEvents="none";
-cv.addEventListener("mousedown",e=>{drag=true;moved=0;lx=e.clientX;ly=e.clientY;cv.classList.add("drag");});
-addEventListener("mousemove",e=>{if(!drag)return;
-  const dx=e.clientX-lx,dy=e.clientY-ly;lx=e.clientX;ly=e.clientY;moved+=Math.abs(dx)+Math.abs(dy);
+cv.style.touchAction="none";
+const ptrs=new Map();
+let dragging=false, moved=0, pinchD0=0, pinchF0=0;
+
+cv.addEventListener("pointerdown",e=>{
+  cv.setPointerCapture(e.pointerId);
+  ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(ptrs.size===1){dragging=true;moved=0;cv.classList.add("drag");}
+  if(ptrs.size===2){
+    const [a,b]=[...ptrs.values()];
+    pinchD0=Math.hypot(a.x-b.x,a.y-b.y); pinchF0=S.fov; dragging=false;
+  }
+});
+cv.addEventListener("pointermove",e=>{
+  const p=ptrs.get(e.pointerId); if(!p)return;
+  const dx=e.clientX-p.x, dy=e.clientY-p.y;
+  p.x=e.clientX; p.y=e.clientY;
+  if(ptrs.size>=2){
+    const [a,b]=[...ptrs.values()];
+    const d=Math.hypot(a.x-b.x,a.y-b.y);
+    if(pinchD0>0&&d>0) S.fov=Math.max(0.1,Math.min(120,pinchF0*pinchD0/d));
+    render(); return;
+  }
+  if(!dragging)return;
+  moved+=Math.abs(dx)+Math.abs(dy);
   const k=S.fov/cv.clientHeight;
   S.look.az=((S.look.az-dx*k)%360+360)%360;
-  S.look.alt=Math.max(-89,Math.min(89,S.look.alt+dy*k));render();});
-addEventListener("mouseup",()=>{drag=false;cv.classList.remove("drag");});
-cv.addEventListener("click",e=>{
-  if(moved>4)return;
-  const im=pick(e.clientX,e.clientY);
-  selectImage(im);
-  if(im && !e.shiftKey) frameImage(im);
+  S.look.alt=Math.max(-89,Math.min(89,S.look.alt+dy*k));
+  render();
 });
+function endPointer(e){
+  const wasTap = dragging && ptrs.size===1 && moved<8;
+  ptrs.delete(e.pointerId);
+  if(ptrs.size<2) pinchD0=0;
+  if(ptrs.size===0){
+    dragging=false; cv.classList.remove("drag");
+    if(wasTap){
+      const im=pick(e.clientX,e.clientY);
+      selectImage(im);
+      if(im && !e.shiftKey) frameImage(im);
+    }
+  }
+}
+cv.addEventListener("pointerup",endPointer);
+cv.addEventListener("pointercancel",endPointer);
 cv.addEventListener("dblclick",e=>e.preventDefault());
 cv.addEventListener("wheel",e=>{e.preventDefault();
   S.fov=Math.max(0.1,Math.min(120,S.fov*(e.deltaY>0?1.08:1/1.08)));render();},{passive:false});
@@ -633,6 +705,8 @@ try{
   sky.onload=()=>{upload(bgTex,sky);bgReady=true;render();};
   sky.onerror=()=>{note(`${SKY.file} not found — put an equirectangular all-sky JPG here and serve the folder over http. Images and overlay still work.`);render();};
   sky.src=SKY.file;
+  if(MQ.matches){ S.speed=0.5; $("spd").value=50; $("spdV").textContent="0.5\u00d7"; }
+  applyMode();
   loadManifest();
   render();
 }catch(err){note("WebGL unavailable: "+err.message);}
