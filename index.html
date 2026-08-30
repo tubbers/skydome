@@ -32,7 +32,7 @@
   .tour{display:flex;gap:4px}
   .tour button{flex:1;font-family:var(--mono);letter-spacing:.05em}
   .tour button.on{color:#000;background:var(--pick);border-color:var(--pick);font-weight:600}
-  .note{font-family:var(--mono);font-size:10px;color:var(--ink-dim);line-height:1.55}
+  .note{font-family:var(--mono);font-size:10px;color:var(--ink-dim);line-height:1.55;white-space:pre-line}
   .val{color:var(--hot)}
   hr{border:0;border-top:1px solid var(--edge);margin:2px 0}
   #list{border:1px solid var(--edge);border-radius:2px;background:var(--panel);
@@ -198,7 +198,8 @@ const S={look:{az:180,alt:45}, fov:100, lat:-33.8, lst:80,
          // gyro / real-sky mode
          gyro:false, decl:12.7, tweak:0, smooth:60,
          lat0:-33.80071, lon:151.20855,
-         q:null, qT:0, M:null, src:null, srcRank:0, gyroEvents:0, absolute:false};
+         q:null, qT:0, M:null, src:null, srcRank:0, gyroEvents:0, absolute:false, seen:{},
+         fovBeforeLock:null};
 let IMAGES=[], RAW=[], TOUR=[], playTimer=null, anim=null;
 
 /* ---------- vector maths ---------- */
@@ -441,10 +442,6 @@ function basis(){
   return{f:[Math.cos(al)*Math.sin(az),Math.cos(al)*Math.cos(az),Math.sin(al)],
          r:[Math.cos(az),-Math.sin(az),0],
          u:[-Math.sin(al)*Math.sin(az),-Math.sin(al)*Math.cos(az),Math.cos(al)]};}
-function altazL(ra,dec,lat,L){const H=((((L-ra)%360)+360)%360)*D,dr=dec*D,lr=lat*D;
-  const alt=Math.asin(Math.sin(dr)*Math.sin(lr)+Math.cos(dr)*Math.cos(lr)*Math.cos(H));
-  let az=Math.atan2(Math.sin(H),Math.cos(H)*Math.sin(lr)-Math.tan(dr)*Math.cos(lr))*R2D+180;
-  return{alt:alt*R2D,az:((az%360)+360)%360};}
 
 /* ---------- render ---------- */
 function fitOv(){const DPR=Math.min(devicePixelRatio||1,2),r=ov.getBoundingClientRect();
@@ -530,14 +527,14 @@ function drawOverlay(w,h,B,FOC,M){
   }
 
   if(S.starNames) for(const [nm,ra,dec,mag] of STARS){
-    const q=altazL(ra,dec,S.lat,S.lst);
-    const p=proj(vec(q.az,q.alt)); if(!p)continue;
+    const p=proj(applyM(M,eqVec(ra,dec))); if(!p)continue;
     octx.beginPath();octx.arc(p[0],p[1],Math.max(2,4.4-mag*0.7),0,7);
     octx.strokeStyle="rgba(127,255,212,.5)";octx.lineWidth=1.2;octx.stroke();
     octx.fillStyle="rgba(127,255,212,.55)";octx.font="10px "+mono;
     octx.textAlign="left";octx.textBaseline="middle";octx.fillText(nm,p[0]+7,p[1]);
   }
 
+  for(const im of IMAGES) im.hit=null;
   for(const im of IMAGES){
     const pts=im.cornerVecs.map(v=>proj(applyM(M,v)));
     const c=proj(applyM(M,im.cVec)); if(!c)continue;
@@ -556,7 +553,12 @@ function drawOverlay(w,h,B,FOC,M){
     }
     octx.fillStyle=on?"#7fffd4":"rgba(255,207,107,.75)";
     octx.font=(on?12:11)+"px "+mono;octx.textAlign="center";octx.textBaseline="top";
-    octx.fillText(im.label,c[0],c[1]+(span<26?7:span/2+4));
+    const ly=c[1]+(span<26?7:span/2+4);
+    octx.fillText(im.label,c[0],ly);
+    // remember where the text landed so it can be tapped - at arm's length a 0.6 deg
+    // image is only a few pixels wide, but its name is a comfortable target
+    const tw=octx.measureText(im.label).width;
+    im.hit=[c[0]-tw/2-8, ly-6, c[0]+tw/2+8, ly+(on?12:11)+6];
   }
 
   if(S.horizon){
@@ -576,6 +578,15 @@ function drawOverlay(w,h,B,FOC,M){
 /* ---------- picking + selection ---------- */
 function pick(clientX,clientY){
   const r=cv.getBoundingClientRect();
+  // a tap on the label counts as a tap on the image
+  const lx=clientX-r.left, ly=clientY-r.top;
+  let byLabel=null;
+  for(const im of IMAGES){
+    const b=im.hit;
+    if(b && lx>=b[0] && lx<=b[2] && ly>=b[1] && ly<=b[3] &&
+       (!byLabel || im.area<byLabel.area)) byLabel=im;
+  }
+  if(byLabel) return byLabel;
   const FOC=(r.height/2)/Math.tan(S.fov/2*D), B=basis();
   const sx=(clientX-r.left)-r.width/2, sy=r.height/2-(clientY-r.top);
   const ray=norm([B.f[0]+sx/FOC*B.r[0]+sy/FOC*B.u[0],
@@ -584,7 +595,8 @@ function pick(clientX,clientY){
   const M=eqToHor(S.lat,S.lst); let best=null;
   for(const im of IMAGES){
     const d=Math.acos(Math.max(-1,Math.min(1,dot(ray,applyM(M,im.cVec)))))*R2D;
-    if(d<im.half && (!best||im.area<best.area)) best=im;
+    const reach=Math.max(im.half, S.fov*0.015);   // small targets still need a thumb-sized target
+    if(d<reach && (!best||im.area<best.area)) best=im;
   }
   return best;
 }
@@ -605,6 +617,15 @@ function selectImage(im){
   if(!im.hires && im.thumb) loadTex(im,im.file,true);
   render();
 }
+/* Where a target actually sits on screen. Everything now goes through eqToHor, so
+   the declination/offset rotation applied in gyro mode is included exactly once.
+   The old altazL() helper did not know about it, which put every target - and every
+   star label - out by (declination + offset) whenever the gyro was on. */
+function azaltOf(v,lat,lst){
+  const h=applyM(eqToHor(lat,lst),v);
+  return{az:((Math.atan2(h[0],h[1])*R2D)%360+360)%360,
+         alt:Math.asin(Math.max(-1,Math.min(1,h[2])))*R2D};
+}
 function frameImage(im){
   // fov is the VERTICAL field, so a wide image has to be divided by the window
   // aspect before comparing. 1.4x leaves a little margin around the frame.
@@ -612,7 +633,7 @@ function frameImage(im){
   const need=Math.max(im.fov_h_deg, im.fov_w_deg/aspect);
   const targetFov=Math.max(0.15,Math.min(120,need*1.4));
   const lst=(S.followSky && !S.gyro)? im.ra_deg : S.lst;
-  const q=altazL(im.ra_deg,im.dec_deg,S.lat,lst);
+  const q=azaltOf(im.cVec,S.lat,lst);
   const to={lst, az:q.az, alt:Math.max(-88,Math.min(88,q.alt)), fov:targetFov};
   const setLstUI=()=>{$("lst").value=Math.round(S.lst);$("lstV").textContent=Math.round(S.lst)+"\u00b0";};
   if(REDUCED){S.lst=to.lst;S.fov=to.fov;S.look.az=to.az;S.look.alt=to.alt;setLstUI();render();return;}
@@ -710,28 +731,46 @@ function pushQuat(q,now){             // adaptive low-pass: steady when still, q
   const dt=Math.max(0.004,Math.min(0.2,(now-S.qT)/1000));
   S.qT=now;
   const d=Math.abs(S.q[0]*q[0]+S.q[1]*q[1]+S.q[2]*q[2]+S.q[3]*q[3]);
-  const degs=2*Math.acos(Math.min(1,d))*R2D/dt;
+  // The speed term widens the filter when you pan. Cap it: no hand sweep exceeds
+  // 300 deg/s, so anything above that is a bad reading rather than real motion, and
+  // letting it through would open the filter exactly when it is needed most.
+  const degs=Math.min(300, 2*Math.acos(Math.min(1,d))*R2D/dt);
   const fc=8*Math.exp(-0.033*S.smooth)+(0.055-S.smooth/100*0.035)*degs;
   const tau=1/(2*Math.PI*fc);
   S.q=qslerp(S.q,q,1/(1+tau/dt));
   S.M=fromQuat(S.q);
 }
-function claimSrc(src){               // several sources fire at once and disagree; pick one
+/* On a Pixel, deviceorientationabsolute (compass-referenced) and deviceorientation
+   (relative, no compass) BOTH fire, with headings that differ by a fixed amount.
+   Feeding both into one filter makes the view flip between two positions several
+   times a second - which looks like jitter but is really two streams disagreeing,
+   so smoothing can never fix it. Lock onto exactly one source and ignore the rest. */
+function claimSrc(src){
   const r=RANK[src]||0;
-  if(r<S.srcRank)return false;
-  if(r>S.srcRank){S.srcRank=r;S.src=src;S.q=null;}
-  return true;
+  if(!S.src){ S.src=src; S.srcRank=r; S.q=null; return true; }
+  if(src===S.src) return true;
+  if(r>S.srcRank){ S.srcRank=r; S.src=src; S.q=null; return true; }  // strict promotion only
+  return false;
+}
+function traceSrc(src,q){             // record every source, even the ones we ignore
+  const M=fromQuat(q), f=[-M[2],-M[5],-M[8]];
+  const prev=S.seen[src];
+  S.seen[src]={n:(prev?prev.n:0)+1,
+               az:((Math.atan2(f[0],f[1])*R2D)%360+360)%360};
 }
 function onOri(e,src){
   if(S.gyro!=="live")return;
   if(e.alpha==null&&e.webkitCompassHeading==null)return;
+  let alpha=e.alpha;
+  if(typeof e.webkitCompassHeading==="number"&&!isNaN(e.webkitCompassHeading))
+    alpha=360-e.webkitCompassHeading;                        // iOS reports true north
+  const q=eulerQuat(alpha,e.beta||0,e.gamma||0);
+  traceSrc(src,q);
   if(!claimSrc(src))return;
   S.gyroEvents++;
-  let alpha=e.alpha;
-  if(typeof e.webkitCompassHeading==="number"&&!isNaN(e.webkitCompassHeading)){
-    alpha=360-e.webkitCompassHeading; S.absolute=true;      // iOS reports true north
-  }else if(e.absolute||src==="deviceorientationabsolute") S.absolute=true;
-  pushQuat(eulerQuat(alpha,e.beta||0,e.gamma||0),performance.now());
+  S.absolute = (typeof e.webkitCompassHeading==="number"&&!isNaN(e.webkitCompassHeading))
+               || !!e.absolute || src==="deviceorientationabsolute";
+  pushQuat(q,performance.now());
 }
 function startGenericSensor(){
   const Abs=window.AbsoluteOrientationSensor, Rel=window.RelativeOrientationSensor;
@@ -741,6 +780,7 @@ function startGenericSensor(){
     sensorObj.addEventListener("reading",()=>{
       if(S.gyro!=="live")return;
       const nm=Abs?"AbsoluteOrientationSensor":"RelativeOrientationSensor";
+      traceSrc(nm,Array.from(sensorObj.quaternion));
       if(!claimSrc(nm))return;
       S.gyroEvents++; S.absolute=!!Abs;
       pushQuat(Array.from(sensorObj.quaternion),performance.now());
@@ -752,9 +792,9 @@ function startGenericSensor(){
 function attachGyro(){
   if(gyroAttached)return; gyroAttached=true;
   addEventListener("deviceorientationabsolute",e=>onOri(e,"deviceorientationabsolute"),true);
-  addEventListener("deviceorientation",
-    e=>onOri(e,S.src==="deviceorientationabsolute"?S.src:"deviceorientation"),true);
-  startGenericSensor();
+  addEventListener("deviceorientation",e=>onOri(e,"deviceorientation"),true);
+  // only reach for the Sensor API if the events haven't given us a compass reference
+  setTimeout(()=>{ if(S.gyro && S.srcRank<4) startGenericSensor(); },1200);
 }
 function gyroBasis(){
   const M=S.M; if(!M)return null;
@@ -781,9 +821,13 @@ function gyroStatus(){
     "Declination turns magnetic north into true north (12.7\u00b0 for Sydney). Compass offset "+
     "corrects your phone's own error \u2014 nudge it until a bright star lines up."; return; }
   const hh=Math.floor(S.lst/15), mm=((S.lst/15)%1*60).toFixed(0);
+  const srcs=Object.entries(S.seen).map(([k,v])=>
+    `${k===S.src?"\u25b8":"\u00b7"}${k.replace("deviceorientation","dev.ori").slice(0,13)} ${v.az.toFixed(0)}\u00b0`
+  ).join("  ");
   $("gyroStat").textContent=
-    `${S.gyroEvents} readings via ${S.src||"\u2014"} \u00b7 `+
-    `${S.absolute?"absolute (compass)":"relative (will drift)"} \u00b7 `+
+    `using ${S.src||"\u2014"} \u00b7 ${S.gyroEvents} readings \u00b7 `+
+    `${S.absolute?"absolute (compass)":"relative (will drift)"}\n`+
+    `${srcs}\n`+
     `LST ${hh}h ${mm}m \u00b7 lat ${S.lat.toFixed(2)}\u00b0 lon ${S.lon.toFixed(2)}\u00b0`;
 }
 function setGyroButton(){
@@ -802,6 +846,8 @@ function gyroLoop(){
   gyroRAF=requestAnimationFrame(gyroLoop);
 }
 function goLive(){
+  // coming back from a locked close-up, hand back the field of view you were scanning at
+  if(S.gyro==="locked" && S.fovBeforeLock!=null){ S.fov=S.fovBeforeLock; S.fovBeforeLock=null; }
   S.gyro="live"; S.playing&&$("play").click();
   syncClock();
   if(!clockTimer) clockTimer=setInterval(()=>{ if(S.gyro) syncClock(); },20000);
@@ -809,6 +855,7 @@ function goLive(){
   if(!gyroRAF) gyroRAF=requestAnimationFrame(gyroLoop);
 }
 function lockGyro(){
+  S.fovBeforeLock=S.fov;
   const b=gyroBasis();
   if(b){ S.look.alt=Math.asin(Math.max(-1,Math.min(1,b.f[2])))*R2D;
          S.look.az=((Math.atan2(b.f[0],b.f[1])*R2D)%360+360)%360; }
