@@ -1,13 +1,13 @@
 {
-  "generated": "2026-08-30T05:57:26Z",
-  "generator": "solve_dso.py 1.6.0",
+  "generated": "2026-08-30T05:48:04Z",
+  "generator": "solve_dso.py 1.5.0",
   "note": "corners are [RA_deg, Dec_deg] in JPEG raster order: TL, TR, BR, BL",
   "images": [
     {
       "file": "web/display/ngc 55 pearls_2400.jpg",
       "thumb": "web/thumbs/ngc 55 pearls_1024.jpg",
       "original": "ngc 55 pearls.jpg",
-      "label": "ngc 55 pearls",
+      "label": "NGC 55 Whale / Pearls",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -40,7 +40,7 @@
       "file": "web/display/ngc 253 sculptor_2400.jpg",
       "thumb": "web/thumbs/ngc 253 sculptor_1024.jpg",
       "original": "ngc 253 sculptor.jpg",
-      "label": "ngc 253 sculptor",
+      "label": "NGC 253 Sculptor Galaxy",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -73,7 +73,7 @@
       "file": "web/display/ngc253 wide AW sig_2400.jpg",
       "thumb": "web/thumbs/ngc253 wide AW sig_1024.jpg",
       "original": "ngc253 wide AW sig.jpg",
-      "label": "ngc253 wide",
+      "label": "NGC 253 Sculptor (wide field)",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -103,43 +103,10 @@
       "height_px": 3968
     },
     {
-      "file": "web/display/NGC292 smc_2400.jpg",
-      "thumb": "web/thumbs/NGC292 smc_1024.jpg",
-      "original": "NGC292 smc.jpg",
-      "label": "NGC292 smc",
-      "solved": true,
-      "engine": "nova",
-      "corners": [
-        [
-          19.17722,
-          -70.80721
-        ],
-        [
-          19.32978,
-          -74.89852
-        ],
-        [
-          7.59628,
-          -74.63341
-        ],
-        [
-          9.83819,
-          -70.59683
-        ]
-      ],
-      "ra_deg": 14.01529,
-      "dec_deg": -72.80327,
-      "fov_w_deg": 4.09504,
-      "fov_h_deg": 3.09585,
-      "pixscale_arcsec": 3.1663,
-      "width_px": 4656,
-      "height_px": 3520
-    },
-    {
       "file": "web/display/NGC_346_97subs_47100sec_ASI585MC_final_2400.jpg",
       "thumb": "web/thumbs/NGC_346_97subs_47100sec_ASI585MC_final_1024.jpg",
       "original": "NGC_346_97subs_47100sec_ASI585MC_final.jpg",
-      "label": "Smc Nebula Ngc346",
+      "label": "NGC 346 (SMC)",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -172,7 +139,7 @@
       "file": "web/display/NGC_292_142subs_42600sec_ASI585_hoo_pi_final_2400.jpg",
       "thumb": "web/thumbs/NGC_292_142subs_42600sec_ASI585_hoo_pi_final_1024.jpg",
       "original": "NGC_292_142subs_42600sec_ASI585_hoo_pi_final.jpg",
-      "label": "Smc Nebula Ngc346",
+      "label": "NGC 292 Small Magellanic Cloud",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -238,7 +205,7 @@
       "file": "web/display/NGC_1365_95subs_16950sec_astrowizard_sig_2400.jpg",
       "thumb": "web/thumbs/NGC_1365_95subs_16950sec_astrowizard_sig_1024.jpg",
       "original": "NGC_1365_95subs_16950sec_astrowizard_sig.jpg",
-      "label": "NGC 1365",
+      "label": "NGC 1365 Great Barred Spiral",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -271,7 +238,7 @@
       "file": "web/display/NGC1909 _crop_ADBE_spcc_blurX_denoise_veralux_LR_remerge - Copy_2400.jpg",
       "thumb": "web/thumbs/NGC1909 _crop_ADBE_spcc_blurX_denoise_veralux_LR_remerge - Copy_1024.jpg",
       "original": "NGC1909 _crop_ADBE_spcc_blurX_denoise_veralux_LR_remerge - Copy.jpg",
-      "label": "NGC1909 ADBE veralux LR remerge Copy",
+      "label": "IC 2118 Witch Head",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -304,7 +271,7 @@
       "file": "web/display/NGC2018_HOO_FINAL_sig_2400.jpg",
       "thumb": "web/thumbs/NGC2018_HOO_FINAL_sig_1024.jpg",
       "original": "NGC2018_HOO_FINAL_sig.jpg",
-      "label": "Ngc 2018 In Large Magellan Cloud",
+      "label": "NGC 2018 (LMC)",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -337,7 +304,7 @@
       "file": "web/display/NGC_2070_257subs_73140sec_ASI585MC_final_2400.jpg",
       "thumb": "web/thumbs/NGC_2070_257subs_73140sec_ASI585MC_final_1024.jpg",
       "original": "NGC_2070_257subs_73140sec_ASI585MC_final.jpg",
-      "label": "NGC 2070",
+      "label": "NGC 2070 Tarantula Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -370,7 +337,7 @@
       "file": "web/display/NGC_2264_62subs_18600sec__ASI585_final_2400.jpg",
       "thumb": "web/thumbs/NGC_2264_62subs_18600sec__ASI585_final_1024.jpg",
       "original": "NGC_2264_62subs_18600sec__ASI585_final.jpg",
-      "label": "Cone Nebula",
+      "label": "NGC 2264 Cone Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -403,7 +370,7 @@
       "file": "web/display/SH2-308_207subs_122280sec_ASI1600MM_pix_2400.jpg",
       "thumb": "web/thumbs/SH2-308_207subs_122280sec_ASI1600MM_pix_1024.jpg",
       "original": "SH2-308_207subs_122280sec_ASI1600MM_pix.jpg",
-      "label": "Dolphin Head Nebula Oiii Lrgb",
+      "label": "Sh2-308 Dolphin Head",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -436,7 +403,7 @@
       "file": "web/display/seagull_recompose_sig_2400.jpg",
       "thumb": "web/thumbs/seagull_recompose_sig_1024.jpg",
       "original": "seagull_recompose_sig.jpg",
-      "label": "Seagull Nebula In Sho Ic 2177",
+      "label": "IC 2177 Seagull Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -469,7 +436,7 @@
       "file": "web/display/NGC_2359_62subs_18600sec_ASI585_final_port_2400.jpg",
       "thumb": "web/thumbs/NGC_2359_62subs_18600sec_ASI585_final_port_1024.jpg",
       "original": "NGC_2359_62subs_18600sec_ASI585_final_port.jpg",
-      "label": "IC 468",
+      "label": "NGC 2359 Thor's Helmet",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -502,7 +469,7 @@
       "file": "web/display/NGC2467_REMIX_FINAL_2400.jpg",
       "thumb": "web/thumbs/NGC2467_REMIX_FINAL_1024.jpg",
       "original": "NGC2467_REMIX_FINAL.jpg",
-      "label": "Skull And Crossbones Nebula",
+      "label": "NGC 2467 Skull and Crossbones",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -535,7 +502,7 @@
       "file": "web/display/vela_LR_recomb_sig_2400.jpg",
       "thumb": "web/thumbs/vela_LR_recomb_sig_1024.jpg",
       "original": "vela_LR_recomb_sig.jpg",
-      "label": "Vela Snr",
+      "label": "Vela Supernova Remnant",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -568,7 +535,7 @@
       "file": "web/display/NGC3293 Gem Cluster_2400.jpg",
       "thumb": "web/thumbs/NGC3293 Gem Cluster_1024.jpg",
       "original": "NGC3293 Gem Cluster.jpg",
-      "label": "Ngc3293 Gem Cluster",
+      "label": "NGC 3293 Gem Cluster",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -601,7 +568,7 @@
       "file": "web/display/gabriella_Foraxx_CC_bx_HMS_curves_revela_recompose_2400.jpg",
       "thumb": "web/thumbs/gabriella_Foraxx_CC_bx_HMS_curves_revela_recompose_1024.jpg",
       "original": "gabriella_Foraxx_CC_bx_HMS_curves_revela_recompose.jpg",
-      "label": "Ngc 3324 Gabriela Mistral Nebula In Sho",
+      "label": "NGC 3324 Gabriela Mistral",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -634,7 +601,7 @@
       "file": "web/display/NGC3372_SHO_Siril_HMS_final_2400.jpg",
       "thumb": "web/thumbs/NGC3372_SHO_Siril_HMS_final_1024.jpg",
       "original": "NGC3372_SHO_Siril_HMS_final.jpg",
-      "label": "NGC3372 Siril HMS",
+      "label": "NGC 3372 Carina Nebula",
       "solved": true,
       "width_px": 4549,
       "height_px": 3395,
@@ -667,7 +634,7 @@
       "file": "web/display/LRGB_FINAL_Sig_2400.jpg",
       "thumb": "web/thumbs/LRGB_FINAL_Sig_1024.jpg",
       "original": "LRGB_FINAL_Sig.jpg",
-      "label": "Ic 2631 Chamaeleon Reflection Complex",
+      "label": "IC 2631 Chamaeleon Complex",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -733,7 +700,7 @@
       "file": "web/display/Gum-37-NGC3572-17809d4d_2400.jpg",
       "thumb": "web/thumbs/Gum-37-NGC3572-17809d4d_1024.jpg",
       "original": "Gum-37-NGC3572-17809d4d.jpg",
-      "label": "Gum 37 NGC3572",
+      "label": "Gum 37 / NGC 3572",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -766,7 +733,7 @@
       "file": "web/display/NGC_3576_80subs_24000sec_ASI585_PI_2400.jpg",
       "thumb": "web/thumbs/NGC_3576_80subs_24000sec_ASI585_PI_1024.jpg",
       "original": "NGC_3576_80subs_24000sec_ASI585_PI.jpg",
-      "label": "Statue Of Liberty Veralux Stretch",
+      "label": "NGC 3576 Statue of Liberty",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -799,7 +766,7 @@
       "file": "web/display/runnig chicken hoo_recomb_clone_2400.jpg",
       "thumb": "web/thumbs/runnig chicken hoo_recomb_clone_1024.jpg",
       "original": "runnig chicken hoo_recomb_clone.jpg",
-      "label": "runnig chicken recomb clone",
+      "label": "IC 2944 Running Chicken",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -832,7 +799,7 @@
       "file": "web/display/antenna_342x120s_FINAL_2400.jpg",
       "thumb": "web/thumbs/antenna_342x120s_FINAL_1024.jpg",
       "original": "antenna_342x120s_FINAL.jpg",
-      "label": "Ngc 4038 Antennae Galaxies Colliding C60 C61",
+      "label": "NGC 4038 Antennae Galaxies",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -865,7 +832,7 @@
       "file": "web/display/doodad_mas_sig_2400.jpg",
       "thumb": "web/thumbs/doodad_mas_sig_1024.jpg",
       "original": "doodad_mas_sig.jpg",
-      "label": "Sandqvist 149 The Dark Doodad",
+      "label": "Sandqvist 149 Dark Doodad",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -898,7 +865,7 @@
       "file": "web/display/m104 sombrero_recombine_sig_final_2400.jpg",
       "thumb": "web/thumbs/m104 sombrero_recombine_sig_final_1024.jpg",
       "original": "m104 sombrero_recombine_sig_final.jpg",
-      "label": "M104 Sombrero",
+      "label": "M104 Sombrero Galaxy",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -931,7 +898,7 @@
       "file": "web/display/Centaurus a 171x120 L 109x300 ha_2400.jpg",
       "thumb": "web/thumbs/Centaurus a 171x120 L 109x300 ha_1024.jpg",
       "original": "Centaurus a 171x120 L 109x300 ha.jpg",
-      "label": "Ngc 5128 Centaurus A With Ha",
+      "label": "NGC 5128 Centaurus A",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -964,7 +931,7 @@
       "file": "web/display/M83_243x120s_MAS_FINAL_sig_2400.jpg",
       "thumb": "web/thumbs/M83_243x120s_MAS_FINAL_sig_1024.jpg",
       "original": "M83_243x120s_MAS_FINAL_sig.jpg",
-      "label": "M83",
+      "label": "M83 Southern Pinwheel",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -997,7 +964,7 @@
       "file": "web/display/NGC_5367_Cometary_Globule_sig_2400.jpg",
       "thumb": "web/thumbs/NGC_5367_Cometary_Globule_sig_1024.jpg",
       "original": "NGC_5367_Cometary_Globule_sig.jpg",
-      "label": "Ngc 5367 Cometary Globule Dust Nebula Cg 12",
+      "label": "NGC 5367 / CG 12",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1030,7 +997,7 @@
       "file": "web/display/Barnard 228 dark_wolf_final_sig_2400.jpg",
       "thumb": "web/thumbs/Barnard 228 dark_wolf_final_sig_1024.jpg",
       "original": "Barnard 228 dark_wolf_final_sig.jpg",
-      "label": "Barnard 228 dark wolf",
+      "label": "Barnard 228 Dark Wolf",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1063,7 +1030,7 @@
       "file": "web/display/Rho_Mosaic_PI_sig2_2400.jpg",
       "thumb": "web/thumbs/Rho_Mosaic_PI_sig2_1024.jpg",
       "original": "Rho_Mosaic_PI_sig2.jpg",
-      "label": "Rho Mosaic",
+      "label": "Rho Ophiuchi Complex",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1096,7 +1063,7 @@
       "file": "web/display/egg_185x300_FINAL_blue_sig_2400.jpg",
       "thumb": "web/thumbs/egg_185x300_FINAL_blue_sig_1024.jpg",
       "original": "egg_185x300_FINAL_blue_sig.jpg",
-      "label": "Ngc 6164 Dragons Egg",
+      "label": "NGC 6164 Dragon's Egg",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1129,7 +1096,7 @@
       "file": "web/display/Cosmic_bat2_2400.jpg",
       "thumb": "web/thumbs/Cosmic_bat2_1024.jpg",
       "original": "Cosmic_bat2.jpg",
-      "label": "Ldn 43 Cosmic Bat",
+      "label": "LDN 43 Cosmic Bat",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1162,7 +1129,7 @@
       "file": "web/display/sho_starless_narrowband_hue_MAS_BX_NX-3-2_recompose_2400.jpg",
       "thumb": "web/thumbs/sho_starless_narrowband_hue_MAS_BX_NX-3-2_recompose_1024.jpg",
       "original": "sho_starless_narrowband_hue_MAS_BX_NX-3-2_recompose.jpg",
-      "label": "Ngc 6188 Fighting Dragons Of Ara In Sho",
+      "label": "NGC 6188 Fighting Dragons (SHO)",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1195,7 +1162,7 @@
       "file": "web/display/ngc 6188 hoo_mirror_thumb_2400.jpg",
       "thumb": "web/thumbs/ngc 6188 hoo_mirror_thumb_1024.jpg",
       "original": "ngc 6188 hoo_mirror_thumb.jpg",
-      "label": "Ngc 6188 Fighting Dragons Of Ara In Ha And Oiii",
+      "label": "NGC 6188 Fighting Dragons (HOO)",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1228,7 +1195,7 @@
       "file": "web/display/sv17 dark_wolf_final_2400.jpg",
       "thumb": "web/thumbs/sv17 dark_wolf_final_1024.jpg",
       "original": "sv17 dark_wolf_final.jpg",
-      "label": "sv17 dark wolf",
+      "label": "SL 17 Fenrir",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1261,7 +1228,7 @@
       "file": "web/display/prawn_reintegrate_sig_2400.jpg",
       "thumb": "web/thumbs/prawn_reintegrate_sig_1024.jpg",
       "original": "prawn_reintegrate_sig.jpg",
-      "label": "prawn",
+      "label": "IC 4628 Prawn Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1294,7 +1261,7 @@
       "file": "web/display/lobster_hoo_recompose_sig_2400.jpg",
       "thumb": "web/thumbs/lobster_hoo_recompose_sig_1024.jpg",
       "original": "lobster_hoo_recompose_sig.jpg",
-      "label": "lobster",
+      "label": "NGC 6357 Lobster Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1327,7 +1294,7 @@
       "file": "web/display/trifid_sig_finla_2400.jpg",
       "thumb": "web/thumbs/trifid_sig_finla_1024.jpg",
       "original": "trifid_sig_finla.jpg",
-      "label": "trifid finla",
+      "label": "M20 Trifid Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1360,7 +1327,7 @@
       "file": "web/display/m8_73subs_21900sec_ASI585MC_SHO_Recomb_processed_stars_2400.jpg",
       "thumb": "web/thumbs/m8_73subs_21900sec_ASI585MC_SHO_Recomb_processed_stars_1024.jpg",
       "original": "m8_73subs_21900sec_ASI585MC_SHO_Recomb_processed_stars.jpg",
-      "label": "m8 Recomb stars",
+      "label": "M8 Lagoon Nebula",
       "solved": true,
       "width_px": 3734,
       "height_px": 2292,
@@ -1393,7 +1360,7 @@
       "file": "web/display/LBN28 chinese dragon AW_2400.jpg",
       "thumb": "web/thumbs/LBN28 chinese dragon AW_1024.jpg",
       "original": "LBN28 chinese dragon AW.jpg",
-      "label": "LBN28 chinese dragon",
+      "label": "NGC 6559 Chinese Dragon",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1426,7 +1393,7 @@
       "file": "web/display/Anteater_74x180s_final_sig_standard_2400.jpg",
       "thumb": "web/thumbs/Anteater_74x180s_final_sig_standard_1024.jpg",
       "original": "Anteater_74x180s_final_sig_standard.jpg",
-      "label": "Ngc 6726 Anteater Nebula R Cra",
+      "label": "NGC 6726 Anteater / R CrA",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1459,7 +1426,7 @@
       "file": "web/display/NGC_6729_30x60R_30x60G_30x60B_50x30L_ASI1600MM_2400.jpg",
       "thumb": "web/thumbs/NGC_6729_30x60R_30x60G_30x60B_50x30L_ASI1600MM_1024.jpg",
       "original": "NGC_6729_30x60R_30x60G_30x60B_50x30L_ASI1600MM.jpg",
-      "label": "SANDQVIST 39",
+      "label": "NGC 6729 Corona Australis",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1492,7 +1459,7 @@
       "file": "web/display/NGC 6744 Pavo Sig_2400.jpg",
       "thumb": "web/thumbs/NGC 6744 Pavo Sig_1024.jpg",
       "original": "NGC 6744 Pavo Sig.jpg",
-      "label": "NGC 6744 Pavo",
+      "label": "NGC 6744 Pavo Galaxy",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1525,7 +1492,7 @@
       "file": "web/display/EagleRay_569_GX_BX_SPCC_starless_NX_ghs_LR2_NX_2400.jpg",
       "thumb": "web/thumbs/EagleRay_569_GX_BX_SPCC_starless_NX_ghs_LR2_NX_1024.jpg",
       "original": "EagleRay_569_GX_BX_SPCC_starless_NX_ghs_LR2_NX.jpg",
-      "label": "EagleRay 569 NX ghs LR2 NX",
+      "label": "Eagle Ray Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1558,7 +1525,7 @@
       "file": "web/display/ngc6960 Veil sig_2400.jpg",
       "thumb": "web/thumbs/ngc6960 Veil sig_1024.jpg",
       "original": "ngc6960 Veil sig.jpg",
-      "label": "ngc6960 Veil",
+      "label": "NGC 6960 Veil Nebula",
       "solved": true,
       "width_px": 4892,
       "height_px": 3270,
@@ -1591,7 +1558,7 @@
       "file": "web/display/C_63_96subs_28800sec_ASI585_HO_PI_2400.jpg",
       "thumb": "web/thumbs/C_63_96subs_28800sec_ASI585_HO_PI_1024.jpg",
       "original": "C_63_96subs_28800sec_ASI585_HO_PI.jpg",
-      "label": "Helix Eye Of God Dual Narrowband",
+      "label": "NGC 7293 Helix Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1624,7 +1591,7 @@
       "file": "web/display/ngc2782 grus_2400.jpg",
       "thumb": "web/thumbs/ngc2782 grus_1024.jpg",
       "original": "ngc2782 grus.jpg",
-      "label": "ngc2782 grus",
+      "label": "NGC 7582 Grus Quartet",
       "solved": true,
       "engine": "nova",
       "corners": [
