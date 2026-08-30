@@ -1,0 +1,1657 @@
+{
+  "generated": "2026-08-30T05:57:26Z",
+  "generator": "solve_dso.py 1.6.0",
+  "note": "corners are [RA_deg, Dec_deg] in JPEG raster order: TL, TR, BR, BL",
+  "images": [
+    {
+      "file": "web/display/ngc 55 pearls_2400.jpg",
+      "thumb": "web/thumbs/ngc 55 pearls_1024.jpg",
+      "original": "ngc 55 pearls.jpg",
+      "label": "ngc 55 pearls",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          3.43958,
+          -39.3863
+        ],
+        [
+          4.17674,
+          -39.38602
+        ],
+        [
+          4.17499,
+          -39.06565
+        ],
+        [
+          3.44114,
+          -39.06584
+        ]
+      ],
+      "ra_deg": 3.808,
+      "dec_deg": -39.22653,
+      "fov_w_deg": 0.5701,
+      "fov_h_deg": 0.32068,
+      "pixscale_arcsec": 0.6288,
+      "width_px": 3264,
+      "height_px": 1836
+    },
+    {
+      "file": "web/display/ngc 253 sculptor_2400.jpg",
+      "thumb": "web/thumbs/ngc 253 sculptor_1024.jpg",
+      "original": "ngc 253 sculptor.jpg",
+      "label": "ngc 253 sculptor",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          11.54156,
+          -25.46596
+        ],
+        [
+          12.21911,
+          -25.46478
+        ],
+        [
+          12.21758,
+          -25.08791
+        ],
+        [
+          11.5418,
+          -25.08901
+        ]
+      ],
+      "ra_deg": 11.87985,
+      "dec_deg": -25.27737,
+      "fov_w_deg": 0.61228,
+      "fov_h_deg": 0.37716,
+      "pixscale_arcsec": 0.6287,
+      "width_px": 3506,
+      "height_px": 2160
+    },
+    {
+      "file": "web/display/ngc253 wide AW sig_2400.jpg",
+      "thumb": "web/thumbs/ngc253 wide AW sig_1024.jpg",
+      "original": "ngc253 wide AW sig.jpg",
+      "label": "ngc253 wide",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          10.35684,
+          -27.49984
+        ],
+        [
+          14.85569,
+          -27.07691
+        ],
+        [
+          14.47354,
+          -24.2518
+        ],
+        [
+          10.09711,
+          -24.65773
+        ]
+      ],
+      "ra_deg": 12.45285,
+      "dec_deg": -25.888,
+      "fov_w_deg": 4.01644,
+      "fov_h_deg": 2.85368,
+      "pixscale_arcsec": 2.5885,
+      "width_px": 5586,
+      "height_px": 3968
+    },
+    {
+      "file": "web/display/NGC292 smc_2400.jpg",
+      "thumb": "web/thumbs/NGC292 smc_1024.jpg",
+      "original": "NGC292 smc.jpg",
+      "label": "NGC292 smc",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          19.17722,
+          -70.80721
+        ],
+        [
+          19.32978,
+          -74.89852
+        ],
+        [
+          7.59628,
+          -74.63341
+        ],
+        [
+          9.83819,
+          -70.59683
+        ]
+      ],
+      "ra_deg": 14.01529,
+      "dec_deg": -72.80327,
+      "fov_w_deg": 4.09504,
+      "fov_h_deg": 3.09585,
+      "pixscale_arcsec": 3.1663,
+      "width_px": 4656,
+      "height_px": 3520
+    },
+    {
+      "file": "web/display/NGC_346_97subs_47100sec_ASI585MC_final_2400.jpg",
+      "thumb": "web/thumbs/NGC_346_97subs_47100sec_ASI585MC_final_1024.jpg",
+      "original": "NGC_346_97subs_47100sec_ASI585MC_final.jpg",
+      "label": "Smc Nebula Ngc346",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          16.52342,
+          -72.2912
+        ],
+        [
+          14.45005,
+          -72.30573
+        ],
+        [
+          14.44427,
+          -71.96418
+        ],
+        [
+          16.47829,
+          -71.94974
+        ]
+      ],
+      "ra_deg": 15.47356,
+      "dec_deg": -72.13035,
+      "fov_w_deg": 0.63052,
+      "fov_h_deg": 0.34205,
+      "pixscale_arcsec": 0.4179,
+      "width_px": 5431,
+      "height_px": 2945
+    },
+    {
+      "file": "web/display/NGC_292_142subs_42600sec_ASI585_hoo_pi_final_2400.jpg",
+      "thumb": "web/thumbs/NGC_292_142subs_42600sec_ASI585_hoo_pi_final_1024.jpg",
+      "original": "NGC_292_142subs_42600sec_ASI585_hoo_pi_final.jpg",
+      "label": "Smc Nebula Ngc346",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          17.64175,
+          -72.09758
+        ],
+        [
+          14.61855,
+          -72.56931
+        ],
+        [
+          13.80387,
+          -72.04754
+        ],
+        [
+          16.76745,
+          -71.58874
+        ]
+      ],
+      "ra_deg": 15.71979,
+      "dec_deg": -72.08211,
+      "fov_w_deg": 1.03216,
+      "fov_h_deg": 0.57801,
+      "pixscale_arcsec": 0.9789,
+      "width_px": 3796,
+      "height_px": 2126
+    },
+    {
+      "file": "web/display/Comet 220P McNaught_2400.jpg",
+      "thumb": "web/thumbs/Comet 220P McNaught_1024.jpg",
+      "original": "Comet 220P McNaught.jpg",
+      "label": "Comet 220P McNaught",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          47.34737,
+          9.53591
+        ],
+        [
+          46.70238,
+          9.53228
+        ],
+        [
+          46.70477,
+          9.1703
+        ],
+        [
+          47.34916,
+          9.17365
+        ]
+      ],
+      "ra_deg": 47.02608,
+      "dec_deg": 9.35358,
+      "fov_w_deg": 0.63672,
+      "fov_h_deg": 0.36229,
+      "pixscale_arcsec": 0.629,
+      "width_px": 3644,
+      "height_px": 2074
+    },
+    {
+      "file": "web/display/NGC_1365_95subs_16950sec_astrowizard_sig_2400.jpg",
+      "thumb": "web/thumbs/NGC_1365_95subs_16950sec_astrowizard_sig_1024.jpg",
+      "original": "NGC_1365_95subs_16950sec_astrowizard_sig.jpg",
+      "label": "NGC 1365",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          53.73298,
+          -36.2998
+        ],
+        [
+          53.0786,
+          -36.30779
+        ],
+        [
+          53.07406,
+          -35.98506
+        ],
+        [
+          53.72539,
+          -35.97723
+        ]
+      ],
+      "ra_deg": 53.40283,
+      "dec_deg": -36.14278,
+      "fov_w_deg": 0.5274,
+      "fov_h_deg": 0.32304,
+      "pixscale_arcsec": 0.2987,
+      "width_px": 6356,
+      "height_px": 3892
+    },
+    {
+      "file": "web/display/NGC1909 _crop_ADBE_spcc_blurX_denoise_veralux_LR_remerge - Copy_2400.jpg",
+      "thumb": "web/thumbs/NGC1909 _crop_ADBE_spcc_blurX_denoise_veralux_LR_remerge - Copy_1024.jpg",
+      "original": "NGC1909 _crop_ADBE_spcc_blurX_denoise_veralux_LR_remerge - Copy.jpg",
+      "label": "NGC1909 ADBE veralux LR remerge Copy",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          77.43317,
+          -9.49025
+        ],
+        [
+          78.11182,
+          -5.47288
+        ],
+        [
+          75.08477,
+          -4.96059
+        ],
+        [
+          74.38167,
+          -8.97362
+        ]
+      ],
+      "ra_deg": 76.25331,
+      "dec_deg": -7.22775,
+      "fov_w_deg": 4.0789,
+      "fov_h_deg": 3.06122,
+      "pixscale_arcsec": 3.1579,
+      "width_px": 4650,
+      "height_px": 3490
+    },
+    {
+      "file": "web/display/NGC2018_HOO_FINAL_sig_2400.jpg",
+      "thumb": "web/thumbs/NGC2018_HOO_FINAL_sig_1024.jpg",
+      "original": "NGC2018_HOO_FINAL_sig.jpg",
+      "label": "Ngc 2018 In Large Magellan Cloud",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          83.45661,
+          -70.84861
+        ],
+        [
+          81.87598,
+          -70.86232
+        ],
+        [
+          81.89039,
+          -71.21412
+        ],
+        [
+          83.49932,
+          -71.20039
+        ]
+      ],
+      "ra_deg": 82.68038,
+      "dec_deg": -71.03303,
+      "fov_w_deg": 0.51874,
+      "fov_h_deg": 0.35223,
+      "pixscale_arcsec": 0.6279,
+      "width_px": 2974,
+      "height_px": 2020
+    },
+    {
+      "file": "web/display/NGC_2070_257subs_73140sec_ASI585MC_final_2400.jpg",
+      "thumb": "web/thumbs/NGC_2070_257subs_73140sec_ASI585MC_final_1024.jpg",
+      "original": "NGC_2070_257subs_73140sec_ASI585MC_final.jpg",
+      "label": "NGC 2070",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          85.62217,
+          -68.60632
+        ],
+        [
+          83.02403,
+          -68.9595
+        ],
+        [
+          83.66007,
+          -69.58938
+        ],
+        [
+          86.32208,
+          -69.22695
+        ]
+      ],
+      "ra_deg": 84.66279,
+      "dec_deg": -69.10116,
+      "fov_w_deg": 1.00445,
+      "fov_h_deg": 0.66997,
+      "pixscale_arcsec": 0.9794,
+      "width_px": 3692,
+      "height_px": 2462
+    },
+    {
+      "file": "web/display/NGC_2264_62subs_18600sec__ASI585_final_2400.jpg",
+      "thumb": "web/thumbs/NGC_2264_62subs_18600sec__ASI585_final_1024.jpg",
+      "original": "NGC_2264_62subs_18600sec__ASI585_final.jpg",
+      "label": "Cone Nebula",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          99.97902,
+          9.65669
+        ],
+        [
+          100.61053,
+          9.66889
+        ],
+        [
+          100.61698,
+          9.32612
+        ],
+        [
+          99.98603,
+          9.31433
+        ]
+      ],
+      "ra_deg": 100.29797,
+      "dec_deg": 9.49157,
+      "fov_w_deg": 0.623,
+      "fov_h_deg": 0.34296,
+      "pixscale_arcsec": 0.4461,
+      "width_px": 5028,
+      "height_px": 2767
+    },
+    {
+      "file": "web/display/SH2-308_207subs_122280sec_ASI1600MM_pix_2400.jpg",
+      "thumb": "web/thumbs/SH2-308_207subs_122280sec_ASI1600MM_pix_1024.jpg",
+      "original": "SH2-308_207subs_122280sec_ASI1600MM_pix.jpg",
+      "label": "Dolphin Head Nebula Oiii Lrgb",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          105.3538,
+          -23.33353
+        ],
+        [
+          104.65166,
+          -27.05298
+        ],
+        [
+          101.61728,
+          -26.55065
+        ],
+        [
+          102.40689,
+          -22.85032
+        ]
+      ],
+      "ra_deg": 103.50956,
+      "dec_deg": -24.95544,
+      "fov_w_deg": 3.77547,
+      "fov_h_deg": 2.75798,
+      "pixscale_arcsec": 3.1616,
+      "width_px": 4299,
+      "height_px": 3141
+    },
+    {
+      "file": "web/display/seagull_recompose_sig_2400.jpg",
+      "thumb": "web/thumbs/seagull_recompose_sig_1024.jpg",
+      "original": "seagull_recompose_sig.jpg",
+      "label": "Seagull Nebula In Sho Ic 2177",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          105.6369,
+          -9.46609
+        ],
+        [
+          105.5497,
+          -12.70211
+        ],
+        [
+          108.00006,
+          -12.75733
+        ],
+        [
+          108.06197,
+          -9.52153
+        ]
+      ],
+      "ra_deg": 106.81266,
+      "dec_deg": -11.11454,
+      "fov_w_deg": 3.2401,
+      "fov_h_deg": 2.39443,
+      "pixscale_arcsec": 2.6095,
+      "width_px": 4470,
+      "height_px": 3303
+    },
+    {
+      "file": "web/display/NGC_2359_62subs_18600sec_ASI585_final_port_2400.jpg",
+      "thumb": "web/thumbs/NGC_2359_62subs_18600sec_ASI585_final_port_1024.jpg",
+      "original": "NGC_2359_62subs_18600sec_ASI585_final_port.jpg",
+      "label": "IC 468",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          109.332,
+          -13.44469
+        ],
+        [
+          109.32568,
+          -13.04625
+        ],
+        [
+          109.98376,
+          -13.03522
+        ],
+        [
+          109.99157,
+          -13.43376
+        ]
+      ],
+      "ra_deg": 109.65832,
+      "dec_deg": -13.24014,
+      "fov_w_deg": 0.39886,
+      "fov_h_deg": 0.64177,
+      "pixscale_arcsec": 0.4554,
+      "width_px": 3153,
+      "height_px": 5072
+    },
+    {
+      "file": "web/display/NGC2467_REMIX_FINAL_2400.jpg",
+      "thumb": "web/thumbs/NGC2467_REMIX_FINAL_1024.jpg",
+      "original": "NGC2467_REMIX_FINAL.jpg",
+      "label": "Skull And Crossbones Nebula",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          117.85035,
+          -26.83666
+        ],
+        [
+          118.03172,
+          -25.88631
+        ],
+        [
+          118.67509,
+          -25.98326
+        ],
+        [
+          118.49918,
+          -26.93439
+        ]
+      ],
+      "ra_deg": 118.26437,
+      "dec_deg": -26.41035,
+      "fov_w_deg": 0.96448,
+      "fov_h_deg": 0.58737,
+      "pixscale_arcsec": 0.9786,
+      "width_px": 3548,
+      "height_px": 2160
+    },
+    {
+      "file": "web/display/vela_LR_recomb_sig_2400.jpg",
+      "thumb": "web/thumbs/vela_LR_recomb_sig_1024.jpg",
+      "original": "vela_LR_recomb_sig.jpg",
+      "label": "Vela Snr",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          133.45829,
+          -42.01065
+        ],
+        [
+          134.37085,
+          -49.33963
+        ],
+        [
+          125.89934,
+          -49.55727
+        ],
+        [
+          126.0475,
+          -42.19414
+        ]
+      ],
+      "ra_deg": 129.93808,
+      "dec_deg": -45.84108,
+      "fov_w_deg": 7.38359,
+      "fov_h_deg": 5.52293,
+      "pixscale_arcsec": 5.786,
+      "width_px": 4594,
+      "height_px": 3436
+    },
+    {
+      "file": "web/display/NGC3293 Gem Cluster_2400.jpg",
+      "thumb": "web/thumbs/NGC3293 Gem Cluster_1024.jpg",
+      "original": "NGC3293 Gem Cluster.jpg",
+      "label": "Ngc3293 Gem Cluster",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          158.3299,
+          -58.42364
+        ],
+        [
+          159.60687,
+          -58.41241
+        ],
+        [
+          159.58841,
+          -58.03649
+        ],
+        [
+          158.32506,
+          -58.04725
+        ]
+      ],
+      "ra_deg": 158.9628,
+      "dec_deg": -58.23155,
+      "fov_w_deg": 0.66931,
+      "fov_h_deg": 0.37648,
+      "pixscale_arcsec": 0.6275,
+      "width_px": 3840,
+      "height_px": 2160
+    },
+    {
+      "file": "web/display/gabriella_Foraxx_CC_bx_HMS_curves_revela_recompose_2400.jpg",
+      "thumb": "web/thumbs/gabriella_Foraxx_CC_bx_HMS_curves_revela_recompose_1024.jpg",
+      "original": "gabriella_Foraxx_CC_bx_HMS_curves_revela_recompose.jpg",
+      "label": "Ngc 3324 Gabriela Mistral Nebula In Sho",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          159.95497,
+          -58.44196
+        ],
+        [
+          158.94964,
+          -58.45645
+        ],
+        [
+          158.9641,
+          -58.82365
+        ],
+        [
+          159.97985,
+          -58.80896
+        ]
+      ],
+      "ra_deg": 159.46214,
+      "dec_deg": -58.63357,
+      "fov_w_deg": 0.5265,
+      "fov_h_deg": 0.36749,
+      "pixscale_arcsec": 0.6276,
+      "width_px": 3020,
+      "height_px": 2108
+    },
+    {
+      "file": "web/display/NGC3372_SHO_Siril_HMS_final_2400.jpg",
+      "thumb": "web/thumbs/NGC3372_SHO_Siril_HMS_final_1024.jpg",
+      "original": "NGC3372_SHO_Siril_HMS_final.jpg",
+      "label": "NGC3372 Siril HMS",
+      "solved": true,
+      "width_px": 4549,
+      "height_px": 3395,
+      "engine": "astap",
+      "corners": [
+        [
+          157.14036,
+          -61.58842
+        ],
+        [
+          158.59023,
+          -57.66402
+        ],
+        [
+          164.15009,
+          -58.0578
+        ],
+        [
+          163.38731,
+          -62.03169
+        ]
+      ],
+      "ra_deg": 160.83123,
+      "dec_deg": -59.86957,
+      "fov_w_deg": 3.99863,
+      "fov_h_deg": 2.98425,
+      "pixscale_arcsec": 3.1644
+    },
+    {
+      "file": "web/display/LRGB_FINAL_Sig_2400.jpg",
+      "thumb": "web/thumbs/LRGB_FINAL_Sig_1024.jpg",
+      "original": "LRGB_FINAL_Sig.jpg",
+      "label": "Ic 2631 Chamaeleon Reflection Complex",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          161.1646,
+          -75.22882
+        ],
+        [
+          160.36383,
+          -78.51033
+        ],
+        [
+          172.73184,
+          -78.40242
+        ],
+        [
+          170.83699,
+          -75.14522
+        ]
+      ],
+      "ra_deg": 166.26498,
+      "dec_deg": -76.88007,
+      "fov_w_deg": 3.28929,
+      "fov_h_deg": 2.47519,
+      "pixscale_arcsec": 2.6123,
+      "width_px": 4533,
+      "height_px": 3412
+    },
+    {
+      "file": "web/display/gum_37_tadpole_sig_2400.jpg",
+      "thumb": "web/thumbs/gum_37_tadpole_sig_1024.jpg",
+      "original": "gum_37_tadpole_sig.jpg",
+      "label": "Gum 37 Southern Tadpoles",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          168.15363,
+          -60.24965
+        ],
+        [
+          167.03277,
+          -60.25841
+        ],
+        [
+          167.02763,
+          -59.90304
+        ],
+        [
+          168.13667,
+          -59.89421
+        ]
+      ],
+      "ra_deg": 167.58764,
+      "dec_deg": -60.07758,
+      "fov_w_deg": 0.55662,
+      "fov_h_deg": 0.35568,
+      "pixscale_arcsec": 0.6278,
+      "width_px": 3192,
+      "height_px": 2040
+    },
+    {
+      "file": "web/display/Gum-37-NGC3572-17809d4d_2400.jpg",
+      "thumb": "web/thumbs/Gum-37-NGC3572-17809d4d_1024.jpg",
+      "original": "Gum-37-NGC3572-17809d4d.jpg",
+      "label": "Gum 37 NGC3572",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          166.95822,
+          -60.25861
+        ],
+        [
+          168.30588,
+          -60.24776
+        ],
+        [
+          168.2865,
+          -59.87129
+        ],
+        [
+          166.95328,
+          -59.88242
+        ]
+      ],
+      "ra_deg": 167.62615,
+      "dec_deg": -60.0668,
+      "fov_w_deg": 0.66952,
+      "fov_h_deg": 0.37661,
+      "pixscale_arcsec": 1.0043,
+      "width_px": 2400,
+      "height_px": 1350
+    },
+    {
+      "file": "web/display/NGC_3576_80subs_24000sec_ASI585_PI_2400.jpg",
+      "thumb": "web/thumbs/NGC_3576_80subs_24000sec_ASI585_PI_1024.jpg",
+      "original": "NGC_3576_80subs_24000sec_ASI585_PI.jpg",
+      "label": "Statue Of Liberty Veralux Stretch",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          168.74107,
+          -61.02483
+        ],
+        [
+          167.35041,
+          -61.0383
+        ],
+        [
+          167.35755,
+          -61.42352
+        ],
+        [
+          168.76608,
+          -61.41021
+        ]
+      ],
+      "ra_deg": 168.05385,
+      "dec_deg": -61.22615,
+      "fov_w_deg": 0.67399,
+      "fov_h_deg": 0.38586,
+      "pixscale_arcsec": 0.314,
+      "width_px": 7728,
+      "height_px": 4424
+    },
+    {
+      "file": "web/display/runnig chicken hoo_recomb_clone_2400.jpg",
+      "thumb": "web/thumbs/runnig chicken hoo_recomb_clone_1024.jpg",
+      "original": "runnig chicken hoo_recomb_clone.jpg",
+      "label": "runnig chicken recomb clone",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          171.47176,
+          -61.38952
+        ],
+        [
+          171.27992,
+          -64.61896
+        ],
+        [
+          176.74551,
+          -64.59046
+        ],
+        [
+          176.37808,
+          -61.36154
+        ]
+      ],
+      "ra_deg": 173.9655,
+      "dec_deg": -63.01361,
+      "fov_w_deg": 3.23573,
+      "fov_h_deg": 2.34914,
+      "pixscale_arcsec": 2.61,
+      "width_px": 4463,
+      "height_px": 3241
+    },
+    {
+      "file": "web/display/antenna_342x120s_FINAL_2400.jpg",
+      "thumb": "web/thumbs/antenna_342x120s_FINAL_1024.jpg",
+      "original": "antenna_342x120s_FINAL.jpg",
+      "label": "Ngc 4038 Antennae Galaxies Colliding C60 C61",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          180.78445,
+          -18.7156
+        ],
+        [
+          180.16022,
+          -18.71645
+        ],
+        [
+          180.15978,
+          -19.04141
+        ],
+        [
+          180.78695,
+          -19.03898
+        ]
+      ],
+      "ra_deg": 180.47273,
+      "dec_deg": -18.87881,
+      "fov_w_deg": 0.5925,
+      "fov_h_deg": 0.32439,
+      "pixscale_arcsec": 0.3145,
+      "width_px": 6782,
+      "height_px": 3712
+    },
+    {
+      "file": "web/display/doodad_mas_sig_2400.jpg",
+      "thumb": "web/thumbs/doodad_mas_sig_1024.jpg",
+      "original": "doodad_mas_sig.jpg",
+      "label": "Sandqvist 149 The Dark Doodad",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          183.86563,
+          -69.80507
+        ],
+        [
+          184.20794,
+          -73.12678
+        ],
+        [
+          192.79211,
+          -72.8559
+        ],
+        [
+          191.11067,
+          -69.57785
+        ]
+      ],
+      "ra_deg": 187.9792,
+      "dec_deg": -71.38377,
+      "fov_w_deg": 3.32635,
+      "fov_h_deg": 2.52637,
+      "pixscale_arcsec": 2.6123,
+      "width_px": 4584,
+      "height_px": 3481
+    },
+    {
+      "file": "web/display/m104 sombrero_recombine_sig_final_2400.jpg",
+      "thumb": "web/thumbs/m104 sombrero_recombine_sig_final_1024.jpg",
+      "original": "m104 sombrero_recombine_sig_final.jpg",
+      "label": "M104 Sombrero",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          190.31945,
+          -11.44524
+        ],
+        [
+          189.67756,
+          -11.45476
+        ],
+        [
+          189.68254,
+          -11.81291
+        ],
+        [
+          190.32529,
+          -11.80338
+        ]
+      ],
+      "ra_deg": 190.00116,
+      "dec_deg": -11.62915,
+      "fov_w_deg": 0.62952,
+      "fov_h_deg": 0.35851,
+      "pixscale_arcsec": 0.6288,
+      "width_px": 3604,
+      "height_px": 2052
+    },
+    {
+      "file": "web/display/Centaurus a 171x120 L 109x300 ha_2400.jpg",
+      "thumb": "web/thumbs/Centaurus a 171x120 L 109x300 ha_1024.jpg",
+      "original": "Centaurus a 171x120 L 109x300 ha.jpg",
+      "label": "Ngc 5128 Centaurus A With Ha",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          201.82042,
+          -42.82559
+        ],
+        [
+          200.92839,
+          -42.8396
+        ],
+        [
+          200.93635,
+          -43.20952
+        ],
+        [
+          201.83363,
+          -43.19549
+        ]
+      ],
+      "ra_deg": 201.37959,
+      "dec_deg": -43.01843,
+      "fov_w_deg": 0.65473,
+      "fov_h_deg": 0.37025,
+      "pixscale_arcsec": 0.6289,
+      "width_px": 3748,
+      "height_px": 2120
+    },
+    {
+      "file": "web/display/M83_243x120s_MAS_FINAL_sig_2400.jpg",
+      "thumb": "web/thumbs/M83_243x120s_MAS_FINAL_sig_1024.jpg",
+      "original": "M83_243x120s_MAS_FINAL_sig.jpg",
+      "label": "M83",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          203.85433,
+          -30.06937
+        ],
+        [
+          204.60612,
+          -30.06287
+        ],
+        [
+          204.60067,
+          -29.6991
+        ],
+        [
+          203.85148,
+          -29.70526
+        ]
+      ],
+      "ra_deg": 204.22837,
+      "dec_deg": -29.88462,
+      "fov_w_deg": 0.65108,
+      "fov_h_deg": 0.36428,
+      "pixscale_arcsec": 0.6287,
+      "width_px": 3728,
+      "height_px": 2086
+    },
+    {
+      "file": "web/display/NGC_5367_Cometary_Globule_sig_2400.jpg",
+      "thumb": "web/thumbs/NGC_5367_Cometary_Globule_sig_1024.jpg",
+      "original": "NGC_5367_Cometary_Globule_sig.jpg",
+      "label": "Ngc 5367 Cometary Globule Dust Nebula Cg 12",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          208.77859,
+          -41.65059
+        ],
+        [
+          208.53655,
+          -39.06666
+        ],
+        [
+          210.93215,
+          -38.91149
+        ],
+        [
+          211.26538,
+          -41.48843
+        ]
+      ],
+      "ra_deg": 209.87775,
+      "dec_deg": -40.28586,
+      "fov_w_deg": 2.59277,
+      "fov_h_deg": 1.86939,
+      "pixscale_arcsec": 2.616,
+      "width_px": 3568,
+      "height_px": 2573
+    },
+    {
+      "file": "web/display/Barnard 228 dark_wolf_final_sig_2400.jpg",
+      "thumb": "web/thumbs/Barnard 228 dark_wolf_final_sig_1024.jpg",
+      "original": "Barnard 228 dark_wolf_final_sig.jpg",
+      "label": "Barnard 228 dark wolf",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          235.06121,
+          -36.29616
+        ],
+        [
+          234.78624,
+          -32.98582
+        ],
+        [
+          237.39618,
+          -32.81046
+        ],
+        [
+          237.77459,
+          -36.11627
+        ]
+      ],
+      "ra_deg": 236.25146,
+      "dec_deg": -34.55866,
+      "fov_w_deg": 3.32316,
+      "fov_h_deg": 2.19993,
+      "pixscale_arcsec": 2.6149,
+      "width_px": 4575,
+      "height_px": 3028
+    },
+    {
+      "file": "web/display/Rho_Mosaic_PI_sig2_2400.jpg",
+      "thumb": "web/thumbs/Rho_Mosaic_PI_sig2_1024.jpg",
+      "original": "Rho_Mosaic_PI_sig2.jpg",
+      "label": "Rho Mosaic",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          248.6068,
+          -22.25417
+        ],
+        [
+          243.85554,
+          -22.66919
+        ],
+        [
+          244.31749,
+          -27.98206
+        ],
+        [
+          249.275,
+          -27.54973
+        ]
+      ],
+      "ra_deg": 246.51193,
+      "dec_deg": -25.13395,
+      "fov_w_deg": 4.41875,
+      "fov_h_deg": 5.33988,
+      "pixscale_arcsec": 2.5845,
+      "width_px": 6155,
+      "height_px": 7438
+    },
+    {
+      "file": "web/display/egg_185x300_FINAL_blue_sig_2400.jpg",
+      "thumb": "web/thumbs/egg_185x300_FINAL_blue_sig_1024.jpg",
+      "original": "egg_185x300_FINAL_blue_sig.jpg",
+      "label": "Ngc 6164 Dragons Egg",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          248.02063,
+          -48.31758
+        ],
+        [
+          248.99333,
+          -48.30965
+        ],
+        [
+          248.98313,
+          -47.93613
+        ],
+        [
+          248.0171,
+          -47.94425
+        ]
+      ],
+      "ra_deg": 248.50347,
+      "dec_deg": -48.12791,
+      "fov_w_deg": 0.64733,
+      "fov_h_deg": 0.37383,
+      "pixscale_arcsec": 0.6275,
+      "width_px": 3714,
+      "height_px": 2144
+    },
+    {
+      "file": "web/display/Cosmic_bat2_2400.jpg",
+      "thumb": "web/thumbs/Cosmic_bat2_1024.jpg",
+      "original": "Cosmic_bat2.jpg",
+      "label": "Ldn 43 Cosmic Bat",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          248.26698,
+          -16.02619
+        ],
+        [
+          248.96425,
+          -16.01356
+        ],
+        [
+          248.9564,
+          -15.63668
+        ],
+        [
+          248.26032,
+          -15.64916
+        ]
+      ],
+      "ra_deg": 248.6118,
+      "dec_deg": -15.83157,
+      "fov_w_deg": 0.67079,
+      "fov_h_deg": 0.37732,
+      "pixscale_arcsec": 0.6289,
+      "width_px": 3840,
+      "height_px": 2160
+    },
+    {
+      "file": "web/display/sho_starless_narrowband_hue_MAS_BX_NX-3-2_recompose_2400.jpg",
+      "thumb": "web/thumbs/sho_starless_narrowband_hue_MAS_BX_NX-3-2_recompose_1024.jpg",
+      "original": "sho_starless_narrowband_hue_MAS_BX_NX-3-2_recompose.jpg",
+      "label": "Ngc 6188 Fighting Dragons Of Ara In Sho",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          251.57563,
+          -50.11086
+        ],
+        [
+          251.42409,
+          -46.87835
+        ],
+        [
+          248.00031,
+          -46.89631
+        ],
+        [
+          247.92723,
+          -50.13035
+        ]
+      ],
+      "ra_deg": 249.73012,
+      "dec_deg": -48.51756,
+      "fov_w_deg": 3.23745,
+      "fov_h_deg": 2.34229,
+      "pixscale_arcsec": 2.6108,
+      "width_px": 4464,
+      "height_px": 3229
+    },
+    {
+      "file": "web/display/ngc 6188 hoo_mirror_thumb_2400.jpg",
+      "thumb": "web/thumbs/ngc 6188 hoo_mirror_thumb_1024.jpg",
+      "original": "ngc 6188 hoo_mirror_thumb.jpg",
+      "label": "Ngc 6188 Fighting Dragons Of Ara In Ha And Oiii",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          251.68461,
+          -50.10371
+        ],
+        [
+          251.52602,
+          -46.87628
+        ],
+        [
+          247.96023,
+          -46.89602
+        ],
+        [
+          247.88451,
+          -50.12485
+        ]
+      ],
+      "ra_deg": 249.76349,
+      "dec_deg": -48.51459,
+      "fov_w_deg": 3.23298,
+      "fov_h_deg": 2.43929,
+      "pixscale_arcsec": 2.6113,
+      "width_px": 4457,
+      "height_px": 3363
+    },
+    {
+      "file": "web/display/sv17 dark_wolf_final_2400.jpg",
+      "thumb": "web/thumbs/sv17 dark_wolf_final_1024.jpg",
+      "original": "sv17 dark_wolf_final.jpg",
+      "label": "sv17 dark wolf",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          252.77658,
+          -43.01178
+        ],
+        [
+          252.7778,
+          -44.07479
+        ],
+        [
+          253.88984,
+          -44.06975
+        ],
+        [
+          253.87336,
+          -43.00783
+        ]
+      ],
+      "ra_deg": 253.33022,
+      "dec_deg": -43.54346,
+      "fov_w_deg": 1.06346,
+      "fov_h_deg": 0.80078,
+      "pixscale_arcsec": 0.8239,
+      "width_px": 4647,
+      "height_px": 3499
+    },
+    {
+      "file": "web/display/prawn_reintegrate_sig_2400.jpg",
+      "thumb": "web/thumbs/prawn_reintegrate_sig_1024.jpg",
+      "original": "prawn_reintegrate_sig.jpg",
+      "label": "prawn",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          254.78486,
+          -40.97821
+        ],
+        [
+          254.76916,
+          -39.91553
+        ],
+        [
+          253.71919,
+          -39.9185
+        ],
+        [
+          253.7194,
+          -40.98329
+        ]
+      ],
+      "ra_deg": 254.24758,
+      "dec_deg": -40.45144,
+      "fov_w_deg": 1.06486,
+      "fov_h_deg": 0.80503,
+      "pixscale_arcsec": 0.8233,
+      "width_px": 4656,
+      "height_px": 3520
+    },
+    {
+      "file": "web/display/lobster_hoo_recompose_sig_2400.jpg",
+      "thumb": "web/thumbs/lobster_hoo_recompose_sig_1024.jpg",
+      "original": "lobster_hoo_recompose_sig.jpg",
+      "label": "lobster",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          262.13698,
+          -35.34053
+        ],
+        [
+          262.22398,
+          -33.1394
+        ],
+        [
+          260.47481,
+          -33.07837
+        ],
+        [
+          260.33192,
+          -35.2723
+        ]
+      ],
+      "ra_deg": 261.29333,
+      "dec_deg": -34.21225,
+      "fov_w_deg": 2.20158,
+      "fov_h_deg": 1.47175,
+      "pixscale_arcsec": 1.2685,
+      "width_px": 6248,
+      "height_px": 4176
+    },
+    {
+      "file": "web/display/trifid_sig_finla_2400.jpg",
+      "thumb": "web/thumbs/trifid_sig_finla_1024.jpg",
+      "original": "trifid_sig_finla.jpg",
+      "label": "trifid finla",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          270.25845,
+          -23.39445
+        ],
+        [
+          270.26306,
+          -22.51359
+        ],
+        [
+          270.97428,
+          -22.51489
+        ],
+        [
+          270.97475,
+          -23.3952
+        ]
+      ],
+      "ra_deg": 270.61841,
+      "dec_deg": -22.95475,
+      "fov_w_deg": 0.88104,
+      "fov_h_deg": 0.65769,
+      "pixscale_arcsec": 0.8234,
+      "width_px": 3852,
+      "height_px": 2875
+    },
+    {
+      "file": "web/display/m8_73subs_21900sec_ASI585MC_SHO_Recomb_processed_stars_2400.jpg",
+      "thumb": "web/thumbs/m8_73subs_21900sec_ASI585MC_SHO_Recomb_processed_stars_1024.jpg",
+      "original": "m8_73subs_21900sec_ASI585MC_SHO_Recomb_processed_stars.jpg",
+      "label": "m8 Recomb stars",
+      "solved": true,
+      "width_px": 3734,
+      "height_px": 2292,
+      "engine": "pixinsight",
+      "corners": [
+        [
+          271.64771,
+          -24.52226
+        ],
+        [
+          270.58152,
+          -24.80449
+        ],
+        [
+          270.40424,
+          -24.24104
+        ],
+        [
+          271.46609,
+          -23.96006
+        ]
+      ],
+      "ra_deg": 271.02529,
+      "dec_deg": -24.38292,
+      "fov_w_deg": 0.98257,
+      "fov_h_deg": 0.60312,
+      "pixscale_arcsec": 0.9473
+    },
+    {
+      "file": "web/display/LBN28 chinese dragon AW_2400.jpg",
+      "thumb": "web/thumbs/LBN28 chinese dragon AW_1024.jpg",
+      "original": "LBN28 chinese dragon AW.jpg",
+      "label": "LBN28 chinese dragon",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          272.10026,
+          -23.41432
+        ],
+        [
+          272.11792,
+          -24.42764
+        ],
+        [
+          272.76372,
+          -24.41724
+        ],
+        [
+          272.74027,
+          -23.40353
+        ]
+      ],
+      "ra_deg": 272.43056,
+      "dec_deg": -23.91616,
+      "fov_w_deg": 1.01428,
+      "fov_h_deg": 0.58828,
+      "pixscale_arcsec": 0.9802,
+      "width_px": 3725,
+      "height_px": 2160
+    },
+    {
+      "file": "web/display/Anteater_74x180s_final_sig_standard_2400.jpg",
+      "thumb": "web/thumbs/Anteater_74x180s_final_sig_standard_1024.jpg",
+      "original": "Anteater_74x180s_final_sig_standard.jpg",
+      "label": "Ngc 6726 Anteater Nebula R Cra",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          284.98901,
+          -37.17856
+        ],
+        [
+          285.76505,
+          -37.17519
+        ],
+        [
+          285.76031,
+          -36.80168
+        ],
+        [
+          284.98842,
+          -36.80529
+        ]
+      ],
+      "ra_deg": 285.37545,
+      "dec_deg": -36.99066,
+      "fov_w_deg": 0.61863,
+      "fov_h_deg": 0.37365,
+      "pixscale_arcsec": 0.6288,
+      "width_px": 3542,
+      "height_px": 2140
+    },
+    {
+      "file": "web/display/NGC_6729_30x60R_30x60G_30x60B_50x30L_ASI1600MM_2400.jpg",
+      "thumb": "web/thumbs/NGC_6729_30x60R_30x60G_30x60B_50x30L_ASI1600MM_1024.jpg",
+      "original": "NGC_6729_30x60R_30x60G_30x60B_50x30L_ASI1600MM.jpg",
+      "label": "SANDQVIST 39",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          284.01682,
+          -35.09651
+        ],
+        [
+          283.15399,
+          -39.02603
+        ],
+        [
+          286.99875,
+          -39.49872
+        ],
+        [
+          287.67028,
+          -35.54735
+        ]
+      ],
+      "ra_deg": 285.4646,
+      "dec_deg": -37.30712,
+      "fov_w_deg": 3.99446,
+      "fov_h_deg": 3.01781,
+      "pixscale_arcsec": 3.1674,
+      "width_px": 4540,
+      "height_px": 3431
+    },
+    {
+      "file": "web/display/NGC 6744 Pavo Sig_2400.jpg",
+      "thumb": "web/thumbs/NGC 6744 Pavo Sig_1024.jpg",
+      "original": "NGC 6744 Pavo Sig.jpg",
+      "label": "NGC 6744 Pavo",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          286.70593,
+          -63.67245
+        ],
+        [
+          288.19751,
+          -63.67504
+        ],
+        [
+          288.2029,
+          -64.04198
+        ],
+        [
+          286.69315,
+          -64.03905
+        ]
+      ],
+      "ra_deg": 287.45084,
+      "dec_deg": -63.859,
+      "fov_w_deg": 0.6615,
+      "fov_h_deg": 0.36713,
+      "pixscale_arcsec": 0.6285,
+      "width_px": 3789,
+      "height_px": 2103
+    },
+    {
+      "file": "web/display/EagleRay_569_GX_BX_SPCC_starless_NX_ghs_LR2_NX_2400.jpg",
+      "thumb": "web/thumbs/EagleRay_569_GX_BX_SPCC_starless_NX_ghs_LR2_NX_1024.jpg",
+      "original": "EagleRay_569_GX_BX_SPCC_starless_NX_ghs_LR2_NX.jpg",
+      "label": "EagleRay 569 NX ghs LR2 NX",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          298.72567,
+          -12.97993
+        ],
+        [
+          298.59806,
+          -15.17984
+        ],
+        [
+          300.12033,
+          -15.25862
+        ],
+        [
+          300.23525,
+          -13.05967
+        ]
+      ],
+      "ra_deg": 299.42033,
+      "dec_deg": -14.12128,
+      "fov_w_deg": 2.2041,
+      "fov_h_deg": 1.47344,
+      "pixscale_arcsec": 1.27,
+      "width_px": 6248,
+      "height_px": 4176
+    },
+    {
+      "file": "web/display/ngc6960 Veil sig_2400.jpg",
+      "thumb": "web/thumbs/ngc6960 Veil sig_1024.jpg",
+      "original": "ngc6960 Veil sig.jpg",
+      "label": "ngc6960 Veil",
+      "solved": true,
+      "width_px": 4892,
+      "height_px": 3270,
+      "engine": "pixinsight",
+      "corners": [
+        [
+          314.57608,
+          28.72616
+        ],
+        [
+          314.63871,
+          33.21089
+        ],
+        [
+          311.06175,
+          33.20115
+        ],
+        [
+          311.16312,
+          28.7163
+        ]
+      ],
+      "ra_deg": 312.86005,
+      "dec_deg": 30.97538,
+      "fov_w_deg": 4.49008,
+      "fov_h_deg": 3.00106,
+      "pixscale_arcsec": 3.3042
+    },
+    {
+      "file": "web/display/C_63_96subs_28800sec_ASI585_HO_PI_2400.jpg",
+      "thumb": "web/thumbs/C_63_96subs_28800sec_ASI585_HO_PI_1024.jpg",
+      "original": "C_63_96subs_28800sec_ASI585_HO_PI.jpg",
+      "label": "Helix Eye Of God Dual Narrowband",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          338.03183,
+          -20.95791
+        ],
+        [
+          336.97081,
+          -21.27237
+        ],
+        [
+          336.78388,
+          -20.71474
+        ],
+        [
+          337.84123,
+          -20.40168
+        ]
+      ],
+      "ra_deg": 337.40722,
+      "dec_deg": -20.83758,
+      "fov_w_deg": 1.03882,
+      "fov_h_deg": 0.58486,
+      "pixscale_arcsec": 0.9349,
+      "width_px": 4000,
+      "height_px": 2251
+    },
+    {
+      "file": "web/display/ngc2782 grus_2400.jpg",
+      "thumb": "web/thumbs/ngc2782 grus_1024.jpg",
+      "original": "ngc2782 grus.jpg",
+      "label": "ngc2782 grus",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          350.29985,
+          -43.22375
+        ],
+        [
+          350.39224,
+          -41.51397
+        ],
+        [
+          348.86771,
+          -41.45913
+        ],
+        [
+          348.73356,
+          -43.16715
+        ]
+      ],
+      "ra_deg": 349.57266,
+      "dec_deg": -42.34388,
+      "fov_w_deg": 1.71193,
+      "fov_h_deg": 1.14442,
+      "pixscale_arcsec": 1.2707,
+      "width_px": 4850,
+      "height_px": 3242
+    }
+  ]
+}

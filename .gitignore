@@ -1,0 +1,23 @@
+# Keep the full-resolution originals out of the repo. The viewer only ever loads
+# web/display and web/thumbs; manifest.json records the original filename as a
+# label but never fetches it.
+#
+# The leading slash anchors each pattern to the repo root, so files inside
+# web/ are NOT matched and get committed normally.
+/*.jpg
+/*.jpeg
+/*.png
+/*.tif
+/*.tiff
+
+# ...except the all-sky backdrop, which the viewer does need.
+!/sky.jpg
+
+# solver scratch and local tooling
+__pycache__/
+*.wcs
+*.fits
+*.pyc
+
+# your Telescopius export is only needed when re-running the solver
+my-telescopius-pictures.csv
