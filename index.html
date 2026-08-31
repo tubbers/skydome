@@ -53,20 +53,24 @@
   #gl,#ov{position:absolute;inset:0;width:100%;height:100%}
   #gl{cursor:grab}#gl.drag{cursor:grabbing}
   #msg{position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:5;max-width:74%;
+    word-break:break-word;
     background:rgba(18,4,2,.94);border:1px solid var(--edge);border-radius:3px;padding:9px 13px;
     font-family:var(--mono);font-size:11px;color:var(--hot);line-height:1.55;display:none}
 
   /* ---- mobile: canvas full screen, a thin bar at the bottom, rest in a sheet ---- */
   #gyro{display:none}
-  #fabs,#nav,#nowpill{display:none}
+  h1 #ver{color:var(--ink-dim);letter-spacing:.08em}
+  #nav,#nowpill{display:none}
+  #fabs{display:flex;position:absolute;right:10px;top:12px;z-index:6;
+    flex-direction:column;gap:9px}
+  #fGyro,#fSet{display:none}                     /* mobile-only controls */
   .fab{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;
     justify-content:center;font-size:19px;line-height:1;color:var(--ink);
     background:rgba(13,3,1,.82);border:1px solid var(--edge);cursor:pointer;
     -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);padding:0}
   .fab.on{color:#000;background:var(--pick);border-color:var(--pick)}
   .fab.warm{color:#000;background:var(--hot);border-color:var(--hot)}
-  body.mobile #fabs{display:flex;position:absolute;right:10px;top:12px;z-index:6;
-    flex-direction:column;gap:9px}
+  body.mobile #fGyro,body.mobile #fSet{display:flex}
   body.mobile #nav{display:flex;position:absolute;left:50%;transform:translateX(-50%);
     bottom:calc(14px + env(safe-area-inset-bottom));z-index:6;gap:14px}
   body.mobile #nav .fab{width:52px;height:52px;font-size:17px}
@@ -117,7 +121,7 @@
 <body>
 <div id="app">
   <aside>
-    <h1>Sky dome · solved images</h1>
+    <h1>Sky dome · <span id="ver"></span></h1>
     <div id="panelTop">
     <div class="note">Drag to look, pinch or scroll to zoom. Tap an image to fly to it.
       Arrow keys step targets, Esc clears.</div>
@@ -173,6 +177,8 @@
       <div class="seg"><button id="lOn" class="on">on</button><button id="lOff">off</button></div></div>
     <div class="fld"><label>RA/Dec grid</label>
       <div class="seg"><button id="gOff" class="on">off</button><button id="gOn">on</button></div></div>
+    <div class="fld"><label>Debug overlay</label>
+      <div class="seg"><button id="dbgOff" class="on">off</button><button id="dbgOn">on</button></div></div>
     <div class="fld"><label>Horizon</label>
       <div class="seg"><button id="hOn" class="on">on</button><button id="hOff">off</button></div></div>
 
@@ -201,6 +207,7 @@
 
 <script>
 "use strict";
+const VERSION="1.1.0";
 const D=Math.PI/180,R2D=180/Math.PI,$=id=>document.getElementById(id);
 const REDUCED=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const MQ=matchMedia("(max-width: 760px), (pointer: coarse)");
@@ -238,7 +245,7 @@ const S={look:{az:180,alt:45}, fov:100, lat:-33.8, lst:80,
          opacity:1, backdrop:true, starNames:true, grid:false, horizon:true,
          followSky:true, speed:1, sel:null, playing:false,
          // gyro / real-sky mode
-         gyro:false, decl:12.7, tweak:0, smooth:60,
+         gyro:false, decl:12.7, tweak:0, smooth:60, debug:false,
          lat0:-33.80071, lon:151.20855,
          q:null, qT:0, M:null, src:null, srcRank:0, gyroEvents:0, absolute:false, seen:{},
          fovBeforeLock:null, screenAdd:0, screenAuto:true, moon:false};
@@ -485,6 +492,48 @@ function basis(){
          r:[Math.cos(az),-Math.sin(az),0],
          u:[-Math.sin(al)*Math.sin(az),-Math.sin(al)*Math.cos(az),Math.cos(al)]};}
 
+/* ---------- debug overlay: sensor state on screen, no settings panel needed ---------- */
+const MISSING=new Set();
+function drawDebug(w,h,B){
+  const mono=getComputedStyle(document.body).getPropertyValue("--mono");
+  const L=[];
+  const n=(v,d=0)=>v==null?"-":(+v).toFixed(d);
+  L.push(`skydome v${VERSION}  ${IMAGES.length} images  fov ${S.fov.toFixed(1)}\u00b0`);
+  L.push(`gl ${gl?"ok":"NONE"}  backdrop ${bgReady?"ok":"no"}  moon ${moonState}`);
+  L.push(`gyro ${S.gyro||"off"}  src ${S.src||"-"}  n=${S.gyroEvents}  ${S.absolute?"absolute":"relative"}`);
+  for(const [k,v] of Object.entries(S.seen))
+    L.push(`  ${k===S.src?"\u25b8":" "}${k} az ${n(v.az)}  (${v.n})`);
+  if(S.raw) L.push(`alpha ${n(S.raw.a)} beta ${n(S.raw.b)} gamma ${n(S.raw.g)}`
+                   +(S.raw.c!=null?` compass ${n(S.raw.c)}`:""));
+  const sa=(screen.orientation&&screen.orientation.angle)||0;
+  L.push(`screen ${sa}\u00b0 ${(screen.orientation&&screen.orientation.type)||"?"}`
+         +`  add ${S.screenAuto?"auto(0)":S.screenAdd}  using ${screenAngle()}\u00b0`);
+  L.push(`win ${innerWidth}x${innerHeight}  dpr ${(devicePixelRatio||1).toFixed(1)}`);
+  const az=((Math.atan2(B.f[0],B.f[1])*R2D)%360+360)%360;
+  const alt=Math.asin(Math.max(-1,Math.min(1,B.f[2])))*R2D;
+  L.push(`look az ${n(az)} alt ${n(alt)}`);
+  // A correct camera has screen-up pointing skyward and screen-right level. If
+  // right has a big vertical component the view is ROLLED - which is what a
+  // vertical horizon line means.
+  const rollDeg=Math.atan2(B.r[2], B.u[2])*R2D;
+  L.push(`up.z ${B.u[2].toFixed(2)}  right.z ${B.r[2].toFixed(2)}  roll ${n(rollDeg)}\u00b0`
+         +(Math.abs(B.r[2])>0.5?"  <- ROLLED":""));
+  L.push(`decl ${S.decl} tweak ${S.tweak}  lat ${n(S.lat,2)} lon ${n(S.lon,2)} lst ${n(S.lst)}`);
+  if(MISSING.size) L.push(`missing files: ${MISSING.size} \u2014 ${[...MISSING][0]}`);
+
+  octx.font="11px "+mono; octx.textAlign="left"; octx.textBaseline="top";
+  const lh=14, pad=6;
+  const wide=Math.max(...L.map(t=>octx.measureText(t).width));
+  octx.fillStyle="rgba(0,0,0,.72)";
+  octx.fillRect(8,8,wide+pad*2,L.length*lh+pad*2);
+  octx.strokeStyle="rgba(255,154,118,.35)";octx.lineWidth=1;
+  octx.strokeRect(8,8,wide+pad*2,L.length*lh+pad*2);
+  L.forEach((t,i)=>{
+    octx.fillStyle=/ROLLED|NONE|missing/.test(t)?"#ffcf6b":"rgba(255,154,118,.92)";
+    octx.fillText(t,8+pad,8+pad+i*lh);
+  });
+}
+
 /* ---------- moon, drawn at true angular size for scale ---------- */
 const MOON_DEG=0.518;                 // mean apparent diameter, 31.1 arcmin
 let moonImg=null, moonState="none";   // none | loading | ok | missing
@@ -573,6 +622,7 @@ function render(){
 
   const {w,h}=fitOv();
   drawOverlay(w,h,B,(h/2)/Math.tan(S.fov/2*D),eqToHor(S.lat,S.lst));
+  $("ver").textContent="v"+VERSION;
   $("cal").textContent=`look az ${Math.round(S.look.az)}\u00b0 alt ${Math.round(S.look.alt)}\u00b0`
     +` \u00b7 fov ${S.fov.toFixed(1)}\u00b0 \u00b7 ${IMAGES.length} image${IMAGES.length===1?"":"s"}`;
 }
@@ -642,6 +692,7 @@ function drawOverlay(w,h,B,FOC,M){
   }
 
   if(S.moon) drawMoon(w,h,FOC);
+  if(S.debug) drawDebug(w,h,B);
 
   if(S.horizon){
     const pts=[];for(let az=0;az<=360;az+=2)pts.push(proj(vec(az,0)));
@@ -769,6 +820,7 @@ seg("dOn","dOff",v=>S.backdrop=v);
 seg("lOn","lOff",v=>S.starNames=v);
 seg("gOff","gOn",v=>S.grid=!v);
 seg("hOn","hOff",v=>S.horizon=v);
+seg("dbgOff","dbgOn",v=>S.debug=!v);
 seg("skFollow","skHold",v=>S.followSky=v);
 
 $("prev").onclick=()=>step(-1);
