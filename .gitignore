@@ -21,3 +21,4 @@ __pycache__/
 
 # your Telescopius export is only needed when re-running the solver
 my-telescopius-pictures.csv
+!/moon.png
