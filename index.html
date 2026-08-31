@@ -203,7 +203,7 @@
 
 <script>
 "use strict";
-const VERSION="1.2.0";
+const VERSION="1.3.0";
 const D=Math.PI/180,R2D=180/Math.PI,$=id=>document.getElementById(id);
 const REDUCED=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const MQ=matchMedia("(max-width: 760px), (pointer: coarse)");
@@ -241,7 +241,7 @@ const S={look:{az:180,alt:45}, fov:100, lat:-33.8, lst:80,
          opacity:1, backdrop:true, starNames:true, grid:false, horizon:true,
          followSky:true, speed:1, sel:null, playing:false,
          // gyro / real-sky mode
-         gyro:false, decl:12.7, tweak:0, smooth:60, debug:false,
+         gyro:false, decl:12.7, tweak:0, smooth:60, debug:false, north:null, levelled:false,
          lat0:-33.80071, lon:151.20855,
          q:null, qT:0, M:null, src:null, srcRank:0, gyroEvents:0, absolute:false, seen:{},
          fovBeforeLock:null, screenAdd:0, moon:false};
@@ -525,6 +525,7 @@ function drawDebug(w,h,B){
   const rollDeg=Math.atan2(B.r[2], B.u[2])*R2D;
   L.push(`up.z ${B.u[2].toFixed(2)}  right.z ${B.r[2].toFixed(2)}  roll ${n(rollDeg)}\u00b0`
          +(Math.abs(B.r[2])>0.5?"  <- ROLLED":""));
+  L.push(`north ${S.north==null?"not locked (point near horizon)":Math.round(S.north)+"\u00b0"}`);
   L.push(`decl ${S.decl} tweak ${S.tweak}  lat ${n(S.lat,2)} lon ${n(S.lon,2)} lst ${n(S.lst)}`);
   if(MISSING.size) L.push(`missing files: ${MISSING.size} \u2014 ${[...MISSING][0]}`);
 
@@ -859,8 +860,7 @@ $("srNudge").onclick=()=>{
   try{ localStorage.setItem("skydome.screenAdd",S.screenAdd); }catch(e){}
   showScreenAdd(); render();
 };
-try{ const v=localStorage.getItem("skydome.screenAdd");
-     if(v!=null) S.screenAdd=+v; }catch(e){}
+const _sa=localStorage_get("skydome.screenAdd"); if(_sa!=null) S.screenAdd=+_sa;
 showScreenAdd();
 $("play").onclick=()=>{
   S.playing=!S.playing;
@@ -944,8 +944,27 @@ function onOri(e,src){
   if(S.gyro!=="live")return;
   if(e.alpha==null&&e.webkitCompassHeading==null)return;
   let alpha=e.alpha;
-  if(typeof e.webkitCompassHeading==="number"&&!isNaN(e.webkitCompassHeading))
-    alpha=360-e.webkitCompassHeading;                        // iOS reports true north
+  const hdg=e.webkitCompassHeading;
+  if(typeof hdg==="number"&&!isNaN(hdg)){
+    /* iOS webkitCompassHeading is absolute but it FLIPS BY 180 as the device tilts
+       past roughly 45 degrees - measured on an iPhone: compass 50 -> 231 while
+       alpha/beta/gamma moved smoothly (4->359, 117->139, 4->1). Substituting it for
+       alpha on every event fed that flip straight into the view.
+       Instead: keep the device's own smooth alpha, and use the compass only to learn
+       a constant north offset, sampled only when the device is pointing near the
+       horizon where the heading is trustworthy. */
+    const M0=fromQuat(eulerQuat(alpha,e.beta||0,e.gamma||0));
+    const altRaw=Math.asin(Math.max(-1,Math.min(1,-M0[8])))*R2D;
+    const cand=(((360-hdg)-alpha)%360+360)%360;
+    if(Math.abs(altRaw)<40){
+      if(S.north==null) S.north=cand;                        // first trustworthy fix
+      else{
+        const d=((cand-S.north+540)%360)-180;
+        if(Math.abs(d)<30) S.north=(S.north+d*0.05+360)%360;  // slow drift correction
+      }
+    }
+    alpha = (S.north!=null) ? alpha+S.north : 360-hdg;        // fall back until locked
+  }
   const q=eulerQuat(alpha,e.beta||0,e.gamma||0);
   traceSrc(src,q);
   if(!claimSrc(src))return;
@@ -996,6 +1015,7 @@ function screenAngle(){
   const a=(screen.orientation&&screen.orientation.angle)||0;
   return a + S.screenAdd;
 }
+function localStorage_get(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
 function currentRoll(){
   const b=(S.gyro==="live")?gyroBasis():null;
   return b ? Math.atan2(b.r[2],b.u[2])*R2D : null;
@@ -1081,6 +1101,16 @@ function goLive(){
   if(!clockTimer) clockTimer=setInterval(()=>{ if(S.gyro) syncClock(); },20000);
   setGyroButton();
   if(!gyroRAF) gyroRAF=requestAnimationFrame(gyroLoop);
+  // An iPad reports screen.orientation.angle against a landscape natural frame while
+  // iOS still reports orientation in a portrait one, so the view starts rolled 90.
+  // Measure it rather than asking anyone to guess.
+  if(!S.levelled && !localStorage_get("skydome.screenAdd")) setTimeout(()=>{
+    const roll=currentRoll();
+    if(S.gyro==="live" && roll!=null && Math.abs(roll)>30){ levelHorizon(); note(
+      `Horizon was ${Math.round(roll)}\u00b0 off - levelled automatically. `+
+      `Settings has a manual control if it needs nudging.`); }
+    S.levelled=true;
+  },2500);
 }
 function lockGyro(){
   S.fovBeforeLock=S.fov;
@@ -1090,7 +1120,7 @@ function lockGyro(){
   S.gyro="locked"; setGyroButton();
 }
 function stopGyro(){
-  S.gyro=false; setGyroButton();
+  S.gyro=false; S.north=null; setGyroButton();
   if(sensorObj){ try{sensorObj.stop();}catch(e){} sensorObj=null; }
   gyroAttached=false; S.srcRank=0; S.src=null; S.q=null; S.M=null;
   gyroStatus(); render();
