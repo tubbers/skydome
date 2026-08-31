@@ -7,7 +7,7 @@
       "file": "web/display/ngc 55 pearls_2400.jpg",
       "thumb": "web/thumbs/ngc 55 pearls_1024.jpg",
       "original": "ngc 55 pearls.jpg",
-      "label": "ngc 55 pearls",
+      "label": "NGC 55 Whale / Pearls",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -34,13 +34,14 @@
       "fov_h_deg": 0.32068,
       "pixscale_arcsec": 0.6288,
       "width_px": 3264,
-      "height_px": 1836
+      "height_px": 1836,
+      "distance_ly": "6,500,000"
     },
     {
       "file": "web/display/ngc 253 sculptor_2400.jpg",
       "thumb": "web/thumbs/ngc 253 sculptor_1024.jpg",
       "original": "ngc 253 sculptor.jpg",
-      "label": "ngc 253 sculptor",
+      "label": "NGC 253 Sculptor Galaxy",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -67,13 +68,14 @@
       "fov_h_deg": 0.37716,
       "pixscale_arcsec": 0.6287,
       "width_px": 3506,
-      "height_px": 2160
+      "height_px": 2160,
+      "distance_ly": "11,400,000"
     },
     {
       "file": "web/display/ngc253 wide AW sig_2400.jpg",
       "thumb": "web/thumbs/ngc253 wide AW sig_1024.jpg",
       "original": "ngc253 wide AW sig.jpg",
-      "label": "ngc253 wide",
+      "label": "NGC 253 Sculptor (wide field)",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -100,13 +102,14 @@
       "fov_h_deg": 2.85368,
       "pixscale_arcsec": 2.5885,
       "width_px": 5586,
-      "height_px": 3968
+      "height_px": 3968,
+      "distance_ly": "11,400,000"
     },
     {
       "file": "web/display/NGC292 smc_2400.jpg",
       "thumb": "web/thumbs/NGC292 smc_1024.jpg",
       "original": "NGC292 smc.jpg",
-      "label": "NGC292 smc",
+      "label": "NGC 292 Small Magellanic Cloud",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -133,13 +136,15 @@
       "fov_h_deg": 3.09585,
       "pixscale_arcsec": 3.1663,
       "width_px": 4656,
-      "height_px": 3520
+      "height_px": 3520,
+      "distance_ly": "200,000",
+      "distance_note": "in SMC; SMC distance, nebula not separately measured"
     },
     {
       "file": "web/display/NGC_346_97subs_47100sec_ASI585MC_final_2400.jpg",
       "thumb": "web/thumbs/NGC_346_97subs_47100sec_ASI585MC_final_1024.jpg",
       "original": "NGC_346_97subs_47100sec_ASI585MC_final.jpg",
-      "label": "Smc Nebula Ngc346",
+      "label": "NGC 346 (SMC)",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -166,13 +171,15 @@
       "fov_h_deg": 0.34205,
       "pixscale_arcsec": 0.4179,
       "width_px": 5431,
-      "height_px": 2945
+      "height_px": 2945,
+      "distance_ly": "200,000",
+      "distance_note": "in SMC; SMC distance, nebula not separately measured"
     },
     {
       "file": "web/display/NGC_292_142subs_42600sec_ASI585_hoo_pi_final_2400.jpg",
       "thumb": "web/thumbs/NGC_292_142subs_42600sec_ASI585_hoo_pi_final_1024.jpg",
       "original": "NGC_292_142subs_42600sec_ASI585_hoo_pi_final.jpg",
-      "label": "Smc Nebula Ngc346",
+      "label": "SMC core, NGC 346 region (HOO)",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -199,7 +206,9 @@
       "fov_h_deg": 0.57801,
       "pixscale_arcsec": 0.9789,
       "width_px": 3796,
-      "height_px": 2126
+      "height_px": 2126,
+      "distance_ly": "200,000",
+      "distance_note": "in SMC; SMC distance, nebula not separately measured"
     },
     {
       "file": "web/display/Comet 220P McNaught_2400.jpg",
@@ -238,7 +247,7 @@
       "file": "web/display/NGC_1365_95subs_16950sec_astrowizard_sig_2400.jpg",
       "thumb": "web/thumbs/NGC_1365_95subs_16950sec_astrowizard_sig_1024.jpg",
       "original": "NGC_1365_95subs_16950sec_astrowizard_sig.jpg",
-      "label": "NGC 1365",
+      "label": "NGC 1365 Great Barred Spiral",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -265,13 +274,14 @@
       "fov_h_deg": 0.32304,
       "pixscale_arcsec": 0.2987,
       "width_px": 6356,
-      "height_px": 3892
+      "height_px": 3892,
+      "distance_ly": "56,000,000"
     },
     {
       "file": "web/display/NGC1909 _crop_ADBE_spcc_blurX_denoise_veralux_LR_remerge - Copy_2400.jpg",
       "thumb": "web/thumbs/NGC1909 _crop_ADBE_spcc_blurX_denoise_veralux_LR_remerge - Copy_1024.jpg",
       "original": "NGC1909 _crop_ADBE_spcc_blurX_denoise_veralux_LR_remerge - Copy.jpg",
-      "label": "NGC1909 ADBE veralux LR remerge Copy",
+      "label": "IC 2118 Witch Head",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -298,13 +308,14 @@
       "fov_h_deg": 3.06122,
       "pixscale_arcsec": 3.1579,
       "width_px": 4650,
-      "height_px": 3490
+      "height_px": 3490,
+      "distance_ly": "900"
     },
     {
       "file": "web/display/NGC2018_HOO_FINAL_sig_2400.jpg",
       "thumb": "web/thumbs/NGC2018_HOO_FINAL_sig_1024.jpg",
       "original": "NGC2018_HOO_FINAL_sig.jpg",
-      "label": "Ngc 2018 In Large Magellan Cloud",
+      "label": "NGC 2018 (LMC)",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -331,13 +342,15 @@
       "fov_h_deg": 0.35223,
       "pixscale_arcsec": 0.6279,
       "width_px": 2974,
-      "height_px": 2020
+      "height_px": 2020,
+      "distance_ly": "161,800",
+      "distance_note": "in LMC; LMC distance (Pietrzy\u0144ski 2019), nebula not separately measured"
     },
     {
       "file": "web/display/NGC_2070_257subs_73140sec_ASI585MC_final_2400.jpg",
       "thumb": "web/thumbs/NGC_2070_257subs_73140sec_ASI585MC_final_1024.jpg",
       "original": "NGC_2070_257subs_73140sec_ASI585MC_final.jpg",
-      "label": "NGC 2070",
+      "label": "NGC 2070 Tarantula Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -364,13 +377,15 @@
       "fov_h_deg": 0.66997,
       "pixscale_arcsec": 0.9794,
       "width_px": 3692,
-      "height_px": 2462
+      "height_px": 2462,
+      "distance_ly": "161,800",
+      "distance_note": "in LMC (Pietrzy\u0144ski 2019)"
     },
     {
       "file": "web/display/NGC_2264_62subs_18600sec__ASI585_final_2400.jpg",
       "thumb": "web/thumbs/NGC_2264_62subs_18600sec__ASI585_final_1024.jpg",
       "original": "NGC_2264_62subs_18600sec__ASI585_final.jpg",
-      "label": "Cone Nebula",
+      "label": "NGC 2264 Cone Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -397,13 +412,14 @@
       "fov_h_deg": 0.34296,
       "pixscale_arcsec": 0.4461,
       "width_px": 5028,
-      "height_px": 2767
+      "height_px": 2767,
+      "distance_ly": "2,700"
     },
     {
       "file": "web/display/SH2-308_207subs_122280sec_ASI1600MM_pix_2400.jpg",
       "thumb": "web/thumbs/SH2-308_207subs_122280sec_ASI1600MM_pix_1024.jpg",
       "original": "SH2-308_207subs_122280sec_ASI1600MM_pix.jpg",
-      "label": "Dolphin Head Nebula Oiii Lrgb",
+      "label": "Sh2-308 Dolphin Head",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -430,13 +446,15 @@
       "fov_h_deg": 2.75798,
       "pixscale_arcsec": 3.1616,
       "width_px": 4299,
-      "height_px": 3141
+      "height_px": 3141,
+      "distance_ly": "4,530",
+      "distance_note": "some sources up to 5,870 ly"
     },
     {
       "file": "web/display/seagull_recompose_sig_2400.jpg",
       "thumb": "web/thumbs/seagull_recompose_sig_1024.jpg",
       "original": "seagull_recompose_sig.jpg",
-      "label": "Seagull Nebula In Sho Ic 2177",
+      "label": "IC 2177 Seagull Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -463,13 +481,14 @@
       "fov_h_deg": 2.39443,
       "pixscale_arcsec": 2.6095,
       "width_px": 4470,
-      "height_px": 3303
+      "height_px": 3303,
+      "distance_ly": "3,800"
     },
     {
       "file": "web/display/NGC_2359_62subs_18600sec_ASI585_final_port_2400.jpg",
       "thumb": "web/thumbs/NGC_2359_62subs_18600sec_ASI585_final_port_1024.jpg",
       "original": "NGC_2359_62subs_18600sec_ASI585_final_port.jpg",
-      "label": "IC 468",
+      "label": "NGC 2359 Thor's Helmet",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -496,13 +515,14 @@
       "fov_h_deg": 0.64177,
       "pixscale_arcsec": 0.4554,
       "width_px": 3153,
-      "height_px": 5072
+      "height_px": 5072,
+      "distance_ly": "12,000"
     },
     {
       "file": "web/display/NGC2467_REMIX_FINAL_2400.jpg",
       "thumb": "web/thumbs/NGC2467_REMIX_FINAL_1024.jpg",
       "original": "NGC2467_REMIX_FINAL.jpg",
-      "label": "Skull And Crossbones Nebula",
+      "label": "NGC 2467 Skull and Crossbones",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -529,13 +549,15 @@
       "fov_h_deg": 0.58737,
       "pixscale_arcsec": 0.9786,
       "width_px": 3548,
-      "height_px": 2160
+      "height_px": 2160,
+      "distance_ly": "13,000",
+      "distance_note": "line-of-sight complex spans several distances"
     },
     {
       "file": "web/display/vela_LR_recomb_sig_2400.jpg",
       "thumb": "web/thumbs/vela_LR_recomb_sig_1024.jpg",
       "original": "vela_LR_recomb_sig.jpg",
-      "label": "Vela Snr",
+      "label": "Vela Supernova Remnant",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -562,13 +584,14 @@
       "fov_h_deg": 5.52293,
       "pixscale_arcsec": 5.786,
       "width_px": 4594,
-      "height_px": 3436
+      "height_px": 3436,
+      "distance_ly": "815"
     },
     {
       "file": "web/display/NGC3293 Gem Cluster_2400.jpg",
       "thumb": "web/thumbs/NGC3293 Gem Cluster_1024.jpg",
       "original": "NGC3293 Gem Cluster.jpg",
-      "label": "Ngc3293 Gem Cluster",
+      "label": "NGC 3293 Gem Cluster",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -595,13 +618,14 @@
       "fov_h_deg": 0.37648,
       "pixscale_arcsec": 0.6275,
       "width_px": 3840,
-      "height_px": 2160
+      "height_px": 2160,
+      "distance_ly": "7,600"
     },
     {
       "file": "web/display/gabriella_Foraxx_CC_bx_HMS_curves_revela_recompose_2400.jpg",
       "thumb": "web/thumbs/gabriella_Foraxx_CC_bx_HMS_curves_revela_recompose_1024.jpg",
       "original": "gabriella_Foraxx_CC_bx_HMS_curves_revela_recompose.jpg",
-      "label": "Ngc 3324 Gabriela Mistral Nebula In Sho",
+      "label": "NGC 3324 Gabriela Mistral",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -628,13 +652,14 @@
       "fov_h_deg": 0.36749,
       "pixscale_arcsec": 0.6276,
       "width_px": 3020,
-      "height_px": 2108
+      "height_px": 2108,
+      "distance_ly": "7,500"
     },
     {
       "file": "web/display/NGC3372_SHO_Siril_HMS_final_2400.jpg",
       "thumb": "web/thumbs/NGC3372_SHO_Siril_HMS_final_1024.jpg",
       "original": "NGC3372_SHO_Siril_HMS_final.jpg",
-      "label": "NGC3372 Siril HMS",
+      "label": "NGC 3372 Carina Nebula",
       "solved": true,
       "width_px": 4549,
       "height_px": 3395,
@@ -661,13 +686,14 @@
       "dec_deg": -59.86957,
       "fov_w_deg": 3.99863,
       "fov_h_deg": 2.98425,
-      "pixscale_arcsec": 3.1644
+      "pixscale_arcsec": 3.1644,
+      "distance_ly": "7,500"
     },
     {
       "file": "web/display/LRGB_FINAL_Sig_2400.jpg",
       "thumb": "web/thumbs/LRGB_FINAL_Sig_1024.jpg",
       "original": "LRGB_FINAL_Sig.jpg",
-      "label": "Ic 2631 Chamaeleon Reflection Complex",
+      "label": "IC 2631 Chamaeleon Complex",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -694,13 +720,15 @@
       "fov_h_deg": 2.47519,
       "pixscale_arcsec": 2.6123,
       "width_px": 4533,
-      "height_px": 3412
+      "height_px": 3412,
+      "distance_ly": "630",
+      "distance_note": "Chamaeleon I cloud (HD 97300)"
     },
     {
       "file": "web/display/gum_37_tadpole_sig_2400.jpg",
       "thumb": "web/thumbs/gum_37_tadpole_sig_1024.jpg",
       "original": "gum_37_tadpole_sig.jpg",
-      "label": "Gum 37 Southern Tadpoles",
+      "label": "NGC 3572 Gum 37 Southern Tadpoles",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -727,13 +755,15 @@
       "fov_h_deg": 0.35568,
       "pixscale_arcsec": 0.6278,
       "width_px": 3192,
-      "height_px": 2040
+      "height_px": 2040,
+      "distance_ly": "9,000",
+      "distance_note": "estimates 6,500\u20139,000 ly"
     },
     {
       "file": "web/display/Gum-37-NGC3572-17809d4d_2400.jpg",
       "thumb": "web/thumbs/Gum-37-NGC3572-17809d4d_1024.jpg",
       "original": "Gum-37-NGC3572-17809d4d.jpg",
-      "label": "Gum 37 NGC3572",
+      "label": "NGC 3572 / Gum 37",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -760,13 +790,15 @@
       "fov_h_deg": 0.37661,
       "pixscale_arcsec": 1.0043,
       "width_px": 2400,
-      "height_px": 1350
+      "height_px": 1350,
+      "distance_ly": "9,000",
+      "distance_note": "estimates 6,500\u20139,000 ly"
     },
     {
       "file": "web/display/NGC_3576_80subs_24000sec_ASI585_PI_2400.jpg",
       "thumb": "web/thumbs/NGC_3576_80subs_24000sec_ASI585_PI_1024.jpg",
       "original": "NGC_3576_80subs_24000sec_ASI585_PI.jpg",
-      "label": "Statue Of Liberty Veralux Stretch",
+      "label": "NGC 3576 Statue of Liberty",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -793,13 +825,14 @@
       "fov_h_deg": 0.38586,
       "pixscale_arcsec": 0.314,
       "width_px": 7728,
-      "height_px": 4424
+      "height_px": 4424,
+      "distance_ly": "9,000"
     },
     {
       "file": "web/display/runnig chicken hoo_recomb_clone_2400.jpg",
       "thumb": "web/thumbs/runnig chicken hoo_recomb_clone_1024.jpg",
       "original": "runnig chicken hoo_recomb_clone.jpg",
-      "label": "runnig chicken recomb clone",
+      "label": "IC 2944 Running Chicken",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -826,13 +859,14 @@
       "fov_h_deg": 2.34914,
       "pixscale_arcsec": 2.61,
       "width_px": 4463,
-      "height_px": 3241
+      "height_px": 3241,
+      "distance_ly": "6,500"
     },
     {
       "file": "web/display/antenna_342x120s_FINAL_2400.jpg",
       "thumb": "web/thumbs/antenna_342x120s_FINAL_1024.jpg",
       "original": "antenna_342x120s_FINAL.jpg",
-      "label": "Ngc 4038 Antennae Galaxies Colliding C60 C61",
+      "label": "NGC 4038 Antennae Galaxies",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -859,13 +893,15 @@
       "fov_h_deg": 0.32439,
       "pixscale_arcsec": 0.3145,
       "width_px": 6782,
-      "height_px": 3712
+      "height_px": 3712,
+      "distance_ly": "45,000,000",
+      "distance_note": "same object as row 55; recent studies ~65 Mly"
     },
     {
       "file": "web/display/doodad_mas_sig_2400.jpg",
       "thumb": "web/thumbs/doodad_mas_sig_1024.jpg",
       "original": "doodad_mas_sig.jpg",
-      "label": "Sandqvist 149 The Dark Doodad",
+      "label": "Sandqvist 149 Dark Doodad",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -898,7 +934,7 @@
       "file": "web/display/m104 sombrero_recombine_sig_final_2400.jpg",
       "thumb": "web/thumbs/m104 sombrero_recombine_sig_final_1024.jpg",
       "original": "m104 sombrero_recombine_sig_final.jpg",
-      "label": "M104 Sombrero",
+      "label": "M104 Sombrero Galaxy",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -925,13 +961,14 @@
       "fov_h_deg": 0.35851,
       "pixscale_arcsec": 0.6288,
       "width_px": 3604,
-      "height_px": 2052
+      "height_px": 2052,
+      "distance_ly": "29,000,000"
     },
     {
       "file": "web/display/Centaurus a 171x120 L 109x300 ha_2400.jpg",
       "thumb": "web/thumbs/Centaurus a 171x120 L 109x300 ha_1024.jpg",
       "original": "Centaurus a 171x120 L 109x300 ha.jpg",
-      "label": "Ngc 5128 Centaurus A With Ha",
+      "label": "NGC 5128 Centaurus A",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -958,13 +995,14 @@
       "fov_h_deg": 0.37025,
       "pixscale_arcsec": 0.6289,
       "width_px": 3748,
-      "height_px": 2120
+      "height_px": 2120,
+      "distance_ly": "13,000,000"
     },
     {
       "file": "web/display/M83_243x120s_MAS_FINAL_sig_2400.jpg",
       "thumb": "web/thumbs/M83_243x120s_MAS_FINAL_sig_1024.jpg",
       "original": "M83_243x120s_MAS_FINAL_sig.jpg",
-      "label": "M83",
+      "label": "M83 Southern Pinwheel",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -991,13 +1029,14 @@
       "fov_h_deg": 0.36428,
       "pixscale_arcsec": 0.6287,
       "width_px": 3728,
-      "height_px": 2086
+      "height_px": 2086,
+      "distance_ly": "15,000,000"
     },
     {
       "file": "web/display/NGC_5367_Cometary_Globule_sig_2400.jpg",
       "thumb": "web/thumbs/NGC_5367_Cometary_Globule_sig_1024.jpg",
       "original": "NGC_5367_Cometary_Globule_sig.jpg",
-      "label": "Ngc 5367 Cometary Globule Dust Nebula Cg 12",
+      "label": "NGC 5367 / CG 12",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1024,13 +1063,15 @@
       "fov_h_deg": 1.86939,
       "pixscale_arcsec": 2.616,
       "width_px": 3568,
-      "height_px": 2573
+      "height_px": 2573,
+      "distance_ly": "2,050",
+      "distance_note": "630 pc (Williams et al. 1977); amateur sites often cite ~2,500 ly"
     },
     {
       "file": "web/display/Barnard 228 dark_wolf_final_sig_2400.jpg",
       "thumb": "web/thumbs/Barnard 228 dark_wolf_final_sig_1024.jpg",
       "original": "Barnard 228 dark_wolf_final_sig.jpg",
-      "label": "Barnard 228 dark wolf",
+      "label": "Barnard 228 Dark Wolf",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1057,13 +1098,15 @@
       "fov_h_deg": 2.19993,
       "pixscale_arcsec": 2.6149,
       "width_px": 4575,
-      "height_px": 3028
+      "height_px": 3028,
+      "distance_ly": "500",
+      "distance_note": "Lupus molecular cloud; a few pages say ~600 ly"
     },
     {
       "file": "web/display/Rho_Mosaic_PI_sig2_2400.jpg",
       "thumb": "web/thumbs/Rho_Mosaic_PI_sig2_1024.jpg",
       "original": "Rho_Mosaic_PI_sig2.jpg",
-      "label": "Rho Mosaic",
+      "label": "LDN 1688 Rho Ophiuchi Complex",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1090,13 +1133,15 @@
       "fov_h_deg": 5.33988,
       "pixscale_arcsec": 2.5845,
       "width_px": 6155,
-      "height_px": 7438
+      "height_px": 7438,
+      "distance_ly": "460",
+      "distance_note": "Rho Ophiuchi cloud complex"
     },
     {
       "file": "web/display/egg_185x300_FINAL_blue_sig_2400.jpg",
       "thumb": "web/thumbs/egg_185x300_FINAL_blue_sig_1024.jpg",
       "original": "egg_185x300_FINAL_blue_sig.jpg",
-      "label": "Ngc 6164 Dragons Egg",
+      "label": "NGC 6164 Dragon's Egg",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1123,13 +1168,15 @@
       "fov_h_deg": 0.37383,
       "pixscale_arcsec": 0.6275,
       "width_px": 3714,
-      "height_px": 2144
+      "height_px": 2144,
+      "distance_ly": "4,000",
+      "distance_note": "estimates 4,000\u20136,000 ly"
     },
     {
       "file": "web/display/Cosmic_bat2_2400.jpg",
       "thumb": "web/thumbs/Cosmic_bat2_1024.jpg",
       "original": "Cosmic_bat2.jpg",
-      "label": "Ldn 43 Cosmic Bat",
+      "label": "LDN 43 Cosmic Bat",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1156,13 +1203,14 @@
       "fov_h_deg": 0.37732,
       "pixscale_arcsec": 0.6289,
       "width_px": 3840,
-      "height_px": 2160
+      "height_px": 2160,
+      "distance_ly": "1,400"
     },
     {
       "file": "web/display/sho_starless_narrowband_hue_MAS_BX_NX-3-2_recompose_2400.jpg",
       "thumb": "web/thumbs/sho_starless_narrowband_hue_MAS_BX_NX-3-2_recompose_1024.jpg",
       "original": "sho_starless_narrowband_hue_MAS_BX_NX-3-2_recompose.jpg",
-      "label": "Ngc 6188 Fighting Dragons Of Ara In Sho",
+      "label": "NGC 6188 Fighting Dragons (SHO)",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1189,13 +1237,14 @@
       "fov_h_deg": 2.34229,
       "pixscale_arcsec": 2.6108,
       "width_px": 4464,
-      "height_px": 3229
+      "height_px": 3229,
+      "distance_ly": "4,000"
     },
     {
       "file": "web/display/ngc 6188 hoo_mirror_thumb_2400.jpg",
       "thumb": "web/thumbs/ngc 6188 hoo_mirror_thumb_1024.jpg",
       "original": "ngc 6188 hoo_mirror_thumb.jpg",
-      "label": "Ngc 6188 Fighting Dragons Of Ara In Ha And Oiii",
+      "label": "NGC 6188 Fighting Dragons (HOO)",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1222,13 +1271,14 @@
       "fov_h_deg": 2.43929,
       "pixscale_arcsec": 2.6113,
       "width_px": 4457,
-      "height_px": 3363
+      "height_px": 3363,
+      "distance_ly": "4,000"
     },
     {
       "file": "web/display/sv17 dark_wolf_final_2400.jpg",
       "thumb": "web/thumbs/sv17 dark_wolf_final_1024.jpg",
       "original": "sv17 dark_wolf_final.jpg",
-      "label": "sv17 dark wolf",
+      "label": "SL 17 Fenrir (Sandqvist 17)",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1255,13 +1305,15 @@
       "fov_h_deg": 0.80078,
       "pixscale_arcsec": 0.8239,
       "width_px": 4647,
-      "height_px": 3499
+      "height_px": 3499,
+      "distance_ly": "5,300\u20136,200",
+      "distance_note": "dark nebula silhouetted against RCW 113/Gum 55; distance range uncertain"
     },
     {
       "file": "web/display/prawn_reintegrate_sig_2400.jpg",
       "thumb": "web/thumbs/prawn_reintegrate_sig_1024.jpg",
       "original": "prawn_reintegrate_sig.jpg",
-      "label": "prawn",
+      "label": "IC 4628 Prawn Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1288,13 +1340,14 @@
       "fov_h_deg": 0.80503,
       "pixscale_arcsec": 0.8233,
       "width_px": 4656,
-      "height_px": 3520
+      "height_px": 3520,
+      "distance_ly": "6,000"
     },
     {
       "file": "web/display/lobster_hoo_recompose_sig_2400.jpg",
       "thumb": "web/thumbs/lobster_hoo_recompose_sig_1024.jpg",
       "original": "lobster_hoo_recompose_sig.jpg",
-      "label": "lobster",
+      "label": "NGC 6357 Lobster Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1321,13 +1374,15 @@
       "fov_h_deg": 1.47175,
       "pixscale_arcsec": 1.2685,
       "width_px": 6248,
-      "height_px": 4176
+      "height_px": 4176,
+      "distance_ly": "5,500",
+      "distance_note": "some sources ~8,000 ly"
     },
     {
       "file": "web/display/trifid_sig_finla_2400.jpg",
       "thumb": "web/thumbs/trifid_sig_finla_1024.jpg",
       "original": "trifid_sig_finla.jpg",
-      "label": "trifid finla",
+      "label": "M20 Trifid Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1354,13 +1409,15 @@
       "fov_h_deg": 0.65769,
       "pixscale_arcsec": 0.8234,
       "width_px": 3852,
-      "height_px": 2875
+      "height_px": 2875,
+      "distance_ly": "5,200",
+      "distance_note": "estimates 4,100\u20135,200 ly"
     },
     {
       "file": "web/display/m8_73subs_21900sec_ASI585MC_SHO_Recomb_processed_stars_2400.jpg",
       "thumb": "web/thumbs/m8_73subs_21900sec_ASI585MC_SHO_Recomb_processed_stars_1024.jpg",
       "original": "m8_73subs_21900sec_ASI585MC_SHO_Recomb_processed_stars.jpg",
-      "label": "m8 Recomb stars",
+      "label": "M8 Lagoon Nebula",
       "solved": true,
       "width_px": 3734,
       "height_px": 2292,
@@ -1387,13 +1444,14 @@
       "dec_deg": -24.38292,
       "fov_w_deg": 0.98257,
       "fov_h_deg": 0.60312,
-      "pixscale_arcsec": 0.9473
+      "pixscale_arcsec": 0.9473,
+      "distance_ly": "4,100"
     },
     {
       "file": "web/display/LBN28 chinese dragon AW_2400.jpg",
       "thumb": "web/thumbs/LBN28 chinese dragon AW_1024.jpg",
       "original": "LBN28 chinese dragon AW.jpg",
-      "label": "LBN28 chinese dragon",
+      "label": "NGC 6559 Chinese Dragon",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1420,13 +1478,15 @@
       "fov_h_deg": 0.58828,
       "pixscale_arcsec": 0.9802,
       "width_px": 3725,
-      "height_px": 2160
+      "height_px": 2160,
+      "distance_ly": "5,000",
+      "distance_note": "Sagittarius/Lagoon region"
     },
     {
       "file": "web/display/Anteater_74x180s_final_sig_standard_2400.jpg",
       "thumb": "web/thumbs/Anteater_74x180s_final_sig_standard_1024.jpg",
       "original": "Anteater_74x180s_final_sig_standard.jpg",
-      "label": "Ngc 6726 Anteater Nebula R Cra",
+      "label": "NGC 6726 Anteater / R CrA",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1453,13 +1513,15 @@
       "fov_h_deg": 0.37365,
       "pixscale_arcsec": 0.6288,
       "width_px": 3542,
-      "height_px": 2140
+      "height_px": 2140,
+      "distance_ly": "430",
+      "distance_note": "Corona Australis molecular cloud"
     },
     {
       "file": "web/display/NGC_6729_30x60R_30x60G_30x60B_50x30L_ASI1600MM_2400.jpg",
       "thumb": "web/thumbs/NGC_6729_30x60R_30x60G_30x60B_50x30L_ASI1600MM_1024.jpg",
       "original": "NGC_6729_30x60R_30x60G_30x60B_50x30L_ASI1600MM.jpg",
-      "label": "SANDQVIST 39",
+      "label": "NGC 6729 Corona Australis",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1486,13 +1548,15 @@
       "fov_h_deg": 3.01781,
       "pixscale_arcsec": 3.1674,
       "width_px": 4540,
-      "height_px": 3431
+      "height_px": 3431,
+      "distance_ly": "430",
+      "distance_note": "Corona Australis molecular cloud"
     },
     {
       "file": "web/display/NGC 6744 Pavo Sig_2400.jpg",
       "thumb": "web/thumbs/NGC 6744 Pavo Sig_1024.jpg",
       "original": "NGC 6744 Pavo Sig.jpg",
-      "label": "NGC 6744 Pavo",
+      "label": "NGC 6744 Pavo Galaxy",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1519,13 +1583,14 @@
       "fov_h_deg": 0.36713,
       "pixscale_arcsec": 0.6285,
       "width_px": 3789,
-      "height_px": 2103
+      "height_px": 2103,
+      "distance_ly": "30,000,000"
     },
     {
       "file": "web/display/EagleRay_569_GX_BX_SPCC_starless_NX_ghs_LR2_NX_2400.jpg",
       "thumb": "web/thumbs/EagleRay_569_GX_BX_SPCC_starless_NX_ghs_LR2_NX_1024.jpg",
       "original": "EagleRay_569_GX_BX_SPCC_starless_NX_ghs_LR2_NX.jpg",
-      "label": "EagleRay 569 NX ghs LR2 NX",
+      "label": "Eagle Ray Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1558,7 +1623,7 @@
       "file": "web/display/ngc6960 Veil sig_2400.jpg",
       "thumb": "web/thumbs/ngc6960 Veil sig_1024.jpg",
       "original": "ngc6960 Veil sig.jpg",
-      "label": "ngc6960 Veil",
+      "label": "NGC 6960 Veil Nebula",
       "solved": true,
       "width_px": 4892,
       "height_px": 3270,
@@ -1585,13 +1650,15 @@
       "dec_deg": 30.97538,
       "fov_w_deg": 4.49008,
       "fov_h_deg": 3.00106,
-      "pixscale_arcsec": 3.3042
+      "pixscale_arcsec": 3.3042,
+      "distance_ly": "2,360",
+      "distance_note": "Cygnus Loop; 725 \u00b1 15 pc (Fesen et al. 2021, MNRAS 507, 244, Gaia EDR3)"
     },
     {
       "file": "web/display/C_63_96subs_28800sec_ASI585_HO_PI_2400.jpg",
       "thumb": "web/thumbs/C_63_96subs_28800sec_ASI585_HO_PI_1024.jpg",
       "original": "C_63_96subs_28800sec_ASI585_HO_PI.jpg",
-      "label": "Helix Eye Of God Dual Narrowband",
+      "label": "NGC 7293 Helix Nebula",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1618,13 +1685,14 @@
       "fov_h_deg": 0.58486,
       "pixscale_arcsec": 0.9349,
       "width_px": 4000,
-      "height_px": 2251
+      "height_px": 2251,
+      "distance_ly": "655"
     },
     {
       "file": "web/display/ngc2782 grus_2400.jpg",
       "thumb": "web/thumbs/ngc2782 grus_1024.jpg",
       "original": "ngc2782 grus.jpg",
-      "label": "ngc2782 grus",
+      "label": "NGC 7582 Grus Quartet",
       "solved": true,
       "engine": "nova",
       "corners": [
@@ -1651,7 +1719,9 @@
       "fov_h_deg": 1.14442,
       "pixscale_arcsec": 1.2707,
       "width_px": 4850,
-      "height_px": 3242
+      "height_px": 3242,
+      "distance_ly": "60,000,000",
+      "distance_note": "part of the Grus Quartet"
     }
   ]
 }

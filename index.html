@@ -32,7 +32,7 @@
   .tour{display:flex;gap:4px}
   .tour button{flex:1;font-family:var(--mono);letter-spacing:.05em}
   .tour button.on{color:#000;background:var(--pick);border-color:var(--pick);font-weight:600}
-  .note{font-family:var(--mono);font-size:10px;color:var(--ink-dim);line-height:1.55}
+  .note{font-family:var(--mono);font-size:10px;color:var(--ink-dim);line-height:1.55;white-space:pre-line}
   .val{color:var(--hot)}
   hr{border:0;border-top:1px solid var(--edge);margin:2px 0}
   #list{border:1px solid var(--edge);border-radius:2px;background:var(--panel);
@@ -57,7 +57,44 @@
     font-family:var(--mono);font-size:11px;color:var(--hot);line-height:1.55;display:none}
 
   /* ---- mobile: canvas full screen, a thin bar at the bottom, rest in a sheet ---- */
-  #more{display:none}
+  #gyro{display:none}
+  #fabs,#nav,#nowpill{display:none}
+  .fab{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;
+    justify-content:center;font-size:19px;line-height:1;color:var(--ink);
+    background:rgba(13,3,1,.82);border:1px solid var(--edge);cursor:pointer;
+    -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);padding:0}
+  .fab.on{color:#000;background:var(--pick);border-color:var(--pick)}
+  .fab.warm{color:#000;background:var(--hot);border-color:var(--hot)}
+  body.mobile #fabs{display:flex;position:absolute;right:10px;top:12px;z-index:6;
+    flex-direction:column;gap:9px}
+  body.mobile #nav{display:flex;position:absolute;left:50%;transform:translateX(-50%);
+    bottom:calc(14px + env(safe-area-inset-bottom));z-index:6;gap:14px}
+  body.mobile #nav .fab{width:52px;height:52px;font-size:17px}
+  body.mobile #nowpill{display:block;position:absolute;left:50%;transform:translateX(-50%);
+    bottom:calc(76px + env(safe-area-inset-bottom));z-index:6;max-width:82vw;
+    font-family:var(--mono);font-size:12px;color:var(--pick);text-align:center;
+    background:rgba(13,3,1,.8);border:1px solid var(--edge);border-radius:14px;
+    padding:5px 13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  body.mobile #nowpill span{color:var(--ink-dim)}
+  body.mobile aside{display:none}
+  body.mobile.sheet aside{display:flex;position:fixed;left:0;right:0;bottom:0;top:auto;
+    z-index:20;flex:none;width:auto;border-right:0;border-top:1px solid var(--edge);
+    padding:12px 14px calc(14px + env(safe-area-inset-bottom));
+    background:rgba(18,4,2,.97);max-height:88vh;overflow-y:auto}
+  body.mobile.sheet #panelTop,body.mobile.sheet #panelBottom{display:flex;
+    flex-direction:column;gap:11px}
+  body.mobile.sheet #list{max-height:32vh}
+  #close{display:none}
+  body.mobile.sheet #close{display:block;width:100%;font:inherit;font-family:var(--mono);
+    font-size:12px;color:#000;background:var(--hot);border:0;border-radius:2px;
+    padding:11px;cursor:pointer;font-weight:600}
+  #compass{display:none;flex-direction:column;gap:11px}
+  body.mobile #compass{display:flex}
+  body.mobile #gyro{display:block;width:100%;font:inherit;font-size:12px;
+    font-family:var(--mono);color:var(--ink);background:var(--panel);
+    border:1px solid var(--edge);border-radius:2px;padding:11px 6px;cursor:pointer}
+  body.mobile #gyro.live{color:#000;background:var(--pick);border-color:var(--pick);font-weight:600}
+  body.mobile #gyro.locked{color:#000;background:var(--hot);border-color:var(--hot);font-weight:600}
   #now{display:none;font-family:var(--mono);font-size:12px;color:var(--pick);
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:2px 1px}
   #now b{font-weight:600}#now span{color:var(--ink-dim)}
@@ -69,9 +106,6 @@
     background:rgba(18,4,2,.94);overflow:hidden;max-height:none}
   body.mobile h1,body.mobile #panelTop,body.mobile #panelBottom{display:none}
   body.mobile #now{display:block}
-  body.mobile #more{display:block;width:100%;font:inherit;font-size:11px;
-    font-family:var(--mono);color:var(--ink-dim);background:transparent;
-    border:1px solid var(--edge);border-radius:2px;padding:5px;cursor:pointer}
   body.mobile .tour button{padding:11px 6px;font-size:12px}
   body.mobile.sheet aside{max-height:86vh;overflow-y:auto}
   body.mobile.sheet #panelTop,body.mobile.sheet #panelBottom{display:flex;
@@ -92,21 +126,35 @@
     </div>
 
     <div id="now"></div>
-    <div class="fld"><label>Move speed <span class="val" id="spdV">1.0&times;</span></label>
-      <input type="range" id="spd" min="25" max="300" value="100" step="5"></div>
     <div class="tour">
       <button id="prev" title="Previous target">&#9666; prev</button>
       <button id="play" title="Auto-advance">&#9656; tour</button>
       <button id="next" title="Next target">next &#9656;</button>
     </div>
 
-    <button id="more">&#9679;&#9679;&#9679;  settings</button>
+    <button id="gyro">&#9678;  point at the sky</button>
 
     <div id="panelBottom">
     <hr>
     <div id="sel">No image selected.</div>
 
     <hr>
+    <div class="fld"><label>Move speed <span class="val" id="spdV">1.0&times;</span></label>
+      <input type="range" id="spd" min="25" max="300" value="100" step="5"></div>
+    <div id="compass">
+      <div class="fld"><label>Screen rotation fix</label>
+        <div class="seg"><button id="sr0" class="on">auto</button><button id="sr90">+90</button>
+          <button id="sr180">+180</button><button id="sr270">+270</button></div></div>
+      <div class="fld"><label>Magnetic declination <span class="val" id="declV">12.7&deg;</span></label>
+        <input type="range" id="decl" min="0" max="30" value="12.7" step="0.1"></div>
+      <div class="fld"><label>Compass offset <span class="val" id="tweakV">0&deg;</span></label>
+        <input type="range" id="tweak" min="-40" max="40" value="0" step="0.5"></div>
+      <div class="fld"><label>Steadiness <span class="val" id="smoothV">60</span></label>
+        <input type="range" id="smooth" min="0" max="100" value="60" step="1"></div>
+      <div class="note" id="gyroStat">Declination turns magnetic north into true north (12.7&deg; for Sydney).
+        Compass offset corrects your phone&rsquo;s own error &mdash; nudge it until a bright star lines up.</div>
+      <hr>
+    </div>
     <div class="fld"><label>Sidereal rotation (LST) <span class="val" id="lstV">80&deg;</span></label>
       <input type="range" id="lst" min="0" max="360" value="80" step="1"></div>
     <div class="fld"><label>Latitude <span class="val" id="latV">-33.8&deg;</span></label>
@@ -129,11 +177,24 @@
       <div class="seg"><button id="hOn" class="on">on</button><button id="hOff">off</button></div></div>
 
     <div class="note" id="cal">look &mdash;</div>
+    <button id="close">done</button>
     </div>
   </aside>
   <main>
     <canvas id="gl"></canvas>
     <canvas id="ov"></canvas>
+    <div id="fabs">
+      <button class="fab" id="fGyro" title="Point at the sky">&#9678;</button>
+      <button class="fab" id="fMoon" title="Moon for scale">&#9789;</button>
+      <button class="fab" id="fFull" title="Full screen">&#9974;</button>
+      <button class="fab" id="fSet" title="Settings">&#9881;</button>
+    </div>
+    <div id="nowpill">&mdash;</div>
+    <div id="nav">
+      <button class="fab" id="fPrev" title="Previous">&#9666;</button>
+      <button class="fab" id="fTour" title="Tour">&#9656;</button>
+      <button class="fab" id="fNext" title="Next">&#9656;</button>
+    </div>
     <div id="msg"></div>
   </main>
 </div>
@@ -175,7 +236,12 @@ const STARS=[
 
 const S={look:{az:180,alt:45}, fov:100, lat:-33.8, lst:80,
          opacity:1, backdrop:true, starNames:true, grid:false, horizon:true,
-         followSky:true, speed:1, sel:null, playing:false};
+         followSky:true, speed:1, sel:null, playing:false,
+         // gyro / real-sky mode
+         gyro:false, decl:12.7, tweak:0, smooth:60,
+         lat0:-33.80071, lon:151.20855,
+         q:null, qT:0, M:null, src:null, srcRank:0, gyroEvents:0, absolute:false, seen:{},
+         fovBeforeLock:null, screenAdd:0, screenAuto:true, moon:false};
 let IMAGES=[], RAW=[], TOUR=[], playTimer=null, anim=null;
 
 /* ---------- vector maths ---------- */
@@ -190,7 +256,17 @@ const lerp3=(a,b,t)=>[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t];
 /* equatorial -> horizontal, column-major mat3. Verified against altazL to machine precision. */
 function eqToHor(lat,lst){
   const sL=Math.sin(lst*D),cL=Math.cos(lst*D),sp=Math.sin(lat*D),cp=Math.cos(lat*D);
-  return new Float32Array([-sL,-cL*sp,cL*cp,  cL,-sL*sp,sL*cp,  0,cp,sp]);
+  // rows of the equatorial -> horizontal rotation
+  let r0=[-sL,cL,0], r1=[-cL*sp,-sL*sp,cp], r2=[cL*cp,sL*cp,sp];
+  if(S.gyro){
+    // The phone's heading is magnetic and imperfect, so rotate the SKY in azimuth
+    // by -(declination + offset) to match it, exactly as SkyTrack does.
+    const dl=(S.decl+S.tweak)*D, c=Math.cos(dl), sn=Math.sin(dl);
+    const a=r0.map((v,i)=>c*v-sn*r1[i]);
+    const b=r0.map((v,i)=>sn*v+c*r1[i]);
+    r0=a; r1=b;
+  }
+  return new Float32Array([r0[0],r1[0],r2[0], r0[1],r1[1],r2[1], r0[2],r1[2],r2[2]]);
 }
 const applyM=(M,v)=>[M[0]*v[0]+M[3]*v[1]+M[6]*v[2],
                      M[1]*v[0]+M[4]*v[1]+M[7]*v[2],
@@ -402,14 +478,44 @@ async function loadManifest(){
 }
 
 /* ---------- camera ---------- */
-function basis(){const az=S.look.az*D,al=S.look.alt*D;
+function basis(){
+  if(S.gyro==="live"){ const b=gyroBasis(); if(b) return b; }
+  const az=S.look.az*D,al=S.look.alt*D;
   return{f:[Math.cos(al)*Math.sin(az),Math.cos(al)*Math.cos(az),Math.sin(al)],
          r:[Math.cos(az),-Math.sin(az),0],
          u:[-Math.sin(al)*Math.sin(az),-Math.sin(al)*Math.cos(az),Math.cos(al)]};}
-function altazL(ra,dec,lat,L){const H=((((L-ra)%360)+360)%360)*D,dr=dec*D,lr=lat*D;
-  const alt=Math.asin(Math.sin(dr)*Math.sin(lr)+Math.cos(dr)*Math.cos(lr)*Math.cos(H));
-  let az=Math.atan2(Math.sin(H),Math.cos(H)*Math.sin(lr)-Math.tan(dr)*Math.cos(lr))*R2D+180;
-  return{alt:alt*R2D,az:((az%360)+360)%360};}
+
+/* ---------- moon, drawn at true angular size for scale ---------- */
+const MOON_DEG=0.518;                 // mean apparent diameter, 31.1 arcmin
+let moonImg=null, moonState="none";   // none | loading | ok | missing
+function loadMoon(){
+  if(moonState!=="none")return;
+  moonState="loading";
+  const i=new Image();
+  i.onload=()=>{moonImg=i;moonState="ok";render();};
+  i.onerror=()=>{moonState="missing";render();};   // fall back to a plain disc
+  i.src="moon.png";
+}
+function drawMoon(w,h,FOC){
+  const r=FOC*Math.tan(MOON_DEG/2*D);
+  const x=w/2, y=h/2;
+  if(moonState==="ok"&&moonImg){
+    octx.save(); octx.globalAlpha=0.92;
+    octx.drawImage(moonImg,x-r,y-r,r*2,r*2);
+    octx.restore();
+  }else{
+    octx.beginPath();octx.arc(x,y,r,0,7);
+    octx.fillStyle="rgba(230,230,225,.16)";octx.fill();
+    octx.strokeStyle="rgba(240,240,235,.75)";octx.lineWidth=1.3;octx.stroke();
+  }
+  octx.beginPath();octx.arc(x,y,r,0,7);
+  octx.strokeStyle="rgba(240,240,235,.5)";octx.lineWidth=1;octx.setLineDash([3,3]);
+  octx.stroke();octx.setLineDash([]);
+  const mono=getComputedStyle(document.body).getPropertyValue("--mono");
+  octx.fillStyle="rgba(240,240,235,.8)";octx.font="11px "+mono;
+  octx.textAlign="center";octx.textBaseline="top";
+  octx.fillText("Moon \u00b7 0.52\u00b0", x, y+r+5);
+}
 
 /* ---------- render ---------- */
 function fitOv(){const DPR=Math.min(devicePixelRatio||1,2),r=ov.getBoundingClientRect();
@@ -420,9 +526,13 @@ function render(){
   const DPR=Math.min(devicePixelRatio||1,2),r=cv.getBoundingClientRect();
   const W=Math.max(1,Math.round(r.width*DPR)),H=Math.max(1,Math.round(r.height*DPR));
   if(cv.width!==W||cv.height!==H){cv.width=W;cv.height=H;}
-  gl.viewport(0,0,W,H);
   const B=basis(), FOC=(H/2)/Math.tan(S.fov/2*D);
 
+  // render() can be called before initGL() (layout runs first now) or after a GL
+  // failure. The 2D overlay still works in both cases, so draw what we can.
+  const glReady=!!(gl&&imProg&&bgProg);
+  if(glReady){
+  gl.viewport(0,0,W,H);
   gl.clearColor(0.02,0.01,0.005,1); gl.clear(gl.COLOR_BUFFER_BIT);
   if(bgReady&&S.backdrop){
     gl.disable(gl.BLEND); gl.useProgram(bgProg);
@@ -459,8 +569,10 @@ function render(){
   }
   gl.disableVertexAttribArray(imAttr.p); gl.disableVertexAttribArray(imAttr.uv);
   gl.disable(gl.BLEND);
+  }
 
-  const {w,h}=fitOv(); drawOverlay(w,h,B,(h/2)/Math.tan(S.fov/2*D),M);
+  const {w,h}=fitOv();
+  drawOverlay(w,h,B,(h/2)/Math.tan(S.fov/2*D),eqToHor(S.lat,S.lst));
   $("cal").textContent=`look az ${Math.round(S.look.az)}\u00b0 alt ${Math.round(S.look.alt)}\u00b0`
     +` \u00b7 fov ${S.fov.toFixed(1)}\u00b0 \u00b7 ${IMAGES.length} image${IMAGES.length===1?"":"s"}`;
 }
@@ -495,14 +607,14 @@ function drawOverlay(w,h,B,FOC,M){
   }
 
   if(S.starNames) for(const [nm,ra,dec,mag] of STARS){
-    const q=altazL(ra,dec,S.lat,S.lst);
-    const p=proj(vec(q.az,q.alt)); if(!p)continue;
+    const p=proj(applyM(M,eqVec(ra,dec))); if(!p)continue;
     octx.beginPath();octx.arc(p[0],p[1],Math.max(2,4.4-mag*0.7),0,7);
     octx.strokeStyle="rgba(127,255,212,.5)";octx.lineWidth=1.2;octx.stroke();
     octx.fillStyle="rgba(127,255,212,.55)";octx.font="10px "+mono;
     octx.textAlign="left";octx.textBaseline="middle";octx.fillText(nm,p[0]+7,p[1]);
   }
 
+  for(const im of IMAGES) im.hit=null;
   for(const im of IMAGES){
     const pts=im.cornerVecs.map(v=>proj(applyM(M,v)));
     const c=proj(applyM(M,im.cVec)); if(!c)continue;
@@ -521,8 +633,15 @@ function drawOverlay(w,h,B,FOC,M){
     }
     octx.fillStyle=on?"#7fffd4":"rgba(255,207,107,.75)";
     octx.font=(on?12:11)+"px "+mono;octx.textAlign="center";octx.textBaseline="top";
-    octx.fillText(im.label,c[0],c[1]+(span<26?7:span/2+4));
+    const ly=c[1]+(span<26?7:span/2+4);
+    octx.fillText(im.label,c[0],ly);
+    // remember where the text landed so it can be tapped - at arm's length a 0.6 deg
+    // image is only a few pixels wide, but its name is a comfortable target
+    const tw=octx.measureText(im.label).width;
+    im.hit=[c[0]-tw/2-8, ly-6, c[0]+tw/2+8, ly+(on?12:11)+6];
   }
+
+  if(S.moon) drawMoon(w,h,FOC);
 
   if(S.horizon){
     const pts=[];for(let az=0;az<=360;az+=2)pts.push(proj(vec(az,0)));
@@ -541,6 +660,15 @@ function drawOverlay(w,h,B,FOC,M){
 /* ---------- picking + selection ---------- */
 function pick(clientX,clientY){
   const r=cv.getBoundingClientRect();
+  // a tap on the label counts as a tap on the image
+  const lx=clientX-r.left, ly=clientY-r.top;
+  let byLabel=null;
+  for(const im of IMAGES){
+    const b=im.hit;
+    if(b && lx>=b[0] && lx<=b[2] && ly>=b[1] && ly<=b[3] &&
+       (!byLabel || im.area<byLabel.area)) byLabel=im;
+  }
+  if(byLabel) return byLabel;
   const FOC=(r.height/2)/Math.tan(S.fov/2*D), B=basis();
   const sx=(clientX-r.left)-r.width/2, sy=r.height/2-(clientY-r.top);
   const ray=norm([B.f[0]+sx/FOC*B.r[0]+sy/FOC*B.u[0],
@@ -549,14 +677,19 @@ function pick(clientX,clientY){
   const M=eqToHor(S.lat,S.lst); let best=null;
   for(const im of IMAGES){
     const d=Math.acos(Math.max(-1,Math.min(1,dot(ray,applyM(M,im.cVec)))))*R2D;
-    if(d<im.half && (!best||im.area<best.area)) best=im;
+    const reach=Math.max(im.half, S.fov*0.015);   // small targets still need a thumb-sized target
+    if(d<reach && (!best||im.area<best.area)) best=im;
   }
   return best;
 }
 function selectImage(im){
   S.sel=im; syncList();
   const box=$("sel"), now=$("now");
-  if(!im){box.innerHTML="No image selected.";now.textContent="\u2014";render();return;}
+  if(!im){box.innerHTML="No image selected.";now.textContent="\u2014";
+          $("nowpill").textContent="\u2014";render();return;}
+  $("nowpill").innerHTML=`${im.label} <span>`
+    +(im.distance_ly?`${im.distance_ly} ly`:`${im.fov_w_deg.toFixed(2)}\u00d7${im.fov_h_deg.toFixed(2)}\u00b0`)
+    +`</span>`;
   now.innerHTML=`<b>${im.label}</b> <span>${im.fov_w_deg.toFixed(2)}\u00d7${im.fov_h_deg.toFixed(2)}\u00b0</span>`;
   const hh=im.ra_deg/15, dd=Math.abs(im.dec_deg);
   box.innerHTML=`<b>${im.label}</b><br>`
@@ -565,10 +698,21 @@ function selectImage(im){
    +`field <span class="v">${im.fov_w_deg.toFixed(2)}\u00b0 \u00d7 ${im.fov_h_deg.toFixed(2)}\u00b0</span><br>`
    +`scale <span class="v">${im.pixscale_arcsec?im.pixscale_arcsec.toFixed(2)+"\u2033/px":"\u2014"}</span> \u00b7 `
    +`<span class="v">${im.width_px}\u00d7${im.height_px}</span><br>`
+   +(im.distance_ly?`distance <span class="v">${im.distance_ly} ly</span>`
+        +(im.distance_note?` <span style="opacity:.7">${im.distance_note}</span>`:"")+"<br>":"")
    +`frame <span class="${im.mirrored?"warn":"v"}">${im.mirrored?"mirrored (east right)":"east left, standard"}</span><br>`
    +`<span class="v">${im.hires?"full resolution":"thumbnail"}</span>`;
   if(!im.hires && im.thumb) loadTex(im,im.file,true);
   render();
+}
+/* Where a target actually sits on screen. Everything now goes through eqToHor, so
+   the declination/offset rotation applied in gyro mode is included exactly once.
+   The old altazL() helper did not know about it, which put every target - and every
+   star label - out by (declination + offset) whenever the gyro was on. */
+function azaltOf(v,lat,lst){
+  const h=applyM(eqToHor(lat,lst),v);
+  return{az:((Math.atan2(h[0],h[1])*R2D)%360+360)%360,
+         alt:Math.asin(Math.max(-1,Math.min(1,h[2])))*R2D};
 }
 function frameImage(im){
   // fov is the VERTICAL field, so a wide image has to be divided by the window
@@ -576,8 +720,8 @@ function frameImage(im){
   const aspect=Math.max(0.2,cv.clientWidth/Math.max(1,cv.clientHeight));
   const need=Math.max(im.fov_h_deg, im.fov_w_deg/aspect);
   const targetFov=Math.max(0.15,Math.min(120,need*1.4));
-  const lst=S.followSky? im.ra_deg : S.lst;
-  const q=altazL(im.ra_deg,im.dec_deg,S.lat,lst);
+  const lst=(S.followSky && !S.gyro)? im.ra_deg : S.lst;
+  const q=azaltOf(im.cVec,S.lat,lst);
   const to={lst, az:q.az, alt:Math.max(-88,Math.min(88,q.alt)), fov:targetFov};
   const setLstUI=()=>{$("lst").value=Math.round(S.lst);$("lstV").textContent=Math.round(S.lst)+"\u00b0";};
   if(REDUCED){S.lst=to.lst;S.fov=to.fov;S.look.az=to.az;S.look.alt=to.alt;setLstUI();render();return;}
@@ -629,14 +773,275 @@ seg("skFollow","skHold",v=>S.followSky=v);
 
 $("prev").onclick=()=>step(-1);
 $("next").onclick=()=>step(1);
-$("more").onclick=()=>document.body.classList.toggle("sheet");
+$("fSet").onclick=()=>document.body.classList.toggle("sheet");
+$("close").onclick=()=>document.body.classList.remove("sheet");
+$("fGyro").onclick=()=>$("gyro").click();
+$("fPrev").onclick=()=>step(-1);
+$("fNext").onclick=()=>step(1);
+$("fTour").onclick=()=>$("play").click();
+$("fMoon").onclick=()=>{
+  S.moon=!S.moon; $("fMoon").classList.toggle("on",S.moon);
+  if(S.moon) loadMoon();
+  if(S.moon&&moonState==="missing") note("moon.png not found \u2014 showing a plain disc at 0.52\u00b0.");
+  render();
+};
+$("fFull").onclick=toggleFull;
+if(!canFullscreen()) $("fFull").style.display="none";
+const SR={sr0:"auto",sr90:90,sr180:180,sr270:270};
+for(const id of Object.keys(SR)) $(id).onclick=()=>{
+  for(const o of Object.keys(SR)) $(o).classList.toggle("on",o===id);
+  S.screenAuto = SR[id]==="auto";
+  if(!S.screenAuto) S.screenAdd=SR[id];
+  render();
+};
 $("play").onclick=()=>{
   S.playing=!S.playing;
   $("play").classList.toggle("on",S.playing);
   $("play").textContent=S.playing?"\u25a0 stop":"\u25b8 tour";
+  $("fTour").classList.toggle("on",S.playing);
+  $("fTour").innerHTML=S.playing?"&#9632;":"&#9656;";
   if(playTimer)clearInterval(playTimer);
   if(S.playing){step(1);playTimer=setInterval(()=>step(1),7000);}
 };
+
+
+/* ================= gyro / real-sky mode =========================================
+   Orientation handling ported from SkyTrack v3.8, which had already been debugged
+   against real devices. The key trick: rather than converting to az/alt, replace
+   the whole camera basis with the device rotation matrix, so tilting the phone
+   sideways rolls the sky correctly too. */
+function canFullscreen(){
+  const el=document.documentElement;
+  return !!(el.requestFullscreen||el.webkitRequestFullscreen);
+}
+const RANK={deviceorientationabsolute:4,AbsoluteOrientationSensor:3,
+            deviceorientation:2,RelativeOrientationSensor:1};
+let sensorObj=null, gyroAttached=false, gyroRAF=null, clockTimer=null;
+
+function eulerQuat(a,b,g){            // W3C ZXY device orientation -> quaternion
+  const A=a*D/2,B=b*D/2,G=g*D/2;
+  const cX=Math.cos(B),cY=Math.cos(G),cZ=Math.cos(A),
+        sX=Math.sin(B),sY=Math.sin(G),sZ=Math.sin(A);
+  return[sX*cY*cZ-cX*sY*sZ, cX*sY*cZ+sX*cY*sZ, cX*cY*sZ+sX*sY*cZ, cX*cY*cZ-sX*sY*sZ];
+}
+function fromQuat(q){                 // [x,y,z,w] device -> world (ENU)
+  const[x,y,z,w]=q;
+  return[1-2*(y*y+z*z), 2*(x*y-z*w),   2*(x*z+y*w),
+         2*(x*y+z*w),   1-2*(x*x+z*z), 2*(y*z-x*w),
+         2*(x*z-y*w),   2*(y*z+x*w),   1-2*(x*x+y*y)];
+}
+function qslerp(a,b,t){
+  let d=a[0]*b[0]+a[1]*b[1]+a[2]*b[2]+a[3]*b[3], bb=b;
+  if(d<0){bb=[-b[0],-b[1],-b[2],-b[3]];d=-d;}
+  if(d>0.9995){
+    const r=a.map((v,i)=>v+t*(bb[i]-v)), n=Math.hypot(r[0],r[1],r[2],r[3]);
+    return r.map(v=>v/n);
+  }
+  const th=Math.acos(d),sn=Math.sin(th),w1=Math.sin((1-t)*th)/sn,w2=Math.sin(t*th)/sn;
+  return a.map((v,i)=>v*w1+bb[i]*w2);
+}
+function pushQuat(q,now){             // adaptive low-pass: steady when still, quick when panning
+  if(!S.q){S.q=q;S.qT=now;S.M=fromQuat(q);return;}
+  const dt=Math.max(0.004,Math.min(0.2,(now-S.qT)/1000));
+  S.qT=now;
+  const d=Math.abs(S.q[0]*q[0]+S.q[1]*q[1]+S.q[2]*q[2]+S.q[3]*q[3]);
+  // The speed term widens the filter when you pan. Cap it: no hand sweep exceeds
+  // 300 deg/s, so anything above that is a bad reading rather than real motion, and
+  // letting it through would open the filter exactly when it is needed most.
+  const degs=Math.min(300, 2*Math.acos(Math.min(1,d))*R2D/dt);
+  const fc=8*Math.exp(-0.033*S.smooth)+(0.055-S.smooth/100*0.035)*degs;
+  const tau=1/(2*Math.PI*fc);
+  S.q=qslerp(S.q,q,1/(1+tau/dt));
+  S.M=fromQuat(S.q);
+}
+/* On a Pixel, deviceorientationabsolute (compass-referenced) and deviceorientation
+   (relative, no compass) BOTH fire, with headings that differ by a fixed amount.
+   Feeding both into one filter makes the view flip between two positions several
+   times a second - which looks like jitter but is really two streams disagreeing,
+   so smoothing can never fix it. Lock onto exactly one source and ignore the rest. */
+function claimSrc(src){
+  const r=RANK[src]||0;
+  if(!S.src){ S.src=src; S.srcRank=r; S.q=null; return true; }
+  if(src===S.src) return true;
+  if(r>S.srcRank){ S.srcRank=r; S.src=src; S.q=null; return true; }  // strict promotion only
+  return false;
+}
+function traceSrc(src,q){             // record every source, even the ones we ignore
+  const M=fromQuat(q), f=[-M[2],-M[5],-M[8]];
+  const prev=S.seen[src];
+  S.seen[src]={n:(prev?prev.n:0)+1,
+               az:((Math.atan2(f[0],f[1])*R2D)%360+360)%360};
+}
+function onOri(e,src){
+  if(S.gyro!=="live")return;
+  if(e.alpha==null&&e.webkitCompassHeading==null)return;
+  let alpha=e.alpha;
+  if(typeof e.webkitCompassHeading==="number"&&!isNaN(e.webkitCompassHeading))
+    alpha=360-e.webkitCompassHeading;                        // iOS reports true north
+  const q=eulerQuat(alpha,e.beta||0,e.gamma||0);
+  traceSrc(src,q);
+  if(!claimSrc(src))return;
+  S.gyroEvents++;
+  S.absolute = (typeof e.webkitCompassHeading==="number"&&!isNaN(e.webkitCompassHeading))
+               || !!e.absolute || src==="deviceorientationabsolute";
+  S.raw={a:e.alpha,b:e.beta,g:e.gamma,
+         c:(typeof e.webkitCompassHeading==="number")?e.webkitCompassHeading:null};
+  pushQuat(q,performance.now());
+}
+function startGenericSensor(){
+  const Abs=window.AbsoluteOrientationSensor, Rel=window.RelativeOrientationSensor;
+  const Ctor=Abs||Rel; if(!Ctor)return;
+  try{
+    sensorObj=new Ctor({frequency:30,referenceFrame:"device"});
+    sensorObj.addEventListener("reading",()=>{
+      if(S.gyro!=="live")return;
+      const nm=Abs?"AbsoluteOrientationSensor":"RelativeOrientationSensor";
+      traceSrc(nm,Array.from(sensorObj.quaternion));
+      if(!claimSrc(nm))return;
+      S.gyroEvents++; S.absolute=!!Abs;
+      pushQuat(Array.from(sensorObj.quaternion),performance.now());
+    });
+    sensorObj.addEventListener("error",ev=>note((ev.error&&ev.error.name)||"sensor error"));
+    sensorObj.start();
+  }catch(err){ note(err.name+": "+err.message); }
+}
+function attachGyro(){
+  if(gyroAttached)return; gyroAttached=true;
+  addEventListener("deviceorientationabsolute",e=>onOri(e,"deviceorientationabsolute"),true);
+  addEventListener("deviceorientation",e=>onOri(e,"deviceorientation"),true);
+  // only reach for the Sensor API if the events haven't given us a compass reference
+  setTimeout(()=>{ if(S.gyro && S.srcRank<4) startGenericSensor(); },1200);
+}
+/* An iPad's natural frame is landscape while an iPhone's is portrait, so the same
+   screen.orientation.angle means different things on each and the sky comes out
+   rotated 90 degrees. Detect it from the aspect at the reported angle, and keep a
+   manual override because the detection cannot be verified on every device. */
+/* screen.orientation.angle is how far the CONTENT has been rotated to stay upright,
+   so undoing it means subtracting, not adding. Adding left portrait correct (angle 0)
+   while landscape came out 180 degrees wrong - which is exactly the reported symptom.
+   screenAdd is a manual constant for devices whose natural frame is landscape (iPad),
+   where everything is a further 180 out in BOTH orientations. */
+function screenAngle(){
+  const a=(screen.orientation&&screen.orientation.angle)||0;
+  return -a + (S.screenAuto ? 0 : S.screenAdd);
+}
+function gyroBasis(){
+  const M=S.M; if(!M)return null;
+  const th=screenAngle()*D;
+  const ap=v=>[M[0]*v[0]+M[1]*v[1]+M[2]*v[2],
+               M[3]*v[0]+M[4]*v[1]+M[5]*v[2],
+               M[6]*v[0]+M[7]*v[1]+M[8]*v[2]];
+  return{f:ap([0,0,-1]),r:ap([Math.cos(th),Math.sin(th),0]),u:ap([-Math.sin(th),Math.cos(th),0])};
+}
+
+/* Local sidereal time from the wall clock. Without this, pointing the phone at
+   Orion would show whatever the LST slider happened to be left on. */
+function lstNow(){
+  const JD=Date.now()/86400000+2440587.5;
+  const gmst=(18.697374558+24.06570982441908*(JD-2451545.0))%24;
+  return (((gmst*15+S.lon)%360)+360)%360;
+}
+function syncClock(){
+  S.lst=lstNow();
+  $("lst").value=Math.round(S.lst); $("lstV").textContent=Math.round(S.lst)+"\u00b0";
+}
+function gyroStatus(){
+  if(!S.gyro){ $("gyroStat").textContent=
+    "Declination turns magnetic north into true north (12.7\u00b0 for Sydney). Compass offset "+
+    "corrects your phone's own error \u2014 nudge it until a bright star lines up."; return; }
+  const hh=Math.floor(S.lst/15), mm=((S.lst/15)%1*60).toFixed(0);
+  const srcs=Object.entries(S.seen).map(([k,v])=>
+    `${k===S.src?"\u25b8":"\u00b7"}${k.replace("deviceorientation","dev.ori").slice(0,13)} ${v.az.toFixed(0)}\u00b0`
+  ).join("  ");
+  $("gyroStat").textContent=
+    `using ${S.src||"\u2014"} \u00b7 ${S.gyroEvents} readings \u00b7 `+
+    `${S.absolute?"absolute (compass)":"relative (will drift)"}\n`+
+    `${srcs}\n`+
+    `LST ${hh}h ${mm}m \u00b7 lat ${S.lat.toFixed(2)}\u00b0 lon ${S.lon.toFixed(2)}\u00b0\n`+
+    (S.raw?`alpha ${(S.raw.a??0).toFixed(0)} beta ${(S.raw.b??0).toFixed(0)} `+
+           `gamma ${(S.raw.g??0).toFixed(0)}`+
+           (S.raw.c!=null?` compass ${S.raw.c.toFixed(0)}`:"")+"\n"+
+           `screen ${(screen.orientation&&screen.orientation.angle)||0}\u00b0 `+
+           `${(screen.orientation&&screen.orientation.type)||"?"} \u2192 using ${screenAngle()}\u00b0`+
+           (()=>{const b=gyroBasis(); if(!b)return "";
+             return `\nlooking az ${((Math.atan2(b.f[0],b.f[1])*R2D)%360+360)%360|0}\u00b0 `+
+                    `alt ${Math.asin(Math.max(-1,Math.min(1,b.f[2])))*R2D|0}\u00b0`;})()
+         :"");
+}
+function setGyroButton(){
+  const f=$("fGyro");
+  f.classList.toggle("on",S.gyro==="live");
+  f.classList.toggle("warm",S.gyro==="locked");
+  const b=$("gyro");
+  b.classList.toggle("live",S.gyro==="live");
+  b.classList.toggle("locked",S.gyro==="locked");
+  b.textContent = S.gyro==="live"   ? "\u25c9  live \u2014 tap a target"
+                : S.gyro==="locked" ? "\u25a3  locked \u2014 tap to resume"
+                :                     "\u25ce  point at the sky";
+  $("lst").disabled = !!S.gyro;
+  $("lat").disabled = !!S.gyro;
+}
+function gyroLoop(){
+  if(S.gyro!=="live"){gyroRAF=null;return;}
+  render(); gyroStatus();
+  gyroRAF=requestAnimationFrame(gyroLoop);
+}
+function goLive(){
+  // coming back from a locked close-up, hand back the field of view you were scanning at
+  if(S.gyro==="locked" && S.fovBeforeLock!=null){ S.fov=S.fovBeforeLock; S.fovBeforeLock=null; }
+  S.gyro="live"; S.playing&&$("play").click();
+  syncClock();
+  if(!clockTimer) clockTimer=setInterval(()=>{ if(S.gyro) syncClock(); },20000);
+  setGyroButton();
+  if(!gyroRAF) gyroRAF=requestAnimationFrame(gyroLoop);
+}
+function lockGyro(){
+  S.fovBeforeLock=S.fov;
+  const b=gyroBasis();
+  if(b){ S.look.alt=Math.asin(Math.max(-1,Math.min(1,b.f[2])))*R2D;
+         S.look.az=((Math.atan2(b.f[0],b.f[1])*R2D)%360+360)%360; }
+  S.gyro="locked"; setGyroButton();
+}
+function stopGyro(){
+  S.gyro=false; setGyroButton();
+  if(sensorObj){ try{sensorObj.stop();}catch(e){} sensorObj=null; }
+  gyroAttached=false; S.srcRank=0; S.src=null; S.q=null; S.M=null;
+  gyroStatus(); render();
+}
+function enableGyro(){
+  const go=()=>{
+    attachGyro(); goLive();
+    if(navigator.geolocation) navigator.geolocation.getCurrentPosition(
+      pos=>{ S.lat=pos.coords.latitude; S.lon=pos.coords.longitude;
+             $("lat").value=S.lat.toFixed(1); $("latV").textContent=S.lat.toFixed(1)+"\u00b0";
+             syncClock(); },
+      ()=>{}, {timeout:6000, maximumAge:600000});
+    setTimeout(()=>{ if(S.gyro==="live"&&!S.gyroEvents)
+      note("No orientation readings. Needs https, and on iPhone: Settings \u203a Apps \u203a Safari "+
+           "\u203a Motion & Orientation Access."); },2500);
+  };
+  if(window.DeviceOrientationEvent&&DeviceOrientationEvent.requestPermission){
+    DeviceOrientationEvent.requestPermission()
+      .then(r=>{ r==="granted" ? go() : note("Motion permission denied."); })
+      .catch(err=>note(err.name+": "+err.message));
+  } else go();
+}
+function toggleFull(){
+  const el=document.documentElement, d=document;
+  const isFull=d.fullscreenElement||d.webkitFullscreenElement;
+  const fn=isFull ? (d.exitFullscreen||d.webkitExitFullscreen)
+                  : (el.requestFullscreen||el.webkitRequestFullscreen);
+  if(fn) try{ fn.call(isFull?d:el); }catch(e){ note("Full screen unavailable here."); }
+  setTimeout(render,300);
+}
+$("gyro").onclick=()=>{
+  if(!S.gyro) enableGyro();
+  else if(S.gyro==="locked") goLive();
+  else stopGyro();
+};
+$("decl").oninput=e=>{S.decl=+e.target.value;$("declV").textContent=S.decl.toFixed(1)+"\u00b0";render();};
+$("tweak").oninput=e=>{S.tweak=+e.target.value;$("tweakV").textContent=S.tweak.toFixed(1)+"\u00b0";render();};
+$("smooth").oninput=e=>{S.smooth=+e.target.value;$("smoothV").textContent=S.smooth;};
 
 /* Pointer events cover mouse, touch and pen in one path: one finger looks around,
    two fingers pinch to zoom, a tap that barely moves is a selection. */
@@ -679,6 +1084,11 @@ function endPointer(e){
     dragging=false; cv.classList.remove("drag");
     if(wasTap){
       const im=pick(e.clientX,e.clientY);
+      if(S.gyro==="live"){
+        if(im){ lockGyro(); selectImage(im); frameImage(im); }   // freeze, then zoom in
+        return;
+      }
+      if(S.gyro==="locked" && !im){ goLive(); return; }          // tap empty sky to resume
       selectImage(im);
       if(im && !e.shiftKey) frameImage(im);
     }
@@ -690,26 +1100,31 @@ cv.addEventListener("dblclick",e=>e.preventDefault());
 cv.addEventListener("wheel",e=>{e.preventDefault();
   S.fov=Math.max(0.1,Math.min(120,S.fov*(e.deltaY>0?1.08:1/1.08)));render();},{passive:false});
 addEventListener("resize",render);
+screen.orientation&&screen.orientation.addEventListener("change",()=>setTimeout(render,120));
 addEventListener("keydown",e=>{
   if(e.target.tagName==="INPUT")return;
-  if(e.key==="Escape")selectImage(null);
+  if(e.key==="Escape"){ if(S.gyro==="locked") goLive(); else selectImage(null); }
   else if(e.key==="ArrowRight")step(1);
   else if(e.key==="ArrowLeft")step(-1);
 });
 
 /* ---------- boot ---------- */
+// Layout and data first: neither needs WebGL, and burying them inside the try block
+// meant a single graphics failure took the whole interface down with it.
+if(MQ.matches){ S.speed=0.5; $("spd").value=50; $("spdV").textContent="0.5\u00d7"; }
+applyMode();
+
 try{
   if(!gl) throw new Error("no WebGL context");
   initGL();
   const sky=new Image();
   sky.onload=()=>{upload(bgTex,sky);bgReady=true;render();};
-  sky.onerror=()=>{note(`${SKY.file} not found — put an equirectangular all-sky JPG here and serve the folder over http. Images and overlay still work.`);render();};
+  sky.onerror=()=>{note(`${SKY.file} not found \u2014 put an equirectangular all-sky JPG here and serve the folder over http. Images and overlay still work.`);render();};
   sky.src=SKY.file;
-  if(MQ.matches){ S.speed=0.5; $("spd").value=50; $("spdV").textContent="0.5\u00d7"; }
-  applyMode();
-  loadManifest();
-  render();
-}catch(err){note("WebGL unavailable: "+err.message);}
+}catch(err){ note("WebGL unavailable: "+err.message); }
+
+loadManifest();
+try{ render(); }catch(err){ note("Draw failed: "+err.message); }
 </script>
 </body>
 </html>
