@@ -526,9 +526,13 @@ function render(){
   const DPR=Math.min(devicePixelRatio||1,2),r=cv.getBoundingClientRect();
   const W=Math.max(1,Math.round(r.width*DPR)),H=Math.max(1,Math.round(r.height*DPR));
   if(cv.width!==W||cv.height!==H){cv.width=W;cv.height=H;}
-  gl.viewport(0,0,W,H);
   const B=basis(), FOC=(H/2)/Math.tan(S.fov/2*D);
 
+  // render() can be called before initGL() (layout runs first now) or after a GL
+  // failure. The 2D overlay still works in both cases, so draw what we can.
+  const glReady=!!(gl&&imProg&&bgProg);
+  if(glReady){
+  gl.viewport(0,0,W,H);
   gl.clearColor(0.02,0.01,0.005,1); gl.clear(gl.COLOR_BUFFER_BIT);
   if(bgReady&&S.backdrop){
     gl.disable(gl.BLEND); gl.useProgram(bgProg);
@@ -565,8 +569,10 @@ function render(){
   }
   gl.disableVertexAttribArray(imAttr.p); gl.disableVertexAttribArray(imAttr.uv);
   gl.disable(gl.BLEND);
+  }
 
-  const {w,h}=fitOv(); drawOverlay(w,h,B,(h/2)/Math.tan(S.fov/2*D),M);
+  const {w,h}=fitOv();
+  drawOverlay(w,h,B,(h/2)/Math.tan(S.fov/2*D),eqToHor(S.lat,S.lst));
   $("cal").textContent=`look az ${Math.round(S.look.az)}\u00b0 alt ${Math.round(S.look.alt)}\u00b0`
     +` \u00b7 fov ${S.fov.toFixed(1)}\u00b0 \u00b7 ${IMAGES.length} image${IMAGES.length===1?"":"s"}`;
 }
@@ -776,7 +782,7 @@ $("fMoon").onclick=()=>{
   render();
 };
 $("fFull").onclick=toggleFull;
-if(!canFull) $("fFull").style.display="none";
+if(!canFullscreen()) $("fFull").style.display="none";
 const SR={sr0:"auto",sr90:90,sr180:180,sr270:270};
 for(const id of Object.keys(SR)) $(id).onclick=()=>{
   for(const o of Object.keys(SR)) $(o).classList.toggle("on",o===id);
@@ -800,6 +806,10 @@ $("play").onclick=()=>{
    against real devices. The key trick: rather than converting to az/alt, replace
    the whole camera basis with the device rotation matrix, so tilting the phone
    sideways rolls the sky correctly too. */
+function canFullscreen(){
+  const el=document.documentElement;
+  return !!(el.requestFullscreen||el.webkitRequestFullscreen);
+}
 const RANK={deviceorientationabsolute:4,AbsoluteOrientationSensor:3,
             deviceorientation:2,RelativeOrientationSensor:1};
 let sensorObj=null, gyroAttached=false, gyroRAF=null, clockTimer=null;
@@ -1006,8 +1016,6 @@ function enableGyro(){
       .catch(err=>note(err.name+": "+err.message));
   } else go();
 }
-const canFull=!!(document.documentElement.requestFullscreen||
-                 document.documentElement.webkitRequestFullscreen);
 function toggleFull(){
   const el=document.documentElement, d=document;
   const isFull=d.fullscreenElement||d.webkitFullscreenElement;
@@ -1090,18 +1098,22 @@ addEventListener("keydown",e=>{
 });
 
 /* ---------- boot ---------- */
+// Layout and data first: neither needs WebGL, and burying them inside the try block
+// meant a single graphics failure took the whole interface down with it.
+if(MQ.matches){ S.speed=0.5; $("spd").value=50; $("spdV").textContent="0.5\u00d7"; }
+applyMode();
+
 try{
   if(!gl) throw new Error("no WebGL context");
   initGL();
   const sky=new Image();
   sky.onload=()=>{upload(bgTex,sky);bgReady=true;render();};
-  sky.onerror=()=>{note(`${SKY.file} not found — put an equirectangular all-sky JPG here and serve the folder over http. Images and overlay still work.`);render();};
+  sky.onerror=()=>{note(`${SKY.file} not found \u2014 put an equirectangular all-sky JPG here and serve the folder over http. Images and overlay still work.`);render();};
   sky.src=SKY.file;
-  if(MQ.matches){ S.speed=0.5; $("spd").value=50; $("spdV").textContent="0.5\u00d7"; }
-  applyMode();
-  loadManifest();
-  render();
-}catch(err){note("WebGL unavailable: "+err.message);}
+}catch(err){ note("WebGL unavailable: "+err.message); }
+
+loadManifest();
+try{ render(); }catch(err){ note("Draw failed: "+err.message); }
 </script>
 </body>
 </html>
