@@ -60,10 +60,24 @@
   /* ---- mobile: canvas full screen, a thin bar at the bottom, rest in a sheet ---- */
   #gyro{display:none}
   h1 #ver{color:var(--ink-dim);letter-spacing:.08em}
-  #nav,#nowpill{display:none}
   #fabs{display:flex;position:absolute;right:10px;top:12px;z-index:6;
     flex-direction:column;gap:9px}
-  #fGyro,#fSet{display:none}                     /* mobile-only controls */
+  #nav{display:flex;position:absolute;left:50%;transform:translateX(-50%);
+    bottom:16px;z-index:6;gap:14px}
+  #nowpill{display:block;position:absolute;left:50%;transform:translateX(-50%);
+    bottom:78px;z-index:6;max-width:70%;
+    font-family:var(--mono);font-size:12px;color:var(--pick);text-align:center;
+    background:rgba(13,3,1,.8);border:1px solid var(--edge);border-radius:14px;
+    padding:5px 13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #nowpill span{color:var(--ink-dim)}
+  #fGyro{display:none}                           /* no gyro on a desktop */
+  body.mobile #fGyro{display:flex}
+  #app{display:block}
+  main{position:absolute;inset:0}
+  aside{display:none;position:fixed;left:0;top:0;bottom:0;z-index:20;width:352px;
+    max-width:92vw;overflow-y:auto;border-right:1px solid var(--edge);
+    background:rgba(18,4,2,.97)}
+  body.sheet aside{display:flex}
   .fab{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;
     justify-content:center;font-size:19px;line-height:1;color:var(--ink);
     background:rgba(13,3,1,.82);border:1px solid var(--edge);cursor:pointer;
@@ -71,27 +85,10 @@
   .fab.on{color:#000;background:var(--pick);border-color:var(--pick)}
   .fab.warm{color:#000;background:var(--hot);border-color:var(--hot)}
   body.mobile #fGyro,body.mobile #fSet{display:flex}
-  body.mobile #nav{display:flex;position:absolute;left:50%;transform:translateX(-50%);
-    bottom:calc(14px + env(safe-area-inset-bottom));z-index:6;gap:14px}
-  body.mobile #nav .fab{width:52px;height:52px;font-size:17px}
-  body.mobile #nowpill{display:block;position:absolute;left:50%;transform:translateX(-50%);
-    bottom:calc(76px + env(safe-area-inset-bottom));z-index:6;max-width:82vw;
-    font-family:var(--mono);font-size:12px;color:var(--pick);text-align:center;
-    background:rgba(13,3,1,.8);border:1px solid var(--edge);border-radius:14px;
-    padding:5px 13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  body.mobile #nowpill span{color:var(--ink-dim)}
-  body.mobile aside{display:none}
-  body.mobile.sheet aside{display:flex;position:fixed;left:0;right:0;bottom:0;top:auto;
-    z-index:20;flex:none;width:auto;border-right:0;border-top:1px solid var(--edge);
-    padding:12px 14px calc(14px + env(safe-area-inset-bottom));
-    background:rgba(18,4,2,.97);max-height:88vh;overflow-y:auto}
-  body.mobile.sheet #panelTop,body.mobile.sheet #panelBottom{display:flex;
-    flex-direction:column;gap:11px}
-  body.mobile.sheet #list{max-height:32vh}
-  #close{display:none}
-  body.mobile.sheet #close{display:block;width:100%;font:inherit;font-family:var(--mono);
+  #close{display:block;width:100%;font:inherit;font-family:var(--mono);
     font-size:12px;color:#000;background:var(--hot);border:0;border-radius:2px;
     padding:11px;cursor:pointer;font-weight:600}
+  #list{max-height:34vh}
   #compass{display:none;flex-direction:column;gap:11px}
   body.mobile #compass{display:flex}
   body.mobile #gyro{display:block;width:100%;font:inherit;font-size:12px;
@@ -102,14 +99,11 @@
   #now{display:none;font-family:var(--mono);font-size:12px;color:var(--pick);
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:2px 1px}
   #now b{font-weight:600}#now span{color:var(--ink-dim)}
-  body.mobile #app{display:block}
-  body.mobile main{position:absolute;inset:0}
-  body.mobile aside{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:10;
-    flex:none;width:auto;border-right:0;border-top:1px solid var(--edge);
-    padding:8px 12px calc(8px + env(safe-area-inset-bottom));gap:8px;
-    background:rgba(18,4,2,.94);overflow:hidden;max-height:none}
-  body.mobile h1,body.mobile #panelTop,body.mobile #panelBottom{display:none}
-  body.mobile #now{display:block}
+  body.mobile aside{left:0;right:0;top:auto;bottom:0;width:auto;max-width:none;
+    border-right:0;border-top:1px solid var(--edge);max-height:88vh}
+  body.mobile #nav{bottom:calc(14px + env(safe-area-inset-bottom))}
+  body.mobile #nav .fab{width:52px;height:52px;font-size:17px}
+  body.mobile #nowpill{bottom:calc(76px + env(safe-area-inset-bottom));max-width:82vw}
   body.mobile .tour button{padding:11px 6px;font-size:12px}
   body.mobile.sheet aside{max-height:86vh;overflow-y:auto}
   body.mobile.sheet #panelTop,body.mobile.sheet #panelBottom{display:flex;
@@ -146,9 +140,11 @@
     <div class="fld"><label>Move speed <span class="val" id="spdV">1.0&times;</span></label>
       <input type="range" id="spd" min="25" max="300" value="100" step="5"></div>
     <div id="compass">
-      <div class="fld"><label>Screen rotation fix</label>
-        <div class="seg"><button id="sr0" class="on">auto</button><button id="sr90">+90</button>
-          <button id="sr180">+180</button><button id="sr270">+270</button></div></div>
+      <div class="fld"><label>Screen rotation <span class="val" id="srV">0&deg;</span></label>
+        <div class="seg"><button id="srLevel">level horizon</button>
+          <button id="srNudge">rotate 90&deg;</button></div>
+        <div class="note">If the horizon runs vertically or the view is upside down, hold the
+          device the way you normally would and tap level horizon. Measured once and remembered.</div></div>
       <div class="fld"><label>Magnetic declination <span class="val" id="declV">12.7&deg;</span></label>
         <input type="range" id="decl" min="0" max="30" value="12.7" step="0.1"></div>
       <div class="fld"><label>Compass offset <span class="val" id="tweakV">0&deg;</span></label>
@@ -207,7 +203,7 @@
 
 <script>
 "use strict";
-const VERSION="1.1.0";
+const VERSION="1.2.0";
 const D=Math.PI/180,R2D=180/Math.PI,$=id=>document.getElementById(id);
 const REDUCED=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const MQ=matchMedia("(max-width: 760px), (pointer: coarse)");
@@ -248,7 +244,7 @@ const S={look:{az:180,alt:45}, fov:100, lat:-33.8, lst:80,
          gyro:false, decl:12.7, tweak:0, smooth:60, debug:false,
          lat0:-33.80071, lon:151.20855,
          q:null, qT:0, M:null, src:null, srcRank:0, gyroEvents:0, absolute:false, seen:{},
-         fovBeforeLock:null, screenAdd:0, screenAuto:true, moon:false};
+         fovBeforeLock:null, screenAdd:0, moon:false};
 let IMAGES=[], RAW=[], TOUR=[], playTimer=null, anim=null;
 
 /* ---------- vector maths ---------- */
@@ -400,6 +396,16 @@ function buildMesh(im){
   im.count=IDX.length;
 }
 
+/* Compact distance for on-screen labels: "460 ly", "200k ly", "11.4M ly". */
+function shortLy(v){
+  if(!v) return "";
+  const n=parseFloat(String(v).replace(/[, ]/g,""));
+  if(!isFinite(n)||n<=0) return "";
+  if(n>=1e6) return (n/1e6).toFixed(n>=1e7?0:1).replace(/\.0$/,"")+"M ly";
+  if(n>=1e4) return Math.round(n/1e3)+"k ly";
+  return Math.round(n).toLocaleString("en-AU")+" ly";
+}
+
 /* ---------- manifest ---------- */
 function prepare(list){
   RAW=list;
@@ -411,6 +417,7 @@ function prepare(list){
         area:(e.fov_w_deg||1)*(e.fov_h_deg||1),
         half:Math.max(...cvs.map(v=>Math.acos(Math.max(-1,Math.min(1,dot(c,v))))*R2D)),
         mirrored: handedness(cvs,c)<0,
+        distShort: shortLy(e.distance_ly),
         tex:mkTex([0,0,0,0]), texReady:false, hires:false,
         label:e.label||e.file.replace(/\.(jpe?g|png)$/i,"")};
     });
@@ -507,7 +514,7 @@ function drawDebug(w,h,B){
                    +(S.raw.c!=null?` compass ${n(S.raw.c)}`:""));
   const sa=(screen.orientation&&screen.orientation.angle)||0;
   L.push(`screen ${sa}\u00b0 ${(screen.orientation&&screen.orientation.type)||"?"}`
-         +`  add ${S.screenAuto?"auto(0)":S.screenAdd}  using ${screenAngle()}\u00b0`);
+         +`  add ${S.screenAdd}  using ${screenAngle()}\u00b0`);
   L.push(`win ${innerWidth}x${innerHeight}  dpr ${(devicePixelRatio||1).toFixed(1)}`);
   const az=((Math.atan2(B.f[0],B.f[1])*R2D)%360+360)%360;
   const alt=Math.asin(Math.max(-1,Math.min(1,B.f[2])))*R2D;
@@ -685,10 +692,17 @@ function drawOverlay(w,h,B,FOC,M){
     octx.font=(on?12:11)+"px "+mono;octx.textAlign="center";octx.textBaseline="top";
     const ly=c[1]+(span<26?7:span/2+4);
     octx.fillText(im.label,c[0],ly);
+    let tw=octx.measureText(im.label).width, hgt=(on?12:11);
+    if(im.distShort){                       // distance sits under the name, dimmer
+      octx.font="10px "+mono;
+      octx.fillStyle=on?"rgba(127,255,212,.8)":"rgba(255,154,118,.62)";
+      octx.fillText(im.distShort,c[0],ly+hgt+1);
+      tw=Math.max(tw,octx.measureText(im.distShort).width);
+      hgt+=12;
+    }
     // remember where the text landed so it can be tapped - at arm's length a 0.6 deg
     // image is only a few pixels wide, but its name is a comfortable target
-    const tw=octx.measureText(im.label).width;
-    im.hit=[c[0]-tw/2-8, ly-6, c[0]+tw/2+8, ly+(on?12:11)+6];
+    im.hit=[c[0]-tw/2-8, ly-6, c[0]+tw/2+8, ly+hgt+6];
   }
 
   if(S.moon) drawMoon(w,h,FOC);
@@ -739,18 +753,18 @@ function selectImage(im){
   if(!im){box.innerHTML="No image selected.";now.textContent="\u2014";
           $("nowpill").textContent="\u2014";render();return;}
   $("nowpill").innerHTML=`${im.label} <span>`
-    +(im.distance_ly?`${im.distance_ly} ly`:`${im.fov_w_deg.toFixed(2)}\u00d7${im.fov_h_deg.toFixed(2)}\u00b0`)
+    +(im.distShort||`${im.fov_w_deg.toFixed(2)}\u00d7${im.fov_h_deg.toFixed(2)}\u00b0`)
     +`</span>`;
   now.innerHTML=`<b>${im.label}</b> <span>${im.fov_w_deg.toFixed(2)}\u00d7${im.fov_h_deg.toFixed(2)}\u00b0</span>`;
   const hh=im.ra_deg/15, dd=Math.abs(im.dec_deg);
-  box.innerHTML=`<b>${im.label}</b><br>`
+  box.innerHTML=`<b>${im.label}</b>`
+   +(im.distance_ly?`  <span class="v">${im.distance_ly} ly</span>`:"")+"<br>"
+   +(im.distance_note?`<span style="opacity:.7">${im.distance_note}</span><br>`:"")
    +`centre <span class="v">${Math.floor(hh)}h ${((hh%1)*60).toFixed(1)}m &nbsp; `
    +`${im.dec_deg<0?"\u2212":"+"}${Math.floor(dd)}\u00b0 ${((dd%1)*60).toFixed(0)}\u2032</span><br>`
    +`field <span class="v">${im.fov_w_deg.toFixed(2)}\u00b0 \u00d7 ${im.fov_h_deg.toFixed(2)}\u00b0</span><br>`
    +`scale <span class="v">${im.pixscale_arcsec?im.pixscale_arcsec.toFixed(2)+"\u2033/px":"\u2014"}</span> \u00b7 `
    +`<span class="v">${im.width_px}\u00d7${im.height_px}</span><br>`
-   +(im.distance_ly?`distance <span class="v">${im.distance_ly} ly</span>`
-        +(im.distance_note?` <span style="opacity:.7">${im.distance_note}</span>`:"")+"<br>":"")
    +`frame <span class="${im.mirrored?"warn":"v"}">${im.mirrored?"mirrored (east right)":"east left, standard"}</span><br>`
    +`<span class="v">${im.hires?"full resolution":"thumbnail"}</span>`;
   if(!im.hires && im.thumb) loadTex(im,im.file,true);
@@ -839,13 +853,15 @@ $("fMoon").onclick=()=>{
 };
 $("fFull").onclick=toggleFull;
 if(!canFullscreen()) $("fFull").style.display="none";
-const SR={sr0:"auto",sr90:90,sr180:180,sr270:270};
-for(const id of Object.keys(SR)) $(id).onclick=()=>{
-  for(const o of Object.keys(SR)) $(o).classList.toggle("on",o===id);
-  S.screenAuto = SR[id]==="auto";
-  if(!S.screenAuto) S.screenAdd=SR[id];
-  render();
+$("srLevel").onclick=levelHorizon;
+$("srNudge").onclick=()=>{
+  S.screenAdd=((S.screenAdd+90+180)%360)-180;
+  try{ localStorage.setItem("skydome.screenAdd",S.screenAdd); }catch(e){}
+  showScreenAdd(); render();
 };
+try{ const v=localStorage.getItem("skydome.screenAdd");
+     if(v!=null) S.screenAdd=+v; }catch(e){}
+showScreenAdd();
 $("play").onclick=()=>{
   S.playing=!S.playing;
   $("play").classList.toggle("on",S.playing);
@@ -968,14 +984,33 @@ function attachGyro(){
    screen.orientation.angle means different things on each and the sky comes out
    rotated 90 degrees. Detect it from the aspect at the reported angle, and keep a
    manual override because the detection cannot be verified on every device. */
-/* screen.orientation.angle is how far the CONTENT has been rotated to stay upright,
-   so undoing it means subtracting, not adding. Adding left portrait correct (angle 0)
-   while landscape came out 180 degrees wrong - which is exactly the reported symptom.
-   screenAdd is a manual constant for devices whose natural frame is landscape (iPad),
-   where everything is a further 180 out in BOTH orientations. */
+/* Screen frame vs device frame.
+   The on-screen roll works out as  roll = th + phi , where phi is the device's own
+   roll about the view axis. So the right th is -phi, and th = angle + k with a single
+   constant k per device: 0 where the natural orientation is portrait, -90 on an iPad
+   where screen.orientation.angle is landscape-referenced but iOS still reports
+   deviceorientation in a portrait frame. Solved from three iPad readings, k = -90 fits
+   both portrait and landscape; a -angle form does not fit either.
+   Rather than ask anyone to work that out, levelHorizon() measures it. */
 function screenAngle(){
   const a=(screen.orientation&&screen.orientation.angle)||0;
-  return -a + (S.screenAuto ? 0 : S.screenAdd);
+  return a + S.screenAdd;
+}
+function currentRoll(){
+  const b=(S.gyro==="live")?gyroBasis():null;
+  return b ? Math.atan2(b.r[2],b.u[2])*R2D : null;
+}
+function levelHorizon(){
+  const roll=currentRoll();
+  if(roll==null){ note("Turn the gyro on and hold the device normally, then level again."); return; }
+  S.screenAdd=Math.round((S.screenAdd-roll)/90)*90;
+  while(S.screenAdd>180) S.screenAdd-=360;
+  while(S.screenAdd<-180) S.screenAdd+=360;
+  try{ localStorage.setItem("skydome.screenAdd",S.screenAdd); }catch(e){}
+  showScreenAdd(); render();
+}
+function showScreenAdd(){
+  $("srV").textContent=(S.screenAdd>0?"+":"")+S.screenAdd+"\u00b0";
 }
 function gyroBasis(){
   const M=S.M; if(!M)return null;
