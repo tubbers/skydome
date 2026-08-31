@@ -57,7 +57,37 @@
     font-family:var(--mono);font-size:11px;color:var(--hot);line-height:1.55;display:none}
 
   /* ---- mobile: canvas full screen, a thin bar at the bottom, rest in a sheet ---- */
-  #more,#gyro{display:none}
+  #gyro{display:none}
+  #fabs,#nav,#nowpill{display:none}
+  .fab{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;
+    justify-content:center;font-size:19px;line-height:1;color:var(--ink);
+    background:rgba(13,3,1,.82);border:1px solid var(--edge);cursor:pointer;
+    -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);padding:0}
+  .fab.on{color:#000;background:var(--pick);border-color:var(--pick)}
+  .fab.warm{color:#000;background:var(--hot);border-color:var(--hot)}
+  body.mobile #fabs{display:flex;position:absolute;right:10px;top:12px;z-index:6;
+    flex-direction:column;gap:9px}
+  body.mobile #nav{display:flex;position:absolute;left:50%;transform:translateX(-50%);
+    bottom:calc(14px + env(safe-area-inset-bottom));z-index:6;gap:14px}
+  body.mobile #nav .fab{width:52px;height:52px;font-size:17px}
+  body.mobile #nowpill{display:block;position:absolute;left:50%;transform:translateX(-50%);
+    bottom:calc(76px + env(safe-area-inset-bottom));z-index:6;max-width:82vw;
+    font-family:var(--mono);font-size:12px;color:var(--pick);text-align:center;
+    background:rgba(13,3,1,.8);border:1px solid var(--edge);border-radius:14px;
+    padding:5px 13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  body.mobile #nowpill span{color:var(--ink-dim)}
+  body.mobile aside{display:none}
+  body.mobile.sheet aside{display:flex;position:fixed;left:0;right:0;bottom:0;top:auto;
+    z-index:20;flex:none;width:auto;border-right:0;border-top:1px solid var(--edge);
+    padding:12px 14px calc(14px + env(safe-area-inset-bottom));
+    background:rgba(18,4,2,.97);max-height:88vh;overflow-y:auto}
+  body.mobile.sheet #panelTop,body.mobile.sheet #panelBottom{display:flex;
+    flex-direction:column;gap:11px}
+  body.mobile.sheet #list{max-height:32vh}
+  #close{display:none}
+  body.mobile.sheet #close{display:block;width:100%;font:inherit;font-family:var(--mono);
+    font-size:12px;color:#000;background:var(--hot);border:0;border-radius:2px;
+    padding:11px;cursor:pointer;font-weight:600}
   #compass{display:none;flex-direction:column;gap:11px}
   body.mobile #compass{display:flex}
   body.mobile #gyro{display:block;width:100%;font:inherit;font-size:12px;
@@ -76,9 +106,6 @@
     background:rgba(18,4,2,.94);overflow:hidden;max-height:none}
   body.mobile h1,body.mobile #panelTop,body.mobile #panelBottom{display:none}
   body.mobile #now{display:block}
-  body.mobile #more{display:block;width:100%;font:inherit;font-size:11px;
-    font-family:var(--mono);color:var(--ink-dim);background:transparent;
-    border:1px solid var(--edge);border-radius:2px;padding:5px;cursor:pointer}
   body.mobile .tour button{padding:11px 6px;font-size:12px}
   body.mobile.sheet aside{max-height:86vh;overflow-y:auto}
   body.mobile.sheet #panelTop,body.mobile.sheet #panelBottom{display:flex;
@@ -99,8 +126,6 @@
     </div>
 
     <div id="now"></div>
-    <div class="fld"><label>Move speed <span class="val" id="spdV">1.0&times;</span></label>
-      <input type="range" id="spd" min="25" max="300" value="100" step="5"></div>
     <div class="tour">
       <button id="prev" title="Previous target">&#9666; prev</button>
       <button id="play" title="Auto-advance">&#9656; tour</button>
@@ -108,14 +133,18 @@
     </div>
 
     <button id="gyro">&#9678;  point at the sky</button>
-    <button id="more">&#9679;&#9679;&#9679;  settings</button>
 
     <div id="panelBottom">
     <hr>
     <div id="sel">No image selected.</div>
 
     <hr>
+    <div class="fld"><label>Move speed <span class="val" id="spdV">1.0&times;</span></label>
+      <input type="range" id="spd" min="25" max="300" value="100" step="5"></div>
     <div id="compass">
+      <div class="fld"><label>Screen rotation fix</label>
+        <div class="seg"><button id="sr0" class="on">auto</button><button id="sr90">+90</button>
+          <button id="sr180">+180</button><button id="sr270">+270</button></div></div>
       <div class="fld"><label>Magnetic declination <span class="val" id="declV">12.7&deg;</span></label>
         <input type="range" id="decl" min="0" max="30" value="12.7" step="0.1"></div>
       <div class="fld"><label>Compass offset <span class="val" id="tweakV">0&deg;</span></label>
@@ -148,11 +177,24 @@
       <div class="seg"><button id="hOn" class="on">on</button><button id="hOff">off</button></div></div>
 
     <div class="note" id="cal">look &mdash;</div>
+    <button id="close">done</button>
     </div>
   </aside>
   <main>
     <canvas id="gl"></canvas>
     <canvas id="ov"></canvas>
+    <div id="fabs">
+      <button class="fab" id="fGyro" title="Point at the sky">&#9678;</button>
+      <button class="fab" id="fMoon" title="Moon for scale">&#9789;</button>
+      <button class="fab" id="fFull" title="Full screen">&#9974;</button>
+      <button class="fab" id="fSet" title="Settings">&#9881;</button>
+    </div>
+    <div id="nowpill">&mdash;</div>
+    <div id="nav">
+      <button class="fab" id="fPrev" title="Previous">&#9666;</button>
+      <button class="fab" id="fTour" title="Tour">&#9656;</button>
+      <button class="fab" id="fNext" title="Next">&#9656;</button>
+    </div>
     <div id="msg"></div>
   </main>
 </div>
@@ -199,7 +241,7 @@ const S={look:{az:180,alt:45}, fov:100, lat:-33.8, lst:80,
          gyro:false, decl:12.7, tweak:0, smooth:60,
          lat0:-33.80071, lon:151.20855,
          q:null, qT:0, M:null, src:null, srcRank:0, gyroEvents:0, absolute:false, seen:{},
-         fovBeforeLock:null};
+         fovBeforeLock:null, screenAdd:0, screenAuto:true, moon:false};
 let IMAGES=[], RAW=[], TOUR=[], playTimer=null, anim=null;
 
 /* ---------- vector maths ---------- */
@@ -443,6 +485,38 @@ function basis(){
          r:[Math.cos(az),-Math.sin(az),0],
          u:[-Math.sin(al)*Math.sin(az),-Math.sin(al)*Math.cos(az),Math.cos(al)]};}
 
+/* ---------- moon, drawn at true angular size for scale ---------- */
+const MOON_DEG=0.518;                 // mean apparent diameter, 31.1 arcmin
+let moonImg=null, moonState="none";   // none | loading | ok | missing
+function loadMoon(){
+  if(moonState!=="none")return;
+  moonState="loading";
+  const i=new Image();
+  i.onload=()=>{moonImg=i;moonState="ok";render();};
+  i.onerror=()=>{moonState="missing";render();};   // fall back to a plain disc
+  i.src="moon.png";
+}
+function drawMoon(w,h,FOC){
+  const r=FOC*Math.tan(MOON_DEG/2*D);
+  const x=w/2, y=h/2;
+  if(moonState==="ok"&&moonImg){
+    octx.save(); octx.globalAlpha=0.92;
+    octx.drawImage(moonImg,x-r,y-r,r*2,r*2);
+    octx.restore();
+  }else{
+    octx.beginPath();octx.arc(x,y,r,0,7);
+    octx.fillStyle="rgba(230,230,225,.16)";octx.fill();
+    octx.strokeStyle="rgba(240,240,235,.75)";octx.lineWidth=1.3;octx.stroke();
+  }
+  octx.beginPath();octx.arc(x,y,r,0,7);
+  octx.strokeStyle="rgba(240,240,235,.5)";octx.lineWidth=1;octx.setLineDash([3,3]);
+  octx.stroke();octx.setLineDash([]);
+  const mono=getComputedStyle(document.body).getPropertyValue("--mono");
+  octx.fillStyle="rgba(240,240,235,.8)";octx.font="11px "+mono;
+  octx.textAlign="center";octx.textBaseline="top";
+  octx.fillText("Moon \u00b7 0.52\u00b0", x, y+r+5);
+}
+
 /* ---------- render ---------- */
 function fitOv(){const DPR=Math.min(devicePixelRatio||1,2),r=ov.getBoundingClientRect();
   ov.width=Math.max(1,Math.round(r.width*DPR));ov.height=Math.max(1,Math.round(r.height*DPR));
@@ -561,6 +635,8 @@ function drawOverlay(w,h,B,FOC,M){
     im.hit=[c[0]-tw/2-8, ly-6, c[0]+tw/2+8, ly+(on?12:11)+6];
   }
 
+  if(S.moon) drawMoon(w,h,FOC);
+
   if(S.horizon){
     const pts=[];for(let az=0;az<=360;az+=2)pts.push(proj(vec(az,0)));
     polyline(pts,"rgba(255,176,102,.45)",1.4);
@@ -603,7 +679,9 @@ function pick(clientX,clientY){
 function selectImage(im){
   S.sel=im; syncList();
   const box=$("sel"), now=$("now");
-  if(!im){box.innerHTML="No image selected.";now.textContent="\u2014";render();return;}
+  if(!im){box.innerHTML="No image selected.";now.textContent="\u2014";
+          $("nowpill").textContent="\u2014";render();return;}
+  $("nowpill").innerHTML=`${im.label} <span>${im.fov_w_deg.toFixed(2)}\u00d7${im.fov_h_deg.toFixed(2)}\u00b0</span>`;
   now.innerHTML=`<b>${im.label}</b> <span>${im.fov_w_deg.toFixed(2)}\u00d7${im.fov_h_deg.toFixed(2)}\u00b0</span>`;
   const hh=im.ra_deg/15, dd=Math.abs(im.dec_deg);
   box.innerHTML=`<b>${im.label}</b><br>`
@@ -685,11 +763,33 @@ seg("skFollow","skHold",v=>S.followSky=v);
 
 $("prev").onclick=()=>step(-1);
 $("next").onclick=()=>step(1);
-$("more").onclick=()=>document.body.classList.toggle("sheet");
+$("fSet").onclick=()=>document.body.classList.toggle("sheet");
+$("close").onclick=()=>document.body.classList.remove("sheet");
+$("fGyro").onclick=()=>$("gyro").click();
+$("fPrev").onclick=()=>step(-1);
+$("fNext").onclick=()=>step(1);
+$("fTour").onclick=()=>$("play").click();
+$("fMoon").onclick=()=>{
+  S.moon=!S.moon; $("fMoon").classList.toggle("on",S.moon);
+  if(S.moon) loadMoon();
+  if(S.moon&&moonState==="missing") note("moon.png not found \u2014 showing a plain disc at 0.52\u00b0.");
+  render();
+};
+$("fFull").onclick=toggleFull;
+if(!canFull) $("fFull").style.display="none";
+const SR={sr0:"auto",sr90:90,sr180:180,sr270:270};
+for(const id of Object.keys(SR)) $(id).onclick=()=>{
+  for(const o of Object.keys(SR)) $(o).classList.toggle("on",o===id);
+  S.screenAuto = SR[id]==="auto";
+  if(!S.screenAuto) S.screenAdd=SR[id];
+  render();
+};
 $("play").onclick=()=>{
   S.playing=!S.playing;
   $("play").classList.toggle("on",S.playing);
   $("play").textContent=S.playing?"\u25a0 stop":"\u25b8 tour";
+  $("fTour").classList.toggle("on",S.playing);
+  $("fTour").innerHTML=S.playing?"&#9632;":"&#9656;";
   if(playTimer)clearInterval(playTimer);
   if(S.playing){step(1);playTimer=setInterval(()=>step(1),7000);}
 };
@@ -770,6 +870,8 @@ function onOri(e,src){
   S.gyroEvents++;
   S.absolute = (typeof e.webkitCompassHeading==="number"&&!isNaN(e.webkitCompassHeading))
                || !!e.absolute || src==="deviceorientationabsolute";
+  S.raw={a:e.alpha,b:e.beta,g:e.gamma,
+         c:(typeof e.webkitCompassHeading==="number")?e.webkitCompassHeading:null};
   pushQuat(q,performance.now());
 }
 function startGenericSensor(){
@@ -796,9 +898,21 @@ function attachGyro(){
   // only reach for the Sensor API if the events haven't given us a compass reference
   setTimeout(()=>{ if(S.gyro && S.srcRank<4) startGenericSensor(); },1200);
 }
+/* An iPad's natural frame is landscape while an iPhone's is portrait, so the same
+   screen.orientation.angle means different things on each and the sky comes out
+   rotated 90 degrees. Detect it from the aspect at the reported angle, and keep a
+   manual override because the detection cannot be verified on every device. */
+function naturalLandscape(){
+  const a=Math.abs((screen.orientation&&screen.orientation.angle)||0)%180;
+  return a===0 ? innerWidth>innerHeight : innerHeight>innerWidth;
+}
+function screenAngle(){
+  const a=(screen.orientation&&screen.orientation.angle)||0;
+  return a + (S.screenAuto ? (naturalLandscape()?90:0) : S.screenAdd);
+}
 function gyroBasis(){
   const M=S.M; if(!M)return null;
-  const th=((screen.orientation&&screen.orientation.angle)||0)*D;
+  const th=screenAngle()*D;
   const ap=v=>[M[0]*v[0]+M[1]*v[1]+M[2]*v[2],
                M[3]*v[0]+M[4]*v[1]+M[5]*v[2],
                M[6]*v[0]+M[7]*v[1]+M[8]*v[2]];
@@ -828,9 +942,16 @@ function gyroStatus(){
     `using ${S.src||"\u2014"} \u00b7 ${S.gyroEvents} readings \u00b7 `+
     `${S.absolute?"absolute (compass)":"relative (will drift)"}\n`+
     `${srcs}\n`+
-    `LST ${hh}h ${mm}m \u00b7 lat ${S.lat.toFixed(2)}\u00b0 lon ${S.lon.toFixed(2)}\u00b0`;
+    `LST ${hh}h ${mm}m \u00b7 lat ${S.lat.toFixed(2)}\u00b0 lon ${S.lon.toFixed(2)}\u00b0\n`+
+    (S.raw?`alpha ${(S.raw.a??0).toFixed(0)} beta ${(S.raw.b??0).toFixed(0)} `+
+           `gamma ${(S.raw.g??0).toFixed(0)}`+
+           (S.raw.c!=null?` compass ${S.raw.c.toFixed(0)}`:"")+
+           ` \u00b7 screen ${screenAngle()}\u00b0`:"");
 }
 function setGyroButton(){
+  const f=$("fGyro");
+  f.classList.toggle("on",S.gyro==="live");
+  f.classList.toggle("warm",S.gyro==="locked");
   const b=$("gyro");
   b.classList.toggle("live",S.gyro==="live");
   b.classList.toggle("locked",S.gyro==="locked");
@@ -884,6 +1005,16 @@ function enableGyro(){
       .then(r=>{ r==="granted" ? go() : note("Motion permission denied."); })
       .catch(err=>note(err.name+": "+err.message));
   } else go();
+}
+const canFull=!!(document.documentElement.requestFullscreen||
+                 document.documentElement.webkitRequestFullscreen);
+function toggleFull(){
+  const el=document.documentElement, d=document;
+  const isFull=d.fullscreenElement||d.webkitFullscreenElement;
+  const fn=isFull ? (d.exitFullscreen||d.webkitExitFullscreen)
+                  : (el.requestFullscreen||el.webkitRequestFullscreen);
+  if(fn) try{ fn.call(isFull?d:el); }catch(e){ note("Full screen unavailable here."); }
+  setTimeout(render,300);
 }
 $("gyro").onclick=()=>{
   if(!S.gyro) enableGyro();
