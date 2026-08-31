@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-30T05:57:26Z",
-  "generator": "solve_dso.py 1.6.0",
+  "generated": "2026-08-30T05:48:04Z",
+  "generator": "solve_dso.py 1.5.0",
   "note": "corners are [RA_deg, Dec_deg] in JPEG raster order: TL, TR, BR, BL",
   "images": [
     {
