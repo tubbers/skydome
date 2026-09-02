@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-30T05:57:26Z",
-  "generator": "solve_dso.py 1.6.0",
+  "generated": "2026-09-02T10:28:38Z",
+  "generator": "solve_dso.py 1.9.0",
   "note": "corners are [RA_deg, Dec_deg] in JPEG raster order: TL, TR, BR, BL",
   "images": [
     {
@@ -403,6 +403,47 @@
       "description": "Emission/HII complex in the Large Magellanic Cloud photoionised by embedded OB stars."
     },
     {
+      "file": "web/display/M_1_75subs_20700sec_ASI585MC_veralux_finalv2_2400.jpg",
+      "thumb": "web/thumbs/M_1_75subs_20700sec_ASI585MC_veralux_finalv2_1024.jpg",
+      "original": "M_1_75subs_20700sec_ASI585MC_veralux_finalv2.jpg",
+      "label": "M1 Crab Nebula",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          83.33157,
+          21.83914
+        ],
+        [
+          83.95065,
+          21.84422
+        ],
+        [
+          83.94832,
+          22.19216
+        ],
+        [
+          83.32741,
+          22.18684
+        ]
+      ],
+      "ra_deg": 83.63942,
+      "dec_deg": 22.01589,
+      "fov_w_deg": 0.57526,
+      "fov_h_deg": 0.34803,
+      "pixscale_arcsec": 0.5978,
+      "width_px": 3464,
+      "height_px": 2096,
+      "type": "Supernova Remnant",
+      "constellation": "Taurus",
+      "slug": "m1-crab-nebula",
+      "distance_ly": "6,500",
+      "discovered_year": 1731,
+      "discovered_by": "John Bevis, 1731. The supernova itself was recorded by Chinese and Japanese astronomers in 1054",
+      "distance_note": "~2.0 kpc, conventional. NOT from the deep-research pass - verify.",
+      "description": "The expanding remnant of the supernova of 1054, still growing at about 1,500 km/s. A pulsar at its centre spins 30 times a second and powers the nebula's synchrotron glow."
+    },
+    {
       "file": "web/display/NGC_2070_257subs_73140sec_ASI585MC_final_2400.jpg",
       "thumb": "web/thumbs/NGC_2070_257subs_73140sec_ASI585MC_final_1024.jpg",
       "original": "NGC_2070_257subs_73140sec_ASI585MC_final.jpg",
@@ -441,6 +482,131 @@
       "discovered_by": "Nicolas-Louis de Lacaille, 1751\u201352 (Cape; originally catalogued as the 'star' 30 Doradus); NGC number from Dreyer 1888. Conventional credit: Lacaille",
       "discovered_year": 1751,
       "description": "Largest and most active starburst HII region in the Local Group; central super star cluster NGC 2070 with core concentration R136 provides most of the ionising radiation \u2014 its dominant star R136a1 has a present-day mass of ~196 M\u2609 (range 169\u2013230; Kalari et al. 2022), the most massive star known."
+    },
+    {
+      "file": "web/display/1735287766166_2400.jpg",
+      "thumb": "web/thumbs/1735287766166_1024.jpg",
+      "original": "1735287766166.jpg",
+      "label": "IC 434 Horsehead Nebula",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          84.72276,
+          -2.62915
+        ],
+        [
+          85.33612,
+          -2.98977
+        ],
+        [
+          85.97661,
+          -1.89995
+        ],
+        [
+          85.36448,
+          -1.54009
+        ]
+      ],
+      "ra_deg": 85.3502,
+      "dec_deg": -2.26449,
+      "fov_w_deg": 0.71119,
+      "fov_h_deg": 1.26434,
+      "pixscale_arcsec": 2.3706,
+      "width_px": 1080,
+      "height_px": 1920,
+      "type": "Emission Nebula",
+      "slug": "ic-434-horsehead-nebula",
+      "scope_hint": "Seestar S50",
+      "camera_hint": "IMX462",
+      "distance_ly": "1,300",
+      "constellation": "Orion",
+      "discovered_year": 1888,
+      "discovered_by": "Williamina Fleming, 1888, from a Harvard photographic plate",
+      "distance_note": "~400 pc to the L1630 / Orion B cloud (Gaia-era). Popularly quoted as 1,500 ly. NOT from the deep-research pass - verify.",
+      "description": "A pillar of cold dust silhouetted against the emission ridge IC 434, lit from behind by sigma Orionis. The dark shape is Barnard 33; the frame also reaches the Flame Nebula, NGC 2024."
+    },
+    {
+      "file": "web/display/NGC2174 final_2400.jpg",
+      "thumb": "web/thumbs/NGC2174 final_1024.jpg",
+      "original": "NGC2174 final.jpg",
+      "label": "NGC 2174 Monkey Head Nebula",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          92.69076,
+          20.06584
+        ],
+        [
+          92.07518,
+          20.16548
+        ],
+        [
+          92.24034,
+          21.07445
+        ],
+        [
+          92.86075,
+          20.97469
+        ]
+      ],
+      "ra_deg": 92.46603,
+      "dec_deg": 20.5703,
+      "fov_w_deg": 0.58772,
+      "fov_h_deg": 0.92263,
+      "pixscale_arcsec": 0.9795,
+      "width_px": 2160,
+      "height_px": 3392,
+      "type": "Emission Nebula",
+      "constellation": "Orion",
+      "slug": "ngc-2174-monkey-head-nebula",
+      "distance_ly": "6,400",
+      "discovered_year": 1857,
+      "discovered_by": "Karl Christian Bruhns, 1857",
+      "distance_note": "~2.0 kpc, conventional. NOT from the deep-research pass - verify.",
+      "description": "An emission nebula and young cluster on the Orion-Gemini border, its pillars sculpted by radiation from the embedded OB stars."
+    },
+    {
+      "file": "web/display/HOO_GraXpert_blurX_alchemy_HMS_composer_GraXpert_2400.jpg",
+      "thumb": "web/thumbs/HOO_GraXpert_blurX_alchemy_HMS_composer_GraXpert_1024.jpg",
+      "original": "HOO_GraXpert_blurX_alchemy_HMS_composer_GraXpert.jpg",
+      "label": "NGC 2237 Rosette Nebula",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          99.20194,
+          2.96641
+        ],
+        [
+          99.69056,
+          6.67426
+        ],
+        [
+          96.7891,
+          7.04643
+        ],
+        [
+          96.3178,
+          3.33752
+        ]
+      ],
+      "ra_deg": 98.00016,
+      "dec_deg": 5.00813,
+      "fov_w_deg": 3.74313,
+      "fov_h_deg": 2.90841,
+      "pixscale_arcsec": 3.1588,
+      "width_px": 4266,
+      "height_px": 3315,
+      "type": "HII Region",
+      "constellation": "Monoceros",
+      "slug": "ngc-2237-rosette-nebula",
+      "distance_ly": "5,200",
+      "discovered_year": 1865,
+      "discovered_by": "Nebulosity: Lewis Swift, 1865 (NGC 2237). The central cluster NGC 2244 was seen by John Flamsteed around 1690",
+      "distance_note": "~1.6 kpc, conventional. NOT from the deep-research pass - verify.",
+      "description": "A large emission nebula cleared into a ring by the winds and radiation of the young cluster NGC 2244 at its centre."
     },
     {
       "file": "web/display/NGC_2264_62subs_18600sec__ASI585_final_2400.jpg",
@@ -683,6 +849,47 @@
       "description": "Evolved (~11,000 yr) supernova remnant with optical filaments from radiative shocks, powered at its heart by the Vela pulsar \u2014 a rotation-powered neutron star driving a synchrotron pulsar-wind nebula."
     },
     {
+      "file": "web/display/pencil aw_2400.jpg",
+      "thumb": "web/thumbs/pencil aw_1024.jpg",
+      "original": "pencil aw.jpg",
+      "label": "NGC 2736 Pencil Nebula",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          135.19485,
+          -46.55397
+        ],
+        [
+          135.41918,
+          -45.64277
+        ],
+        [
+          134.66377,
+          -45.55064
+        ],
+        [
+          134.4276,
+          -46.46073
+        ]
+      ],
+      "ra_deg": 134.92672,
+      "dec_deg": -46.05256,
+      "fov_w_deg": 0.92535,
+      "fov_h_deg": 0.5367,
+      "pixscale_arcsec": 0.9795,
+      "width_px": 3401,
+      "height_px": 1973,
+      "type": "Supernova Remnant",
+      "constellation": "Vela",
+      "slug": "ngc-2736-pencil-nebula",
+      "distance_ly": "936",
+      "discovered_year": 1835,
+      "discovered_by": "John Herschel, 1835 (Cape of Good Hope survey)",
+      "distance_note": "287 pc, from the Vela pulsar VLBI parallax (Dodson et al.). Same value as the Vela SNR entry - the Pencil is part of it.",
+      "description": "A shock front within the Vela supernova remnant, where the blast wave is ploughing into a denser cloud. The thin bright filament is gas compressed and heated at the shock, moving at around 640,000 km/h."
+    },
+    {
       "file": "web/display/NGC3293 Gem Cluster_2400.jpg",
       "thumb": "web/thumbs/NGC3293 Gem Cluster_1024.jpg",
       "original": "NGC3293 Gem Cluster.jpg",
@@ -843,6 +1050,47 @@
       "description": "Brightest reflection nebula in the Chamaeleon I cloud, illuminated by the Herbig Ae/Be pre-main-sequence star HD 97300 (B9V), which is ringed by an infrared dust bubble."
     },
     {
+      "file": "web/display/tadpole_statue_wide_2400.jpg",
+      "thumb": "web/thumbs/tadpole_statue_wide_1024.jpg",
+      "original": "tadpole_statue_wide.jpg",
+      "label": "Gum 37 Tadpoles and Statue of Liberty (wide)",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          163.86461,
+          -59.08421
+        ],
+        [
+          164.24646,
+          -62.43428
+        ],
+        [
+          169.55929,
+          -62.18122
+        ],
+        [
+          168.63428,
+          -58.86045
+        ]
+      ],
+      "ra_deg": 166.56252,
+      "dec_deg": -60.66429,
+      "fov_w_deg": 3.35719,
+      "fov_h_deg": 2.4776,
+      "pixscale_arcsec": 2.6126,
+      "width_px": 4626,
+      "height_px": 3415,
+      "type": "Open Cluster",
+      "constellation": "Carina",
+      "slug": "gum-37-tadpoles-and-statue-of-liberty-wide",
+      "distance_ly": "7,600",
+      "discovered_year": 1834,
+      "discovered_by": "John Herschel, 1834-38 (Cape of Good Hope survey)",
+      "distance_note": "~2.35 kpc for NGC 3572 / Gum 37. NGC 3576 in the same frame is separately given as 9,100 ly, so this wide field spans both.",
+      "description": "A wide field across the Carina arm taking in the Gum 37 tadpole globules around NGC 3572 and, in the same frame, the pillars of NGC 3576, the Statue of Liberty."
+    },
+    {
       "file": "web/display/gum_37_tadpole_sig_2400.jpg",
       "thumb": "web/thumbs/gum_37_tadpole_sig_1024.jpg",
       "original": "gum_37_tadpole_sig.jpg",
@@ -961,6 +1209,47 @@
       "discovered_by": "John Herschel, 1834 (Cape). Conventional credit: J. Herschel",
       "discovered_year": 1834,
       "description": "Compact HII region (RCW 57A, Gum 38a) with active massive-star formation, PAH emission, and embedded OB stars; physically in front of the more distant giant cluster NGC 3603."
+    },
+    {
+      "file": "web/display/ngc3628 hamburger_2400.jpg",
+      "thumb": "web/thumbs/ngc3628 hamburger_1024.jpg",
+      "original": "ngc3628 hamburger.jpg",
+      "label": "NGC 3628 Hamburger Galaxy",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          170.4,
+          13.77092
+        ],
+        [
+          169.74459,
+          13.76247
+        ],
+        [
+          169.74998,
+          13.40425
+        ],
+        [
+          170.40437,
+          13.41269
+        ]
+      ],
+      "ra_deg": 170.07478,
+      "dec_deg": 13.58757,
+      "fov_w_deg": 0.63721,
+      "fov_h_deg": 0.35843,
+      "pixscale_arcsec": 0.6288,
+      "width_px": 3648,
+      "height_px": 2052,
+      "type": "Spiral Galaxy",
+      "constellation": "Leo",
+      "slug": "ngc-3628-hamburger-galaxy",
+      "distance_ly": "35,000,000",
+      "discovered_year": 1784,
+      "discovered_by": "William Herschel, 1784",
+      "distance_note": "~10.7 Mpc. NOT from the deep-research pass - verify.",
+      "description": "An edge-on spiral with a thick, warped dust lane cutting its length. The faintest member of the Leo Triplet with M65 and M66, and tidally distorted by them."
     },
     {
       "file": "web/display/runnig chicken hoo_recomb_clone_2400.jpg",
@@ -1563,6 +1852,47 @@
       "description": "Large HII emission nebula (Gum 56) in the Sagittarius Arm, photoionised by O-stars of the Sco OB1 association and the cluster NGC 6231."
     },
     {
+      "file": "web/display/cats paw astrowizard_2400.jpg",
+      "thumb": "web/thumbs/cats paw astrowizard_1024.jpg",
+      "original": "cats paw astrowizard.jpg",
+      "label": "NGC 6334 Cat's Paw Nebula",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          261.27118,
+          -35.32045
+        ],
+        [
+          258.74201,
+          -35.31011
+        ],
+        [
+          258.71556,
+          -36.5064
+        ],
+        [
+          261.28331,
+          -36.51656
+        ]
+      ],
+      "ra_deg": 260.003,
+      "dec_deg": -35.92034,
+      "fov_w_deg": 2.06496,
+      "fov_h_deg": 1.19768,
+      "pixscale_arcsec": 1.9957,
+      "width_px": 3725,
+      "height_px": 2160,
+      "type": "Emission Nebula",
+      "constellation": "Scorpius",
+      "slug": "ngc-6334-cat-s-paw-nebula",
+      "distance_ly": "4,400",
+      "discovered_year": 1837,
+      "discovered_by": "John Herschel, 1837 (Cape of Good Hope survey)",
+      "distance_note": "1.34 kpc from VLBI water-maser parallax, Chibueze et al. 2014. Older literature commonly says 5,500 ly. NOT from the deep-research pass - verify.",
+      "description": "A giant star-forming complex whose bright emission knots form the toe-pads of the 'paw'. One of the most active regions of massive star formation within 2 kpc of the Sun."
+    },
+    {
       "file": "web/display/lobster_hoo_recompose_sig_2400.jpg",
       "thumb": "web/thumbs/lobster_hoo_recompose_sig_1024.jpg",
       "original": "lobster_hoo_recompose_sig.jpg",
@@ -1681,6 +2011,49 @@
       "discovered_by": "Cluster NGC 6530 noted by John Flamsteed c.1680; nebula recorded by Giovanni Hodierna before 1654 and catalogued by Charles Messier, 1764 (M8). Conventional credit: Messier",
       "discovered_year": 1764,
       "description": "Giant HII region and cluster NGC 6530, photoionised mainly by the O4 star 9 Sagittarii, with the compact Hourglass sub-region ionised by Herschel 36 (O7.5V)."
+    },
+    {
+      "file": "web/display/lagoon and dragon wide aw_2400.jpg",
+      "thumb": "web/thumbs/lagoon and dragon wide aw_1024.jpg",
+      "original": "lagoon and dragon wide aw.jpg",
+      "label": "M8 Lagoon to NGC 6559 Chinese Dragon (wide)",
+      "solved": true,
+      "engine": "nova",
+      "corners": [
+        [
+          270.74486,
+          -25.15303
+        ],
+        [
+          273.01948,
+          -24.39269
+        ],
+        [
+          272.45551,
+          -23.01507
+        ],
+        [
+          270.20171,
+          -23.76775
+        ]
+      ],
+      "ra_deg": 271.60721,
+      "dec_deg": -24.08686,
+      "fov_w_deg": 2.20261,
+      "fov_h_deg": 1.47245,
+      "pixscale_arcsec": 1.2691,
+      "width_px": 6248,
+      "height_px": 4176,
+      "type": "Emission Nebula",
+      "slug": "m8-lagoon-to-ngc-6559-chinese-dragon-wide",
+      "scope_hint": "ASKAR 91F",
+      "camera_hint": "ASI2600MC",
+      "distance_ly": "4,080",
+      "constellation": "Sagittarius",
+      "discovered_year": 1654,
+      "discovered_by": "M8: Giovanni Battista Hodierna, before 1654. NGC 6559: John Herschel, 1837",
+      "distance_note": "~1,250 pc, Damiani et al. 2017 (Gaia). Matches the separate M8 and NGC 6559 entries - one physical complex.",
+      "description": "A wide field spanning the whole Sagittarius complex, from the Lagoon Nebula across to the dust and emission of NGC 6559. Both lie at the same distance in the same star-forming cloud."
     },
     {
       "file": "web/display/LBN28 chinese dragon AW_2400.jpg",
@@ -2001,6 +2374,34 @@
       "discovered_by": "James Dunlop, 1826 (Parramatta, NSW; discovered together with NGC 7552). Conventional credit: Dunlop",
       "discovered_year": 1826,
       "description": "Barred spiral Seyfert 2 galaxy with a circumnuclear starburst ring and gas outflow; brightest member of the interacting Grus Quartet \u2014 together with NGC 7552, NGC 7590 and NGC 7599 \u2014 whose members are linked by tidal HI, indicating ongoing gravitational interaction."
+    },
+    {
+      "original": "2025-01-26-093534-Solar-RAW_Planet_20 composite.jpg",
+      "file": "web/display/2025-01-26-093534-Solar-RAW_Planet_20 composite_2400.jpg",
+      "thumb": "web/thumbs/2025-01-26-093534-Solar-RAW_Planet_20 composite_1024.jpg",
+      "label": "The Sun",
+      "solved": false,
+      "dome": false,
+      "kind": "solar-system",
+      "reason": "no sky coordinates - gallery only",
+      "width_px": 1002,
+      "height_px": 1002,
+      "description": "White-light composite of the solar disc.",
+      "slug": "the-sun"
+    },
+    {
+      "original": "2026-03-20-1123_0-U-L-Jup_stack16.jpg",
+      "file": "web/display/2026-03-20-1123_0-U-L-Jup_stack16_2400.jpg",
+      "thumb": "web/thumbs/2026-03-20-1123_0-U-L-Jup_stack16_1024.jpg",
+      "label": "Jupiter",
+      "solved": false,
+      "dome": false,
+      "kind": "solar-system",
+      "reason": "no sky coordinates - gallery only",
+      "width_px": 493,
+      "height_px": 586,
+      "description": "Stack of 16 frames of Jupiter and its cloud belts.",
+      "slug": "jupiter"
     }
   ]
 }
