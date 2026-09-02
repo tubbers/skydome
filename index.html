@@ -173,6 +173,11 @@
       <div class="seg"><button id="lOn" class="on">on</button><button id="lOff">off</button></div></div>
     <div class="fld"><label>RA/Dec grid</label>
       <div class="seg"><button id="gOff" class="on">off</button><button id="gOn">on</button></div></div>
+    <div class="fld"><label>Tour order</label>
+      <div class="seg"><button id="tSky" class="on">across the sky</button>
+        <button id="tDist">by distance</button></div>
+      <div class="note">Across the sky hops to the nearest neighbour each time. By distance
+        travels outward from the closest object to the furthest.</div></div>
     <div class="fld"><label>Debug overlay</label>
       <div class="seg"><button id="dbgOff" class="on">off</button><button id="dbgOn">on</button></div></div>
     <div class="fld"><label>Horizon</label>
@@ -203,7 +208,7 @@
 
 <script>
 "use strict";
-const VERSION="1.3.0";
+const VERSION="1.4.0";
 const D=Math.PI/180,R2D=180/Math.PI,$=id=>document.getElementById(id);
 const REDUCED=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const MQ=matchMedia("(max-width: 760px), (pointer: coarse)");
@@ -241,7 +246,7 @@ const S={look:{az:180,alt:45}, fov:100, lat:-33.8, lst:80,
          opacity:1, backdrop:true, starNames:true, grid:false, horizon:true,
          followSky:true, speed:1, sel:null, playing:false,
          // gyro / real-sky mode
-         gyro:false, decl:12.7, tweak:0, smooth:60, debug:false, north:null, levelled:false,
+         gyro:false, decl:12.7, tweak:0, smooth:60, debug:false, north:null, levelled:false, tourBy:"sky",
          lat0:-33.80071, lon:151.20855,
          q:null, qT:0, M:null, src:null, srcRank:0, gyroEvents:0, absolute:false, seen:{},
          fovBeforeLock:null, screenAdd:0, moon:false};
@@ -431,7 +436,15 @@ const listOrder=()=>[...IMAGES].sort((a,b)=>a.ra_deg-b.ra_deg);
 /* Greedy nearest-neighbour route. Sorting by RA alone whips you between
    declinations - dec -71 to dec +9 on adjacent steps - so instead start at the
    westernmost image and always hop to the closest one not yet visited. */
+function distOf(im){
+  const n=parseFloat(String(im.distance_ly||"").replace(/[, ]/g,""));
+  return isFinite(n)&&n>0 ? n : Infinity;      // unknown distances travel last
+}
 function buildTour(){
+  if(S.tourBy==="distance"){
+    TOUR=[...IMAGES].sort((a,b)=>distOf(a)-distOf(b)||a.ra_deg-b.ra_deg);
+    return;
+  }
   const rest=listOrder();
   TOUR=rest.length?[rest.shift()]:[];
   while(rest.length){
@@ -461,7 +474,7 @@ const syncList=()=>{
   for(const im of IMAGES) if(im.row) im.row.classList.toggle("on",S.sel===im);
   // the list reads by RA but the tour walks a nearest-neighbour route, so keep
   // the current row scrolled into view or you lose track of where you are
-  if(S.sel&&S.sel.row) S.sel.row.scrollIntoView({block:"nearest"});
+  if(S.sel&&S.sel.row&&S.sel.row.scrollIntoView) S.sel.row.scrollIntoView({block:"nearest"});
 };
 
 function loadTex(im,src,hires){
@@ -481,6 +494,7 @@ async function loadManifest(){
     prepare(FALLBACK.images);
     note("No manifest.json here \u2014 showing the built-in Rho Ophiuchi entry only.");
   }
+  openFromURL();
   if(IMAGES.length===0 && RAW.length>0){
     const bad=RAW.filter(e=>e.solved===false);
     note(`manifest.json has ${RAW.length} entr${RAW.length===1?"y":"ies"} but nothing solved yet`
@@ -489,6 +503,26 @@ async function loadManifest(){
       +". Re-run solve_dso.py, then reload.");
   }
   render();
+}
+
+/* A gallery elsewhere can link straight to one image:
+      tubbers.github.io/skydome/?target=ngc-4038-antennae-galaxies
+   Slugs are stored in manifest.json so the gallery reads them rather than
+   re-implementing the slug rule. We still compute one as a fallback, and also
+   accept the source filename, so older links keep working after a rename. */
+const slugify=t=>String(t||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+function openFromURL(){
+  let want=null;
+  try{ want=new URLSearchParams(location.search).get("target"); }catch(e){}
+  if(!want) return;
+  want=slugify(want);
+  const hit=IMAGES.find(im=>im.slug===want)
+         || IMAGES.find(im=>slugify(im.label)===want)
+         || IMAGES.find(im=>slugify((im.original||"").replace(/\.[^.]+$/,""))===want);
+  if(!hit){ note(`No target called "${want}" \u2014 showing the whole sky.`); return; }
+  S.followSky=false;                       // a linked target must not drift off
+  $("skHold").classList.add("on"); $("skFollow").classList.remove("on");
+  selectImage(hit); frameImage(hit);
 }
 
 /* ---------- camera ---------- */
@@ -764,7 +798,10 @@ function selectImage(im){
    +`centre <span class="v">${Math.floor(hh)}h ${((hh%1)*60).toFixed(1)}m &nbsp; `
    +`${im.dec_deg<0?"\u2212":"+"}${Math.floor(dd)}\u00b0 ${((dd%1)*60).toFixed(0)}\u2032</span><br>`
    +`field <span class="v">${im.fov_w_deg.toFixed(2)}\u00b0 \u00d7 ${im.fov_h_deg.toFixed(2)}\u00b0</span><br>`
-   +`scale <span class="v">${im.pixscale_arcsec?im.pixscale_arcsec.toFixed(2)+"\u2033/px":"\u2014"}</span> \u00b7 `
+   +(im.constellation?`in <span class="v">${im.constellation}</span><br>`:"")
+   +(im.discovered_by?`found by <span class="v">${im.discovered_by}</span><br>`:"")
+   +(im.description?`<span style="opacity:.85">${im.description}</span><br>`:"")
+   +`<br>scale <span class="v">${im.pixscale_arcsec?im.pixscale_arcsec.toFixed(2)+"\u2033/px":"\u2014"}</span> \u00b7 `
    +`<span class="v">${im.width_px}\u00d7${im.height_px}</span><br>`
    +`frame <span class="${im.mirrored?"warn":"v"}">${im.mirrored?"mirrored (east right)":"east left, standard"}</span><br>`
    +`<span class="v">${im.hires?"full resolution":"thumbnail"}</span>`;
@@ -836,6 +873,7 @@ seg("lOn","lOff",v=>S.starNames=v);
 seg("gOff","gOn",v=>S.grid=!v);
 seg("hOn","hOff",v=>S.horizon=v);
 seg("dbgOff","dbgOn",v=>S.debug=!v);
+seg("tSky","tDist",v=>{S.tourBy=v?"sky":"distance";buildTour();});
 seg("skFollow","skHold",v=>S.followSky=v);
 
 $("prev").onclick=()=>step(-1);
