@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13T11:26:19Z",
+  "generated": "2026-10-13T11:35:12Z",
   "generator": "solve_dso.py 1.12.0",
   "note": "corners are [RA_deg, Dec_deg] in JPEG raster order: TL, TR, BR, BL",
   "images": [
