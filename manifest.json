@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13T11:35:12Z",
+  "generated": "2026-10-26T09:49:33Z",
   "generator": "solve_dso.py 1.12.0",
   "note": "corners are [RA_deg, Dec_deg] in JPEG raster order: TL, TR, BR, BL",
   "images": [
@@ -670,6 +670,47 @@
       "discovered_by": "Williamina Fleming, 1888, from a Harvard photographic plate",
       "distance_note": "~400 pc to the L1630 / Orion B cloud (Gaia-era). Popularly quoted as 1,500 ly. NOT from the deep-research pass - verify.",
       "description": "A pillar of cold dust silhouetted against the emission ridge IC 434, lit from behind by sigma Orionis. The dark shape is Barnard 33; the frame also reaches the Flame Nebula, NGC 2024."
+    },
+    {
+      "file": "web/display/Henize-70_2400.jpg",
+      "thumb": "web/thumbs/Henize-70_1024.jpg",
+      "original": "Henize-70.jpg",
+      "label": "Henize 70",
+      "solved": true,
+      "engine": "astrometry.net-local",
+      "corners": [
+        [
+          84.99546,
+          -68.0239
+        ],
+        [
+          86.73541,
+          -68.01904
+        ],
+        [
+          86.71493,
+          -67.65937
+        ],
+        [
+          85.00172,
+          -67.66427
+        ]
+      ],
+      "ra_deg": 85.86192,
+      "dec_deg": -67.84391,
+      "fov_w_deg": 0.65156,
+      "fov_h_deg": 0.35999,
+      "pixscale_arcsec": 0.6275,
+      "width_px": 3738,
+      "height_px": 2065,
+      "slug": "henize-70",
+      "type": "Emission Nebula",
+      "constellation": "Dorado",
+      "distance_ly": "160,000",
+      "distance_note": "LMC distance, 49.6 kpc (about 162,000 ly), from eclipsing binaries; Pietrzy\u0144ski et al. 2019. Henize 70 is taken to sit at the LMC's distance",
+      "discovered_by": "Karl Henize (catalogued 1956)",
+      "discovered_year": 1956,
+      "description": "Henize 70 is a superbubble in the Large Magellanic Cloud: a near-circular shell of glowing gas about 340 light-years across. Ultraviolet light from the hot, massive stars of the young association LH 114 ionises the gas, with shocks adding to the glow, and the stars' winds have been inflating the shell, which is still expanding at about 60 to 70 kilometres per second. The gas inside is heated to millions of degrees and shines in X-rays, brighter than winds alone should manage, which points to a recent supernova inside as well. It is a close-up look at how clusters of massive stars stir up and shape their host galaxy, though just what energised this one is still debated."
     },
     {
       "file": "web/display/NGC2174 final_2400.jpg",
