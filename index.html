@@ -208,7 +208,7 @@
 
 <script>
 "use strict";
-const VERSION="1.4.1";
+const VERSION="1.4.2";
 const D=Math.PI/180,R2D=180/Math.PI,$=id=>document.getElementById(id);
 const REDUCED=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const MQ=matchMedia("(max-width: 760px), (pointer: coarse)");
@@ -247,7 +247,7 @@ const S={look:{az:180,alt:45}, fov:100, lat:-33.8, lst:80,
          followSky:true, speed:1, sel:null, playing:false,
          // gyro / real-sky mode
          gyro:false, decl:12.7, tweak:0, smooth:60, debug:false, north:null, levelled:false, tourBy:"sky",
-         lat0:-33.80, lon:151.21,
+         lat0:-33.8, lon:151.2,
          q:null, qT:0, M:null, src:null, srcRank:0, gyroEvents:0, absolute:false, seen:{},
          fovBeforeLock:null, screenAdd:0, moon:false};
 let IMAGES=[], RAW=[], TOUR=[], playTimer=null, anim=null;
