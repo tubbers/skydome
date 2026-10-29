@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.6.1 — 2026-10-29
+- Added the Crescent Nebula (NGC 6888) in Cygnus (200PDS + ASI1600MM, Ha/OIII).
+
 ## 1.6.0 — 2026-10-29
 - The dome now opens on the sky as it is right now. The sidereal time is set once from the viewer's clock at page load, using the default longitude 151.2 and latitude −33.8 (unchanged). Before this, desktop and phone both started at the slider's fixed 80° and only point-at-the-sky mode read the clock. The Sun, which follows its real position, was usually drawn below the horizon. Now it sits at its true altitude and azimuth for that time (above the horizon by day, below it at night). The LST slider, "spin sky to it" and point-at-the-sky mode work as before.
 - Added NGC 460 (N84) in the Small Magellanic Cloud (200PDS + ASI585MC, south-up frame).

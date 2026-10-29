@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29T06:30:46Z",
+  "generated": "2026-10-29T07:44:57Z",
   "generator": "solve_dso.py 1.15.0",
   "note": "corners are [RA_deg, Dec_deg] in JPEG raster order: TL, TR, BR, BL",
   "images": [
@@ -2755,6 +2755,46 @@
       "discovered_by": "Stewart Sharpless, 1959 (Sharpless catalogue, as Sh2-63/LBN 82). [Identification UNVERIFIED]",
       "discovered_year": 1959,
       "description": "High-galactic-latitude faint nebula; the supplied coordinates (19h57.7m, \u221214\u00b007\u2032) fall within Sagittarius by IAU boundaries (not Aquila or Aquarius), in a region associated with the Aquila Rift complex."
+    },
+    {
+      "file": "web/display/NGC-6888-Crescent-Nebula_2400.jpg",
+      "thumb": "web/thumbs/NGC-6888-Crescent-Nebula_1024.jpg",
+      "original": "NGC-6888-Crescent-Nebula.jpg",
+      "label": "NGC 6888 Crescent Nebula",
+      "solved": true,
+      "engine": "astrometry.net-local",
+      "corners": [
+        [
+          302.49938,
+          38.89565
+        ],
+        [
+          302.51971,
+          37.82941
+        ],
+        [
+          303.53793,
+          37.83592
+        ],
+        [
+          303.53335,
+          38.90345
+        ]
+      ],
+      "ra_deg": 303.02219,
+      "dec_deg": 38.36676,
+      "fov_w_deg": 1.06621,
+      "fov_h_deg": 0.80605,
+      "pixscale_arcsec": 0.9371,
+      "width_px": 4096,
+      "height_px": 3097,
+      "slug": "ngc-6888-crescent-nebula",
+      "constellation": "Cygnus",
+      "distance_ly": "4,500",
+      "distance_note": "Commonly quoted value (older estimates 1.26 to 1.45 kpc). Gaia puts WR 136 farther, about 1.9 kpc or 6,200 ly (Bailer-Jones et al. 2018)",
+      "discovered_by": "William Herschel, 1792",
+      "discovered_year": 1792,
+      "description": "The Crescent Nebula, NGC 6888, is a shell of glowing gas in the constellation Cygnus, about 4,500 light-years away and roughly 20 to 25 light-years across. A single star blew it: WR 136, a Wolf-Rayet star that began with 25 to 40 times the mass of the Sun and now throws off a wind at around 1,800 kilometres per second. That fast wind is ploughing into the slower wind the star shed earlier as a red supergiant, piling the gas into a shell, while shocks and the star's ultraviolet light make it glow. Chandra X-ray observations show gas inside the bubble heated to millions of degrees, and the nebula's nitrogen and oxygen carry the mark of material processed in the star's core. WR 136 is expected to end its life as a supernova. William Herschel found the nebula in 1792."
     },
     {
       "file": "web/display/ngc6960 Veil sig_2400.jpg",
