@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.6.2 — 2026-10-29
+- Distance tour: eight dome images had no `distance_ly` in the manifest (only in gallery.json), so "by distance" put them after the 100M-ly galaxies (Zeta Ophiuchi 440 ly, Eastern Veil 2,400 ly, Lagoon SHO 4,100 ly...). Copied their distances across from gallery.json.
+
 ## 1.6.1 — 2026-10-29
 - Added the Crescent Nebula (NGC 6888) in Cygnus (200PDS + ASI1600MM, Ha/OIII).
 

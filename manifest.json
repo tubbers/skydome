@@ -74,7 +74,8 @@
       "pixscale_arcsec": 0.6291,
       "width_px": 3840,
       "height_px": 2160,
-      "slug": "hd-3680"
+      "slug": "hd-3680",
+      "distance_ly": "2,118"
     },
     {
       "file": "web/display/ngc253_BX_NX_MASwav_LH_reccomb_2400.jpg",
@@ -387,7 +388,8 @@
       "height_px": 2036,
       "solved": true,
       "engine": "nova",
-      "slug": "ngc613-291-nx"
+      "slug": "ngc613-291-nx",
+      "distance_ly": "67,000,000"
     },
     {
       "file": "web/display/Comet 220P McNaught_2400.jpg",
@@ -426,7 +428,8 @@
       "distance_note": "Not applicable \u2014 Solar System body; light-year distance is not meaningful. Orbital elements (JPL/MPC): Jupiter-family comet in near-2:1 resonance with Jupiter, period ~5.5 yr, perihelion q\u22481.6 AU (perihelion 14 June 2026), aphelion 4.679 AU (reached 12 March 2029)",
       "discovered_by": "Robert H. McNaught, 20 May 2004 (Siding Spring Survey, Uppsala Southern Schmidt Telescope, Siding Spring Observatory, NSW); announced as P/2004 K2 in IAU Circular 8348 (28 May 2004), confirmed by J. Young and A. Gilmore. Conventional credit: McNaught",
       "discovered_year": 2004,
-      "description": "Small icy Jupiter-family periodic comet; a sublimating cometary nucleus producing coma and tail near perihelion. Orbital period ~5.5 yr, perihelion ~1.6 AU, aphelion 4.68 AU."
+      "description": "Small icy Jupiter-family periodic comet; a sublimating cometary nucleus producing coma and tail near perihelion. Orbital period ~5.5 yr, perihelion ~1.6 AU, aphelion 4.68 AU.",
+      "distance_ly": "0.0000079"
     },
     {
       "file": "web/display/NGC_1365_95subs_16950sec_astrowizard_sig_2400.jpg",
@@ -2042,7 +2045,8 @@
       "height_px": 6248,
       "solved": true,
       "engine": "nova",
-      "slug": "zeta-134-nx-lh"
+      "slug": "zeta-134-nx-lh",
+      "distance_ly": "440"
     },
     {
       "file": "web/display/sho_starless_narrowband_hue_MAS_BX_NX-3-2_recompose_2400.jpg",
@@ -2397,7 +2401,8 @@
       "height_px": 4176,
       "solved": true,
       "engine": "nova",
-      "slug": "lagoon-lh"
+      "slug": "lagoon-lh",
+      "distance_ly": "4,100"
     },
     {
       "file": "web/display/m8_73subs_21900sec_ASI585MC_SHO_Recomb_processed_stars_2400.jpg",
@@ -2554,7 +2559,8 @@
       "height_px": 2160,
       "solved": true,
       "engine": "nova",
-      "slug": "ngc6618-swan-121"
+      "slug": "ngc6618-swan-121",
+      "distance_ly": "5,500"
     },
     {
       "file": "web/display/astro_v3_sig_2400.jpg",
@@ -2868,7 +2874,8 @@
       "fov_w_deg": 2.20367,
       "fov_h_deg": 1.47316,
       "pixscale_arcsec": 1.2697,
-      "engine": "nova"
+      "engine": "nova",
+      "distance_ly": "2,400"
     },
     {
       "file": "web/display/C_63_96subs_28800sec_ASI585_HO_PI_2400.jpg",
@@ -2942,7 +2949,8 @@
       "height_px": 4176,
       "solved": true,
       "engine": "nova",
-      "slug": "grus-167-nx-lh"
+      "slug": "grus-167-nx-lh",
+      "distance_ly": "66,500,000"
     },
     {
       "file": "web/display/2025-01-26-093534-Solar-RAW_Planet_20 composite_2400.jpg",
