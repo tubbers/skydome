@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.5.0 — 2026-10-29
+- The Sun on the dome. A manifest entry with `track: "sun"` is moved to the Sun's position for the current date and time (low-precision solar formula precessed to J2000, ~0.01°). It is scaled to that day's solar diameter and rebuilt as the Sun moves, with a once-a-minute redraw while the page is open. Its stored corners are the capture-time geometry, so older viewers show it where it was when it was taken.
+- `ephem.orientation: "horizon"` keeps the frame zenith-up for the sky as drawn. The position angle of image-up is the parallactic angle, worked out from the dome's own latitude setting and sidereal time (the slider, or the clock in point-at-the-sky mode). No observer location is stored in the manifest.
+- Per-image `blend: "screen"`: black adds nothing, so a disc on a black frame shows no border against the backdrop.
+- Distances under 0.01 ly show as light-minutes ("8.3 lt-min") instead of "0 ly".
+- First tracked image: ISS transit of the Sun, 17 Oct 2026 (DWARF Mini).
+
 ## 1.4.2 — 2026-10-26
 - Privacy: rounded the default gyro/real-sky observer location (`lat0`/`lon` in the main state object) from 2 decimal places to 1 (now -33.8, 151.2). The latitude slider and its label already read -33.8.
 - Corrected the 1.4.1 entry below.

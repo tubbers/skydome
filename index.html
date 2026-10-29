@@ -208,7 +208,7 @@
 
 <script>
 "use strict";
-const VERSION="1.4.2";
+const VERSION="1.5.0";
 const D=Math.PI/180,R2D=180/Math.PI,$=id=>document.getElementById(id);
 const REDUCED=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const MQ=matchMedia("(max-width: 760px), (pointer: coarse)");
@@ -393,7 +393,8 @@ function buildMesh(im){
     const a=j*(NSUB+1)+i;
     IDX.push(a,a+1,a+NSUB+1, a+1,a+NSUB+2,a+NSUB+1);
   }
-  im.buf={p:gl.createBuffer(),uv:gl.createBuffer(),i:gl.createBuffer()};
+  // reuse the buffers on a rebuild - a tracked frame (the Sun) is rebuilt as it moves
+  im.buf=im.buf||{p:gl.createBuffer(),uv:gl.createBuffer(),i:gl.createBuffer()};
   gl.bindBuffer(gl.ARRAY_BUFFER,im.buf.p);  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(P),gl.STATIC_DRAW);
   gl.bindBuffer(gl.ARRAY_BUFFER,im.buf.uv); gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(UV),gl.STATIC_DRAW);
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,im.buf.i);
@@ -406,9 +407,82 @@ function shortLy(v){
   if(!v) return "";
   const n=parseFloat(String(v).replace(/[, ]/g,""));
   if(!isFinite(n)||n<=0) return "";
+  if(n<0.01) return (n*525600).toFixed(1)+" lt-min";   // the Sun is 8.3 light-minutes, not "0 ly"
   if(n>=1e6) return (n/1e6).toFixed(n>=1e7?0:1).replace(/\.0$/,"")+"M ly";
   if(n>=1e4) return Math.round(n/1e3)+"k ly";
   return Math.round(n).toLocaleString("en-AU")+" ly";
+}
+
+
+/* ---------- the Sun: an image that follows the live solar position ----------
+   A manifest entry with track:"sun" carries its capture-time corners (so older
+   viewers and the gallery still work) plus an ephem block:
+     disc_px     [cx, cy, diameter] of the solar disc in the width_px x height_px frame
+     pa_up_deg   position angle (E of N) of image-up at capture time
+     orientation "horizon" = keep image-up pointing at the zenith for the sky
+                 as currently shown (parallactic angle from the dome's own
+                 latitude and sidereal time); anything else = pa_up_deg, fixed.
+   The frame is re-centred on today's Sun and scaled to today's solar diameter. */
+function sunNow(date){
+  // Astronomical Almanac low-precision formula, ~0.01 deg; the -1.397 deg/century
+  // term precesses the of-date longitude back to J2000, the frame the solves use
+  const n=date.getTime()/86400000+2440587.5-2451545.0;
+  const L=(280.460+0.9856474*n)%360, g=((357.528+0.9856003*n)%360)*D;
+  const lam=(L+1.915*Math.sin(g)+0.020*Math.sin(2*g)-1.397*n/36525)*D;
+  const eps=(23.439-0.0000004*n)*D;
+  const ra=((Math.atan2(Math.cos(eps)*Math.sin(lam),Math.cos(lam))*R2D)+360)%360;
+  const dec=Math.asin(Math.sin(eps)*Math.sin(lam))*R2D;
+  const au=1.00014-0.01671*Math.cos(g)-0.00014*Math.cos(2*g);
+  return {ra, dec, diam:2*Math.asin(695700/(au*149597870.7))*R2D};
+}
+/* Parallactic angle: position angle (E of N) of the direction to the zenith. */
+function parallactic(ra,dec,lat,lst){
+  const H=(lst-ra)*D, p=lat*D, d=dec*D;
+  return Math.atan2(Math.sin(H), Math.tan(p)*Math.cos(d)-Math.sin(d)*Math.cos(H))*R2D;
+}
+/* TL,TR,BR,BL [ra,dec] of a frame whose disc sits on (ra0,dec0), image-up at pa. */
+function discCorners(e,W,H,ra0,dec0,diam,pa){
+  const [cx,cy,dpx]=e.disc_px, sc=diam/dpx*D, th=pa*D;
+  const up=[Math.sin(th),Math.cos(th)], rt=[Math.sin(th-Math.PI/2),Math.cos(th-Math.PI/2)];
+  const a0=ra0*D, d0=dec0*D;
+  return [[0,0],[W,0],[W,H],[0,H]].map(([x,y])=>{
+    const dx=(x-cx)*sc, dy=-(y-cy)*sc;
+    const xi=dx*rt[0]+dy*up[0], eta=dx*rt[1]+dy*up[1];
+    const den=Math.cos(d0)-eta*Math.sin(d0);
+    return [((a0+Math.atan2(xi,den))*R2D+360)%360,
+            Math.atan2(Math.sin(d0)+eta*Math.cos(d0),Math.hypot(xi,den))*R2D];
+  });
+}
+let SUN=null, SUN_T=0;
+function sunCached(){
+  const t=Date.now();
+  if(!SUN||t-SUN_T>60000){ SUN=sunNow(new Date(t)); SUN_T=t; }
+  return SUN;
+}
+/* Move every track:"sun" image to the Sun as it is now, and turn it horizon-up
+   for the sky as drawn. Cheap (81 vertices) and only redone when something moved. */
+function retrack(force){
+  const s=sunCached();
+  for(const im of IMAGES){
+    if(im.track!=="sun"||!im.ephem||!im.ephem.disc_px) continue;
+    const pa=im.ephem.orientation==="horizon"
+      ? parallactic(s.ra,s.dec,S.lat,S.lst) : im.ephem.pa_up_deg;
+    const k=im._trk;
+    if(!force&&k&&k.t===SUN_T&&Math.abs(((pa-k.pa+540)%360)-180)<0.05) continue;
+    im._trk={t:SUN_T,pa};
+    const W=im.width_px, H=im.height_px;
+    im.corners=discCorners(im.ephem,W,H,s.ra,s.dec,s.diam,pa);
+    const cvs=im.corners.map(c=>eqVec(c[0],c[1]));
+    const c=norm(cvs.reduce((a,v)=>[a[0]+v[0],a[1]+v[1],a[2]+v[2]],[0,0,0]));
+    im.cornerVecs=cvs; im.cVec=c;
+    im.ra_deg=((Math.atan2(c[1],c[0])*R2D)+360)%360; im.dec_deg=Math.asin(c[2])*R2D;
+    im.fov_w_deg=W*s.diam/im.ephem.disc_px[2]; im.fov_h_deg=H*s.diam/im.ephem.disc_px[2];
+    im.pixscale_arcsec=s.diam/im.ephem.disc_px[2]*3600;
+    im.half=Math.max(...cvs.map(v=>Math.acos(Math.max(-1,Math.min(1,dot(c,v))))*R2D));
+    im.mirrored=handedness(cvs,c)<0;
+    im.sunPA=pa;
+    if(gl&&imProg) buildMesh(im);
+  }
 }
 
 /* ---------- manifest ---------- */
@@ -426,6 +500,7 @@ function prepare(list){
         tex:mkTex([0,0,0,0]), texReady:false, hires:false,
         label:e.label||e.file.replace(/\.(jpe?g|png)$/i,"")};
     });
+  retrack(true);                       // the Sun goes where the Sun is today
   IMAGES.forEach(im=>{buildMesh(im); loadTex(im, im.thumb||im.file, false);});
   IMAGES.sort((a,b)=>b.area-a.area);   // widest field first, so tighter framings land on top
   buildTour();
@@ -639,6 +714,7 @@ function render(){
     gl.disableVertexAttribArray(a);
   }
 
+  retrack(false);
   const M=eqToHor(S.lat,S.lst);
   gl.enable(gl.BLEND); gl.blendEquation(gl.FUNC_ADD); gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA);
   gl.useProgram(imProg);
@@ -652,6 +728,9 @@ function render(){
     if(!im.texReady) continue;
     if(dot(applyM(M,im.cVec),B.f)<cullCos) continue;
     gl.uniform1f(imU.uAlpha, S.opacity*(S.sel? (S.sel===im?1:0.15) : 1));
+    // "screen": black adds nothing, so a disc on a black frame (the Sun) shows no border
+    if(im.blend==="screen") gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_COLOR);
+    else gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA);
     gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,im.tex);
     gl.bindBuffer(gl.ARRAY_BUFFER,im.buf.p);  gl.vertexAttribPointer(imAttr.p,3,gl.FLOAT,false,0,0);
     gl.bindBuffer(gl.ARRAY_BUFFER,im.buf.uv); gl.vertexAttribPointer(imAttr.uv,2,gl.FLOAT,false,0,0);
@@ -793,7 +872,10 @@ function selectImage(im){
   now.innerHTML=`<b>${im.label}</b> <span>${im.fov_w_deg.toFixed(2)}\u00d7${im.fov_h_deg.toFixed(2)}\u00b0</span>`;
   const hh=im.ra_deg/15, dd=Math.abs(im.dec_deg);
   box.innerHTML=`<b>${im.label}</b>`
-   +(im.distance_ly?`  <span class="v">${im.distance_ly} ly</span>`:"")+"<br>"
+   +(im.distance_ly?`  <span class="v">${shortLy(im.distance_ly)||im.distance_ly+" ly"}</span>`:"")+"<br>"
+   +(im.track==="sun"?`<span style="opacity:.8">shown where the Sun is today, at today's size`
+      +(im.ephem&&im.ephem.orientation==="horizon"?", turned upright for your horizon":"")
+      +`</span><br>`:"")
    +(im.distance_note?`<span style="opacity:.7">${im.distance_note}</span><br>`:"")
    +`centre <span class="v">${Math.floor(hh)}h ${((hh%1)*60).toFixed(1)}m &nbsp; `
    +`${im.dec_deg<0?"\u2212":"+"}${Math.floor(dd)}\u00b0 ${((dd%1)*60).toFixed(0)}\u2032</span><br>`
@@ -1279,6 +1361,8 @@ try{
 }catch(err){ note("WebGL unavailable: "+err.message); }
 
 loadManifest();
+// the Sun moves about a degree a day; a once-a-minute redraw keeps a tracked frame honest
+setInterval(()=>{ if(IMAGES.some(im=>im.track==="sun")&&!document.hidden) render(); },60000);
 try{ render(); }catch(err){ note("Draw failed: "+err.message); }
 </script>
 </body>

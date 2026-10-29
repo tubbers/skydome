@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-26T09:49:33Z",
-  "generator": "solve_dso.py 1.12.0",
+  "generated": "2026-10-29T06:02:46Z",
+  "generator": "solve_dso.py 1.15.0",
   "note": "corners are [RA_deg, Dec_deg] in JPEG raster order: TL, TR, BR, BL",
   "images": [
     {
@@ -1636,6 +1636,59 @@
       "discovered_by": "James Dunlop, 1826 (Parramatta, NSW). Conventional credit: Dunlop",
       "discovered_year": 1826,
       "description": "Nearest giant elliptical galaxy, a recent merger with a warped central dust lane, powered by an active galactic nucleus driving relativistic synchrotron radio jets."
+    },
+    {
+      "file": "web/display/ISS-transit-of-the-Sun-2026_2400.jpg",
+      "thumb": "web/thumbs/ISS-transit-of-the-Sun-2026_1024.jpg",
+      "original": "ISS-transit-of-the-Sun-2026.jpg",
+      "label": "ISS transit of the Sun",
+      "solved": true,
+      "engine": "ephemeris",
+      "kind": "solar-system",
+      "track": "sun",
+      "corners": [
+        [
+          201.79786,
+          -9.88948
+        ],
+        [
+          202.48084,
+          -8.82938
+        ],
+        [
+          201.7995,
+          -8.40113
+        ],
+        [
+          201.1153,
+          -9.45995
+        ]
+      ],
+      "ra_deg": 201.79868,
+      "dec_deg": -9.1453,
+      "fov_w_deg": 1.25624,
+      "fov_h_deg": 0.79831,
+      "pixscale_arcsec": 1.9958,
+      "width_px": 2266,
+      "height_px": 1440,
+      "ephem": {
+        "body": "sun",
+        "epoch_utc": "2026-10-17T06:45:00Z",
+        "disc_px": [
+          1129.3,
+          748.8,
+          964.5
+        ],
+        "pa_up_deg": 122.5,
+        "orientation": "horizon"
+      },
+      "blend": "screen",
+      "video": "web/video/ISS-transit-of-the-Sun-2026.mp4",
+      "poster": "web/video/ISS-transit-of-the-Sun-2026_poster.jpg",
+      "scope_hint": "DWARF Mini",
+      "camera_hint": "DWARF Mini",
+      "distance_ly": "0.0000158",
+      "slug": "iss-transit-of-the-sun"
     },
     {
       "file": "web/display/M83_243x120s_MAS_FINAL_sig_2400.jpg",
