@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29T06:02:46Z",
+  "generated": "2026-10-29T06:30:46Z",
   "generator": "solve_dso.py 1.15.0",
   "note": "corners are [RA_deg, Dec_deg] in JPEG raster order: TL, TR, BR, BL",
   "images": [
@@ -274,6 +274,46 @@
       "discovered_by": "John Herschel, 1834\u201336 (Cape survey); NGC 1888",
       "discovered_year": 1834,
       "description": "Field in the star-forming SMC bar around the OB cluster NGC 346; emission dominated by photoionised hydrogen and doubly-ionised oxygen."
+    },
+    {
+      "file": "web/display/wade_smc_ngc460_2400.jpg",
+      "thumb": "web/thumbs/wade_smc_ngc460_1024.jpg",
+      "original": "wade_smc_ngc460.jpg",
+      "label": "NGC 460 (N84)",
+      "solved": true,
+      "engine": "astrometry.net-local",
+      "corners": [
+        [
+          17.51143,
+          -73.48369
+        ],
+        [
+          19.86455,
+          -73.46873
+        ],
+        [
+          19.8109,
+          -73.09287
+        ],
+        [
+          17.50831,
+          -73.10718
+        ]
+      ],
+      "ra_deg": 18.67571,
+      "dec_deg": -73.29132,
+      "fov_w_deg": 0.66972,
+      "fov_h_deg": 0.37672,
+      "pixscale_arcsec": 0.6279,
+      "width_px": 3840,
+      "height_px": 2160,
+      "slug": "ngc-460-n84",
+      "constellation": "Tucana",
+      "distance_ly": "203,600",
+      "distance_note": "Host galaxy SMC: Graczyk et al. 2020, ApJ 904, 13, 62.44 kpc (eclipsing binaries)",
+      "discovered_by": "John Herschel, 11 April 1834 (Cape survey); possibly seen earlier by James Dunlop, 1826",
+      "discovered_year": 1834,
+      "description": "NGC 460 is an open cluster wrapped in glowing hydrogen gas in the Small Magellanic Cloud, a dwarf galaxy about 200,000 light-years away in the constellation Tucana. Its nebula carries the Henize catalogue number N84, and it sits next to its neighbour NGC 456 in the N83-84-85 complex, a region of linked clusters and nebulae that is home to several rare O-type stars, the hottest and most massive normal stars there are. The stars here are only one to ten million years old. Their radiation ionises the surrounding hydrogen so it glows, while their winds and radiation blow the gas into bubbles and shells, and that compression can set off a new round of star formation. The Small Magellanic Cloud also has fewer heavy elements than the Milky Way, so it is a close-up look at star formation under conditions more like those of the early universe."
     },
     {
       "file": "web/display/lenticular_285_starless_nr_mas_curves_sig_2400.jpg",

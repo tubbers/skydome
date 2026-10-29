@@ -208,7 +208,7 @@
 
 <script>
 "use strict";
-const VERSION="1.5.0";
+const VERSION="1.6.0";
 const D=Math.PI/180,R2D=180/Math.PI,$=id=>document.getElementById(id);
 const REDUCED=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const MQ=matchMedia("(max-width: 760px), (pointer: coarse)");
@@ -1360,6 +1360,13 @@ try{
   sky.src=SKY.file;
 }catch(err){ note("WebGL unavailable: "+err.message); }
 
+// Start on the sky as it is now. Until 1.6.0 the sidereal time began at the
+// slider's fixed 80 deg (only point-at-the-sky mode read the clock), so the
+// live-tracked Sun usually sat below the horizon on load. The clock time is
+// read once, with the default longitude (S.lon, 151.2) and latitude (S.lat,
+// -33.8). After that the slider, "spin sky to it" and the gyro mode behave as
+// before.
+syncClock();
 loadManifest();
 // the Sun moves about a degree a day; a once-a-minute redraw keeps a tracked frame honest
 setInterval(()=>{ if(IMAGES.some(im=>im.track==="sun")&&!document.hidden) render(); },60000);
