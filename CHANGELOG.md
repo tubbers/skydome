@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.3 — 2026-11-13
+- Added the Andromeda Galaxy (M31), a DWARF Mini mosaic from Wiruna, and M78 (NGC 2068), captured remotely from the Nebula Nest.
+
+
 ## 1.6.2 — 2026-10-29
 - Distance tour: eight dome images had no `distance_ly` in the manifest (only in gallery.json), so "by distance" put them after the 100M-ly galaxies (Zeta Ophiuchi 440 ly, Eastern Veil 2,400 ly, Lagoon SHO 4,100 ly...). Copied their distances across from gallery.json.
 
