@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6.4 — 2026-11-13
+- Added NGC 1097 (Caldwell 67), a barred spiral in Fornax, captured from Wiruna (200PDS + ASI585MC).
+- Shortened the M31 and M78 descriptions on the dome to match the older, more educational style.
+
+
 ## 1.6.3 — 2026-11-13
 - Added the Andromeda Galaxy (M31), a DWARF Mini mosaic from Wiruna, and M78 (NGC 2068), captured remotely from the Nebula Nest.
 

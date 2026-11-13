@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T06:25:46Z",
+  "generated": "2026-11-13T07:12:28Z",
   "generator": "solve_dso.py 1.15.0",
   "note": "corners are [RA_deg, Dec_deg] in JPEG raster order: TL, TR, BR, BL",
   "images": [
@@ -432,6 +432,46 @@
       "distance_ly": "67,000,000"
     },
     {
+      "file": "web/display/NGC-1097-Barred-Spiral_2400.jpg",
+      "thumb": "web/thumbs/NGC-1097-Barred-Spiral_1200.jpg",
+      "original": "NGC-1097-Barred-Spiral.jpg",
+      "label": "NGC 1097",
+      "solved": true,
+      "engine": "astrometry.net-local",
+      "corners": [
+        [
+          41.97365,
+          -30.08604
+        ],
+        [
+          41.1997,
+          -30.0912
+        ],
+        [
+          41.20159,
+          -30.46959
+        ],
+        [
+          41.97937,
+          -30.46204
+        ]
+      ],
+      "ra_deg": 41.58847,
+      "dec_deg": -30.27775,
+      "fov_w_deg": 0.67058,
+      "fov_h_deg": 0.3772,
+      "pixscale_arcsec": 0.6287,
+      "width_px": 3840,
+      "height_px": 2160,
+      "slug": "ngc-1097",
+      "constellation": "Fornax",
+      "distance_ly": "45,000,000",
+      "distance_note": "Commonly quoted value (ESO/ALMA). Redshift distances are typically 14–18 Mpc (about 46–59 million ly); Galianni et al. 2010 adopted 17 ± 2 Mpc.",
+      "discovered_by": "William Herschel, 1790",
+      "discovered_year": 1790,
+      "description": "NGC 1097 is a barred spiral galaxy about 45 million light-years away in Fornax. A bright bar of stars cuts across its core and funnels gas inward, feeding a ring of star formation about 5,000 light-years across. At the heart sits a supermassive black hole about 140 million times the mass of the Sun. The small yellow glow at the upper right is the dwarf companion NGC 1097A.\n\nThose features once called jets are four faint, narrow streams of stars, radiating in an X from the galaxy. They are not jets from the black hole: they are tidal debris, the remains of a dwarf galaxy that NGC 1097 has been tearing apart. The brightest of them, R1, runs northeast and bends at a right angle — the “dog-leg” — about 13 arcminutes out. A faint linear glow in the upper left of this frame follows the path of that stream."
+    },
+    {
       "file": "web/display/Comet 220P McNaught_2400.jpg",
       "thumb": "web/thumbs/Comet 220P McNaught_1024.jpg",
       "original": "Comet 220P McNaught.jpg",
@@ -833,7 +873,7 @@
       "distance_note": "Commonly quoted value, about 400–420 pc to the Orion B molecular cloud.",
       "discovered_by": "Pierre Méchain, 1780",
       "discovered_year": 1780,
-      "description": "M 78 is one of the brightest reflection nebulae in the sky, about 1,350 light-years away in Orion. It makes no light of its own. It is a cloud of fine dust, and it shines because two young, hot B-type stars at its heart, HD 38563 A and B, scatter their blue-white light off the grains. It is about 8 by 6 arcminutes in size, around magnitude 8.3, and part of the Orion B molecular cloud complex, a region where new stars are still forming. Pierre Méchain found it in 1780 and Charles Messier added it to his catalogue the same year. The nearby glows catalogued as NGC 2064, NGC 2067 and NGC 2071 belong to the same group.\n\nThis wide view (about 2.2 × 1.5 degrees) shows the bright blue-white glow of M 78 and its neighbour at the centre, threaded with near-black dust lanes, a dark spiky dust cloud off to the upper right, and a pink glow of hydrogen gas from the wider Orion complex along the left edge. It is my first finished image from the Nebula Nest, my remote rig."
+      "description": "M 78 is one of the brightest reflection nebulae in the sky, about 1,350 light-years away in Orion. It makes no light of its own: two young, hot B-type stars at its heart, HD 38563 A and B, scatter their blue-white light off a cloud of fine dust. This wide view shows the bright blue-white core threaded with near-black dust lanes, a dark spiky cloud off to the upper right, and a pink glow of hydrogen along the left edge. It is my first finished image from the Nebula Nest."
     },
     {
       "file": "web/display/NGC2174 final_2400.jpg",
