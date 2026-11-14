@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6.5 — 2026-11-14
+- Added NGC 1532 (Haley's Coronet), an edge-on barred spiral in Eridanus with its dwarf companion NGC 1531, captured from Wheeny Creek and Wiruna (200PDS + ASI585MC).
+- Added M 74 (the Phantom Galaxy), a face-on grand design spiral in Pisces, captured from Wiruna (200PDS + ASI585MC).
+
+
 ## 1.6.4 — 2026-11-13
 - Added NGC 1097 (Caldwell 67), a barred spiral in Fornax, captured from Wiruna (200PDS + ASI585MC).
 - Shortened the M31 and M78 descriptions on the dome to match the older, more educational style.

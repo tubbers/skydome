@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T07:12:28Z",
+  "generated": "2026-11-14T10:00:39Z",
   "generator": "solve_dso.py 1.15.0",
   "note": "corners are [RA_deg, Dec_deg] in JPEG raster order: TL, TR, BR, BL",
   "images": [
@@ -432,6 +432,46 @@
       "distance_ly": "67,000,000"
     },
     {
+      "file": "web/display/M74-Phantom-Galaxy_2400.jpg",
+      "thumb": "web/thumbs/M74-Phantom-Galaxy_1200.jpg",
+      "original": "M74-Phantom-Galaxy.jpg",
+      "label": "M74 Phantom Galaxy",
+      "solved": true,
+      "engine": "astrometry.net-local",
+      "corners": [
+        [
+          23.82463,
+          15.59802
+        ],
+        [
+          24.52057,
+          15.6009
+        ],
+        [
+          24.51944,
+          15.97827
+        ],
+        [
+          23.82223,
+          15.97509
+        ]
+      ],
+      "ra_deg": 24.17174,
+      "dec_deg": 15.78841,
+      "fov_w_deg": 0.67071,
+      "fov_h_deg": 0.37728,
+      "pixscale_arcsec": 0.6288,
+      "width_px": 3840,
+      "height_px": 2160,
+      "slug": "m74-phantom-galaxy",
+      "constellation": "Pisces",
+      "distance_ly": "30,000,000",
+      "distance_note": "About 30 million light-years (published estimates typically 24–32 million ly).",
+      "discovered_by": "Pierre Méchain, 1780",
+      "discovered_year": 1780,
+      "description": "M 74, the Phantom Galaxy, is a face-on grand design spiral in Pisces, about 30 million light-years away. Its two clean spiral arms are packed with young blue stars, and the pink knots along them are clouds of glowing hydrogen lit by newborn stars. It fills only a quarter of this frame, set among faint background galaxies."
+    },
+    {
       "file": "web/display/NGC-1097-Barred-Spiral_2400.jpg",
       "thumb": "web/thumbs/NGC-1097-Barred-Spiral_1200.jpg",
       "original": "NGC-1097-Barred-Spiral.jpg",
@@ -589,6 +629,46 @@
       "distance_note": "136.2 pc from VLBI parallax; Melis et al. 2014, resolving the long-running disagreement with the Hipparcos value",
       "discovered_by": "Known since antiquity",
       "description": "An open cluster in Taurus, around 100 million years old and one of the nearest to the Sun. The blue haze around the brightest stars is not gas the cluster was born from but an unrelated dust cloud it happens to be drifting through, scattering starlight the way fog scatters a headlight. Its distance was disputed for two decades until radio interferometry settled it at about 444 light-years."
+    },
+    {
+      "file": "web/display/NGC-1532-Edge-On-Spiral_2400.jpg",
+      "thumb": "web/thumbs/NGC-1532-Edge-On-Spiral_1200.jpg",
+      "original": "NGC-1532-Edge-On-Spiral.jpg",
+      "label": "NGC 1532",
+      "solved": true,
+      "engine": "astrometry.net-local",
+      "corners": [
+        [
+          62.62342,
+          -33.06309
+        ],
+        [
+          63.41429,
+          -33.05503
+        ],
+        [
+          63.40798,
+          -32.68974
+        ],
+        [
+          62.62038,
+          -32.69756
+        ]
+      ],
+      "ra_deg": 63.01664,
+      "dec_deg": -32.87683,
+      "fov_w_deg": 0.66282,
+      "fov_h_deg": 0.36575,
+      "pixscale_arcsec": 0.6291,
+      "width_px": 3793,
+      "height_px": 2093,
+      "slug": "ngc-1532",
+      "constellation": "Eridanus",
+      "distance_ly": "55,000,000",
+      "distance_note": "About 55 million light-years (published estimates typically 55–58 million ly; NED 58.3 ± 1.5 million ly).",
+      "discovered_by": "James Dunlop, 1826",
+      "discovered_year": 1826,
+      "description": "NGC 1532, also known as Haley's Coronet, is a barred spiral galaxy in Eridanus, seen edge-on, about 55 million light-years away. It is locked in a slow gravitational dance with the dwarf galaxy NGC 1531, the small yellowish glow just below the core. Tidal forces have lifted part of the disc and drawn a bridge of gas and dust between the pair. The faint elongated galaxy at the upper right is ESO 359-G29."
     },
     {
       "file": "web/display/NGC1909 _crop_ADBE_spcc_blurX_denoise_veralux_LR_remerge - Copy_2400.jpg",
