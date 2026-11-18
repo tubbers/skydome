@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6.6 — 2026-11-18
+- Added NGC 6752 (the Great Peacock), a globular cluster in Pavo, captured from Wiruna (GSO 150 + ASI2600MM).
+- Added NGC 1433, a barred spiral in Horologium with Type Ia supernova SN 2026ahvu, captured remotely from the Nebula Nest (Askar 91F + ASI2600MC).
+
+
 ## 1.6.5 — 2026-11-14
 - Added NGC 1532 (Haley's Coronet), an edge-on barred spiral in Eridanus with its dwarf companion NGC 1531, captured from Wheeny Creek and Wiruna (200PDS + ASI585MC).
 - Added M 74 (the Phantom Galaxy), a face-on grand design spiral in Pisces, captured from Wiruna (200PDS + ASI585MC).
