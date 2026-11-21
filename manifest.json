@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T09:28:09Z",
+  "generated": "2026-11-21T03:19:43Z",
   "generator": "solve_dso.py 1.15.0",
   "note": "corners are [RA_deg, Dec_deg] in JPEG raster order: TL, TR, BR, BL",
   "images": [
@@ -3257,6 +3257,46 @@
       "width_px": 493,
       "height_px": 586,
       "slug": "jupiter"
+    },
+    {
+      "file": "web/display/M33-Triangulum-Galaxy_2400.jpg",
+      "thumb": "web/thumbs/M33-Triangulum-Galaxy_1200.jpg",
+      "original": "M33-Triangulum-Galaxy.jpg",
+      "label": "M33 Triangulum Galaxy",
+      "slug": "m33-triangulum-galaxy",
+      "solved": true,
+      "engine": "astrometry.net-local",
+      "corners": [
+        [
+          24.2020982,
+          29.7394837
+        ],
+        [
+          24.1696303,
+          31.6148721
+        ],
+        [
+          22.7075844,
+          31.5888785
+        ],
+        [
+          22.769267,
+          29.7113469
+        ]
+      ],
+      "ra_deg": 23.4633228,
+      "dec_deg": 30.6654075,
+      "fov_w_deg": 1.87705,
+      "fov_h_deg": 1.245215,
+      "pixscale_arcsec": 3.3013,
+      "width_px": 2048,
+      "height_px": 1359,
+      "constellation": "Triangulum",
+      "distance_ly": "3,000,000",
+      "distance_note": "About 3 million light-years (NASA Hubble Messier Catalog).",
+      "discovered_by": "Charles Messier, 1764",
+      "discovered_year": 1764,
+      "description": "The Triangulum Galaxy is a spiral in the constellation Triangulum, roughly three million light-years away and the third-largest galaxy in the Local Group. Blue clusters of young stars trace the arms alongside pink clouds of glowing hydrogen. The bright pink region just above and right of the core is NGC 604, a stellar nursery nearly 1,500 light-years across."
     }
   ]
 }
