@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.6.9 — 2026-11-21
+- Refresh object descriptions to match the Gallery caption pass. Image placement and assets are unchanged.
+
 ## 1.6.8 — 2026-11-21
 - Use month-level capture dates; keep photography details in the Gallery facts table.
 

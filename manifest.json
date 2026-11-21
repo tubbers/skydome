@@ -194,7 +194,7 @@
       "distance_note": "~3.5–3.7 Mpc: Rekola et al. 2005 PNLF 3.34 Mpc; TRGB 3.7–3.94 Mpc (Karachentsev et al. 2003; Anand et al. 2021 3.70 Mpc). Range 3.34–3.94 Mpc; TRGB best regarded",
       "discovered_by": "Caroline Herschel, 1783. Conventional credit: Caroline Herschel",
       "discovered_year": 1783,
-      "description": "Nearly edge-on SAB(s)c starburst spiral with intense nuclear star formation and a galactic superwind; brightest member of the Sculptor filament."
+      "description": "The wide view brings two very different objects together. The long streak is NGC 253, a nearby galaxy with a busy centre where new stars are forming. The small, round gathering of stars is NGC 288, a globular cluster that belongs to the Milky Way.\n\nDark lanes cutting across the streak are dust in the galaxy, while the round cluster is made of old stars held together by gravity. The two appear close because we see them in the same direction, not because they are neighbours. The cluster is hundreds of times closer to Earth than the galaxy behind it."
     },
     {
       "file": "web/display/NGC292 smc_2400.jpg",
@@ -234,7 +234,7 @@
       "constellation": "Tucana",
       "discovered_by": "Naked-eye object known since antiquity; first European written record by members of Magellan's expedition, 1519. No individual discovery credit",
       "discovered_year": 1519,
-      "description": "Low-metallicity irregular dwarf satellite galaxy of the Milky Way with active star formation and a line-of-sight depth of several kpc."
+      "description": "The Small Magellanic Cloud is a dwarf galaxy and one of the Milky Way's prominent neighbours in the southern sky. Its irregular outline is a contrast to the tidy arms of a spiral galaxy. Gravity from its encounters with the Large Magellanic Cloud and the Milky Way has helped shape it.\n\nThe cloud also has fewer heavy elements than the Milky Way, giving astronomers a nearby place to study how stars form in a different chemical environment. Within the broad glow, bright knots trace pockets of recent star formation, while diffuse light comes from many stars blending together at this distance."
     },
     {
       "file": "web/display/NGC_346_97subs_47100sec_ASI585MC_final_2400.jpg",
@@ -274,7 +274,7 @@
       "constellation": "Tucana",
       "discovered_by": "John Herschel, 1834–36 (Cape of Good Hope survey); catalogued in Dreyer's NGC 1888. Conventional credit: J. Herschel",
       "discovered_year": 1834,
-      "description": "Largest star-forming region in the SMC, an HII region and young cluster photoionised by a large population of hot OB stars including massive O-type members."
+      "description": "NGC 346 is a young star cluster and one of the busiest stellar nurseries in the Small Magellanic Cloud, a companion galaxy to the Milky Way. The hot young stars light up the surrounding gas, while denser lanes of gas and dust provide material for stars still forming.\n\nRidges and arcs help make the boundaries between those regions visible. The Small Magellanic Cloud contains relatively little of the heavier elements that astronomers call metals. That makes NGC 346 a useful nearby comparison for how stars formed in the early universe, when those elements were also less abundant."
     },
     {
       "file": "web/display/NGC_292_142subs_42600sec_ASI585_hoo_pi_final_2400.jpg",
@@ -314,7 +314,7 @@
       "constellation": "Tucana",
       "discovered_by": "John Herschel, 1834–36 (Cape survey); NGC 1888",
       "discovered_year": 1834,
-      "description": "Field in the star-forming SMC bar around the OB cluster NGC 346; emission dominated by photoionised hydrogen and doubly-ionised oxygen."
+      "description": "The Small Magellanic Cloud is a neighbouring galaxy about 200,000 light-years away. Around its young star cluster NGC 346, radiation energises the surrounding gas and makes it shine. This view draws attention to the light from hydrogen and oxygen, so the curved rims and thin strands of glowing gas stand out among the stars.\n\nThe shapes record how successive generations of massive stars have disturbed the cloud around them. It is a view of one small part of a galaxy, but also a good example of how stars can reshape the places where they were born."
     },
     {
       "file": "web/display/wade_smc_ngc460_2400.jpg",
@@ -394,7 +394,7 @@
       "distance_note": "Surface brightness fluctuation; ~32 Mpc. Estimates range 95-110 Mly",
       "discovered_by": "William Herschel",
       "discovered_year": 1784,
-      "description": "A lenticular galaxy in Pisces wrapped in faint concentric shells of stars. Those shells are the debris of smaller galaxies torn apart and absorbed, their stars still settling into the larger galaxy's gravity hundreds of millions of years later. NGC 474 is one of the clearest nearby examples of a galaxy built by mergers, and the shells are extremely faint - they need long broadband integration and very careful gradient control to show at all."
+      "description": "At first, NGC 474 looks like a smooth, oval galaxy. Look again outside the bright core and you can make out a series of pale arcs, like ripples spreading away from the centre. These shells are made of stars rather than gas. They are among the clearest clues that the galaxy has absorbed smaller neighbours.\n\nAs a smaller galaxy is pulled apart, its stars keep moving on related paths. They can bunch up where they slow near the far ends of their orbits, making the shells stand out. The faint edges are a record of past mergers that the bright centre alone would not reveal."
     },
     {
       "file": "web/display/ngc613_291_crop_GX_spcc_starless_nx_MAS_recompose_2400.jpg",
@@ -548,7 +548,7 @@
       "distance_note": "Not applicable — Solar System body; light-year distance is not meaningful. Orbital elements (JPL/MPC): Jupiter-family comet in near-2:1 resonance with Jupiter, period ~5.5 yr, perihelion q≈1.6 AU (perihelion 14 June 2026), aphelion 4.679 AU (reached 12 March 2029)",
       "discovered_by": "Robert H. McNaught, 20 May 2004 (Siding Spring Survey, Uppsala Southern Schmidt Telescope, Siding Spring Observatory, NSW); announced as P/2004 K2 in IAU Circular 8348 (28 May 2004), confirmed by J. Young and A. Gilmore. Conventional credit: McNaught",
       "discovered_year": 2004,
-      "description": "Small icy Jupiter-family periodic comet; a sublimating cometary nucleus producing coma and tail near perihelion. Orbital period ~5.5 yr, perihelion ~1.6 AU, aphelion 4.68 AU.",
+      "description": "220P/McNaught is a short-period comet discovered by Robert McNaught at Siding Spring in New South Wales. Its solid nucleus is small compared with the surrounding coma, the diffuse cloud that forms when sunlight warms the ice and gas escapes, carrying dust with it.\n\nA green tint in a comet's coma can come from carbon molecules fluorescing in sunlight. Look for the change from a bright centre to a softer envelope, rather than expecting the nucleus itself to be resolved. Unlike the stars behind it, a comet can noticeably change position from one night to the next as it moves around the Sun.",
       "distance_ly": "0.0000079"
     },
     {
@@ -589,7 +589,7 @@
       "distance_note": "~18.1–18.6 Mpc: Hoyt et al. 2021 TRGB 18.1±0.5 Mpc; Madore et al./Silbermann et al. 1999 Cepheid 18.6±0.6 Mpc (Fornax Cluster). Midpoint ~18.3 Mpc; TRGB and Cepheid determinations agree",
       "discovered_by": "James Dunlop, 1826 (Parramatta, NSW). Conventional credit: Dunlop",
       "discovered_year": 1826,
-      "description": "Giant SBb barred spiral in the Fornax Cluster with a prominent bar, bar-fed star formation, and a Seyfert nucleus."
+      "description": "NGC 1365 is a barred spiral in the Fornax Cluster. Its straight central bar and sweeping arms make an especially clear example of the way spiral galaxies can be organised. The bar is a pattern made of orbiting stars, not a rigid structure, and its gravity can steer gas towards the galaxy's centre.\n\nSome of that gas feeds star formation in the inner region. The central black hole is also active. The contrast between the straight bar, the curved arms and the clumpy places where new stars are forming gives a sense of how different parts of a galaxy can evolve together."
     },
     {
       "file": "web/display/NGC-1433_2400.jpg",
@@ -668,7 +668,7 @@
       "distance_ly": "444",
       "distance_note": "136.2 pc from VLBI parallax; Melis et al. 2014, resolving the long-running disagreement with the Hipparcos value",
       "discovered_by": "Known since antiquity",
-      "description": "An open cluster in Taurus, around 100 million years old and one of the nearest to the Sun. The blue haze around the brightest stars is not gas the cluster was born from but an unrelated dust cloud it happens to be drifting through, scattering starlight the way fog scatters a headlight. Its distance was disputed for two decades until radio interferometry settled it at about 444 light-years."
+      "description": "The Pleiades are a family of young stars in Taurus, close enough for the brightest members to make a little cluster visible to the naked eye. A longer look shows something the eye usually misses: delicate blue wisps around the stars, with some strands looking almost brushed across the sky.\n\nThe wisps are dust, not gas glowing on its own. The cluster is passing through a cloud, and starlight scattered by its dust grains reaches us as a blue haze. The bright stars and the cloud look like one object here, but they are two things briefly sharing the same space."
     },
     {
       "file": "web/display/NGC-1532-Edge-On-Spiral_2400.jpg",
@@ -748,7 +748,7 @@
       "distance_note": "~210 pc (Kun et al. 2001); the illuminating star Rigel/β Orionis lies ~264 pc (Hipparcos/Gaia). Popular ~900 ly is a rough figure",
       "discovered_by": "William Herschel, 1786 (bright portion = NGC 1909); IC 2118 designation in Dreyer's Index Catalogue 1895. Conventional credit: W. Herschel",
       "discovered_year": 1786,
-      "description": "Cometary reflection nebula in the Orion–Eridanus superbubble; scatters light from the B8Ia supergiant Rigel (β Orionis). The centre coordinates fall in Eridanus, not Orion."
+      "description": "This cloud in Eridanus has the sharp nose and chin of a face in profile. It doesn’t shine like a star or glow like the gas in many nebulae. Its light comes from Rigel, the bright blue star in Orion, which illuminates it from the side.\n\nThe blue is a clue: fine dust scatters shorter wavelengths of light more readily than longer ones. In other words, we see Rigel by reflection, even though the star itself is not the subject of the photograph. The same effect lets us trace a cloud that would otherwise be hard to see."
     },
     {
       "file": "web/display/NGC2018_HOO_FINAL_sig_2400.jpg",
@@ -788,7 +788,7 @@
       "constellation": "Dorado",
       "discovered_by": "John Herschel, 1834–36 (Cape survey); NGC 1888",
       "discovered_year": 1834,
-      "description": "Emission/HII complex in the Large Magellanic Cloud photoionised by embedded OB stars."
+      "description": "NGC 2018 lies in the Large Magellanic Cloud, a satellite galaxy of the Milky Way. The red glow marks hydrogen gas lit by hot young stars. At first glance it looks like a soft wash of colour, but follow the brighter rims and you can see where the light picks out the edges of clouds.\n\nThe rounded blue-green bubble nearby offers a different view of what massive stars can do. Their winds can clear space around them and pile up gas into a shell. What looks like a neat ring from Earth is the bright edge of a much larger structure."
     },
     {
       "file": "web/display/M_1_75subs_20700sec_ASI585MC_veralux_finalv2_2400.jpg",
@@ -829,7 +829,7 @@
       "discovered_year": 1731,
       "discovered_by": "John Bevis, 1731. The supernova itself was recorded by Chinese and Japanese astronomers in 1054",
       "distance_note": "~2.0 kpc, conventional. NOT from the deep-research pass - verify.",
-      "description": "The expanding remnant of the supernova of 1054, still growing at about 1,500 km/s. A pulsar at its centre spins 30 times a second and powers the nebula's synchrotron glow."
+      "description": "The Crab Nebula is what remains of a star whose explosion was recorded in 1054. For a time the new point of light could be seen even in daylight. Today, the outer strands in the picture trace gas flung outward by that blast, still expanding centuries after the event.\n\nThere is a second source of energy at work inside. The collapsed core is a pulsar, a neutron star that spins about thirty times every second. It drives a wind of charged particles that lights the smoother interior. The photograph shows both the debris of the explosion and the continuing influence of the star it left behind."
     },
     {
       "file": "web/display/NGC_2070_257subs_73140sec_ASI585MC_final_2400.jpg",
@@ -869,7 +869,7 @@
       "constellation": "Dorado",
       "discovered_by": "Nicolas-Louis de Lacaille, 1751–52 (Cape; originally catalogued as the 'star' 30 Doradus); NGC number from Dreyer 1888. Conventional credit: Lacaille",
       "discovered_year": 1751,
-      "description": "Largest and most active starburst HII region in the Local Group; central super star cluster NGC 2070 with core concentration R136 provides most of the ionising radiation — its dominant star R136a1 has a present-day mass of ~196 M☉ (range 169–230; Kalari et al. 2022), the most massive star known."
+      "description": "The Tarantula Nebula lies in the Large Magellanic Cloud, outside the Milky Way. Even from that distance it stands out as one of the great stellar nurseries of the Local Group. The curved ridges of light outline cavities in the cloud, where the youngest, hottest stars are blowing gas out of their surroundings.\n\nAt the heart of the nebula is R136, a tight cluster that contains some of the most massive stars known. Several weigh more than a hundred Suns. They burn their fuel quickly, so the nebula lets us see a particularly short, energetic stage in the life of stars."
     },
     {
       "file": "web/display/1735287766166_2400.jpg",
@@ -912,7 +912,7 @@
       "discovered_year": 1888,
       "discovered_by": "Williamina Fleming, 1888, from a Harvard photographic plate",
       "distance_note": "~400 pc to the L1630 / Orion B cloud (Gaia-era). Popularly quoted as 1,500 ly. NOT from the deep-research pass - verify.",
-      "description": "A pillar of cold dust silhouetted against the emission ridge IC 434, lit from behind by sigma Orionis. The dark shape is Barnard 33; the frame also reaches the Flame Nebula, NGC 2024."
+      "description": "The Horsehead is a dark cloud in Orion outlined against the glow of IC 434. The bright gas behind it and the dusty silhouette in front are two different features; the darker shape does not emit less light simply because it is farther away.\n\nDense dust absorbs the background glow, picking out the familiar muzzle and neck. Ultraviolet light from the Sigma Orionis system illuminates and slowly erodes the cloud’s surface. The sharp outline offers a way to see where unusually dense material has survived while the more exposed gas around it has been worn away."
     },
     {
       "file": "web/display/Henize-70_2400.jpg",
@@ -1034,7 +1034,7 @@
       "discovered_year": 1857,
       "discovered_by": "Karl Christian Bruhns, 1857",
       "distance_note": "~2.0 kpc, conventional. NOT from the deep-research pass - verify.",
-      "description": "An emission nebula and young cluster on the Orion-Gemini border, its pillars sculpted by radiation from the embedded OB stars."
+      "description": "The Monkey Head Nebula in Orion is a place where stars are still forming. The intense light of young stars makes the surrounding gas glow and wears away the surface of the cloud. Look for the darker knots and pillars in the brighter gas.\n\nThey are denser regions that can hold out longer against the radiation and may shelter young stars we cannot see in visible light. Infrared observations can reveal some of those hidden stars. The nickname comes from the outline, but the small structures along its edges tell the more interesting story."
     },
     {
       "file": "web/display/HOO_GraXpert_blurX_alchemy_HMS_composer_GraXpert_2400.jpg",
@@ -1075,7 +1075,7 @@
       "discovered_year": 1865,
       "discovered_by": "Nebulosity: Lewis Swift, 1865 (NGC 2237). The central cluster NGC 2244 was seen by John Flamsteed around 1690",
       "distance_note": "~1.6 kpc, conventional. NOT from the deep-research pass - verify.",
-      "description": "A large emission nebula cleared into a ring by the winds and radiation of the young cluster NGC 2244 at its centre."
+      "description": "The Rosette is a broad cloud of glowing gas in Monoceros, with the young open cluster NGC 2244 at its heart. The ring of brighter material outlines a cavity carved by the cluster’s hottest stars. Their winds help clear gas from the centre, and their ultraviolet light makes the surrounding hydrogen glow.\n\nDense fingers and knots around the rim have resisted erosion longer than the thinner material around them. The flower-like outline is striking, but this is a three-dimensional cloud: the bright rim is partly a consequence of looking through its thicker edges."
     },
     {
       "file": "web/display/NGC_2264_62subs_18600sec__ASI585_final_2400.jpg",
@@ -1115,7 +1115,7 @@
       "distance_note": "~719–738 pc: Maíz Apellániz 2019 (Gaia DR2) 719±16 pc; Kuhn et al. 2019 738 pc (Mon OB1)",
       "discovered_by": "William Herschel, 1785 (Cone Nebula, H V.27); associated cluster 1784. Conventional credit: W. Herschel",
       "discovered_year": 1785,
-      "description": "Photoevaporating pillar of cold molecular gas in the Mon OB1 cloud, shaped by radiation from the O7 binary S Monocerotis in the adjacent Christmas Tree Cluster."
+      "description": "The Cone Nebula is a pillar of relatively dense gas and dust in NGC 2264, a star-forming region in Monoceros that also contains the Christmas Tree Cluster. Hot young stars illuminate the cloud and erode the less protected gas around it.\n\nThe cone persists because denser material resists that erosion longer than its surroundings. Its dark interior and the bright outlines of exposed gas are useful clues: one blocks light from behind, while the other is being lit from outside. What looks like a solid peak is really a cloud with a long, slow process of erosion under way."
     },
     {
       "file": "web/display/SH2-308_207subs_122280sec_ASI1600MM_pix_2400.jpg",
@@ -1155,7 +1155,7 @@
       "constellation": "Canis Major",
       "discovered_by": "Stewart Sharpless, 1959 (Sharpless catalogue Sh2-308; = RCW 11, LBN 1052)",
       "discovered_year": 1959,
-      "description": "Wolf–Rayet wind-blown bubble surrounding the WN4 star EZ Canis Majoris (WR 6/HD 50896); stellar-wind-swept shell photoionised by the star, prominent in doubly-ionised oxygen and X-ray-emitting."
+      "description": "The Dolphin Head is a bubble around EZ Canis Majoris, an evolved Wolf–Rayet star in Canis Major. A fast wind from the star has pushed into older material around it, piling gas into a thin, expanding shell.\n\nThe outline can look brighter along the rim because our view passes through more of the emitting shell there than it does looking straight through the middle. Light from doubly ionised oxygen is especially conspicuous in parts of this nebula. The sharp curves are the boundaries of a stellar wind at work, not the wreckage of a supernova."
     },
     {
       "file": "web/display/seagull_recompose_sig_2400.jpg",
@@ -1195,7 +1195,7 @@
       "distance_note": "~1,120 pc via the ionising Be star HD 53367 (Gaia); commonly cited ~3,800 ly. NOTE: the supplied centre coordinate (Dec −11.11°) falls within Canis Major by IAU (Delporte 1930) boundaries, though the nebula straddles the Monoceros border",
       "discovered_by": "Isaac Roberts, 1898 (photographic); IC 2177 in Dreyer's Index Catalogue 1910. Conventional credit: Roberts",
       "discovered_year": 1898,
-      "description": "HII region on the Monoceros–Canis Major border centred on the Be star HD 53367 (B0IV/Ve); photoionised hydrogen forming the 'head', with Sh2-296 forming the 'wings'."
+      "description": "The Seagull is a sprawling complex of glowing gas near the boundary of Monoceros and Canis Major. Its rounded head is known as Sharpless 2-292, while the much larger arcs that suggest wings are part of Sharpless 2-296.\n\nThe bright star HD 53367 helps light the gas in the head; ultraviolet light from hot stars ionises hydrogen, which then gives off light. The bird is a nickname for the arrangement of these separate structures in the sky. Following the wing-like arcs is a good way to appreciate how much farther the complex extends beyond its brightest patch."
     },
     {
       "file": "web/display/NGC_2359_62subs_18600sec_ASI585_final_port_2400.jpg",
@@ -1235,7 +1235,7 @@
       "distance_note": "Conventional ~3,670 pc (~11,960 ly). The Gaia DR2 parallax of WR 7/HD 56925 (0.210±0.027 mas) is low-precision (~15% error) and variously interpreted (implying ~4,800 pc); no consensus downward revision. Distance uncertain",
       "discovered_by": "William Herschel, 1785. Conventional credit: W. Herschel",
       "discovered_year": 1785,
-      "description": "Wind-blown bubble and bow-shock nebula around the WN4 Wolf–Rayet star WR 7 (HD 56925), shaped by the star's fast wind interacting with a molecular cloud and photoionised by its ultraviolet radiation."
+      "description": "Thor's Helmet is an emission nebula in Canis Major with a rounded shell and long extensions that suggest the wings of a helmet. Its sculptor is WR 7, a hot, evolved Wolf–Rayet star that is shedding material in a fast stellar wind.\n\nAs that wind runs into slower gas around the star, it sweeps the gas into a shell. The bubble is expanding into a patchy neighbourhood, which helps explain why it is neither smooth nor symmetrical. The round part and the irregular extensions are two ways to see what happens when a powerful wind meets uneven material."
     },
     {
       "file": "web/display/NGC2467_REMIX_FINAL_2400.jpg",
@@ -1275,7 +1275,7 @@
       "constellation": "Puppis",
       "discovered_by": "William Herschel, 1784. Conventional credit: W. Herschel",
       "discovered_year": 1784,
-      "description": "Star-forming HII complex in Puppis; the S311 region is photoionised by the O6 star HD 64315, with several physically unrelated clusters projected along the same sight line at different distances."
+      "description": "NGC 2467 is a busy star-forming region in Puppis, nicknamed the Skull and Crossbones for its bright and dark shapes. Hot young stars light up the gas around them, while denser clumps of dust and gas stand in front of the glow like silhouettes.\n\nSome look like pillars because the exposed material around them has been worn away more quickly. The stars and clouds we see in this direction are not all at the same distance. The image is a useful reminder that a single striking shape on the sky can combine several layers along our line of sight."
     },
     {
       "file": "web/display/vela_LR_recomb_sig_2400.jpg",
@@ -1315,7 +1315,7 @@
       "distance_note": "287 pc (~936 ly) from Vela pulsar VLBI parallax 3.5±0.2 mas, Dodson et al. 2003, ApJ 596, 1137; cf. HST optical parallax 294 pc (Caraveo et al. 2001). Supersedes the older kinematic ~500 pc. Popular ~815 ly is too low",
       "discovered_by": "Vela pulsar (PSR B0833-45) discovered 1968 by Large, Vaughan & Mills (Molonglo, NSW); the SNR was mapped in 1950s–60s radio surveys. Conventional credit for the pulsar: Large et al. 1968",
       "discovered_year": 1968,
-      "description": "Evolved (~11,000 yr) supernova remnant with optical filaments from radiative shocks, powered at its heart by the Vela pulsar — a rotation-powered neutron star driving a synchrotron pulsar-wind nebula."
+      "description": "The scattered arcs in Vela are debris from a star that exploded roughly 11,000 years ago. The blast has since spread over a region of sky many times wider than the full Moon. Its outlines are brightest where the expanding shock meets denser gas and heats it enough to shine.\n\nThe explosion also left a pulsar, the compact core of the star. It spins about eleven times a second; its beams can sweep past Earth like a lighthouse. The thin luminous threads and the tiny spinning remnant are very different traces of the same event."
     },
     {
       "file": "web/display/pencil aw_2400.jpg",
@@ -1356,7 +1356,7 @@
       "discovered_year": 1835,
       "discovered_by": "John Herschel, 1835 (Cape of Good Hope survey)",
       "distance_note": "287 pc, from the Vela pulsar VLBI parallax (Dodson et al.). Same value as the Vela SNR entry - the Pencil is part of it.",
-      "description": "A shock front within the Vela supernova remnant, where the blast wave is ploughing into a denser cloud. The thin bright filament is gas compressed and heated at the shock, moving at around 640,000 km/h."
+      "description": "The Pencil Nebula is a thin-looking piece of the much larger Vela supernova remnant. It is not a narrow rod floating in space: the bright line is the edge of a sheet of gas. We see it almost side-on, so light from more of the sheet is packed into a thin strip in our view.\n\nThe gas glows where it is heated by the shock from the explosion of a star around 11,000 years ago. Follow the bright edge and it starts to look less like a straight pencil and more like a folded ribbon."
     },
     {
       "file": "web/display/NGC3293 Gem Cluster_2400.jpg",
@@ -1396,7 +1396,7 @@
       "distance_note": "~2,335 pc (~7,600 ly): Dias et al. 2021 (Gaia DR2) 2,334±52 pc; Göppl & Preibisch 2022 (Gaia EDR3) ~2.3 kpc",
       "discovered_by": "Nicolas-Louis de Lacaille, 1751 (Cape; Lac). Conventional credit: Lacaille",
       "discovered_year": 1751,
-      "description": "Young, populous open cluster (~10–20 Myr) in the Carina complex containing many early-B stars plus blue and red supergiants (e.g. V361 Car); no O-type members remain."
+      "description": "The Gem Cluster is a young open cluster in Carina, a group of stars born from the same molecular cloud. Its tight grouping is speckled with hot blue stars, making the contrast with its prominent reddish star especially striking. Blue stars generally have hotter surfaces than red ones, but colour alone is not a measure of age.\n\nFor a cluster whose members formed around the same time, the differences tell us more about mass and how quickly stars change. The most massive stars use their fuel much faster than the Sun and can evolve while their lower-mass neighbours are still young."
     },
     {
       "file": "web/display/gabriella_Foraxx_CC_bx_HMS_curves_revela_recompose_2400.jpg",
@@ -1436,7 +1436,7 @@
       "distance_note": "~2.3 kpc (~7,500 ly): Göppl & Preibisch 2022, Gaia EDR3 OB-star sample; adopted by the JWST Early Release Observations 2022. The popular ~9,100 ly (2,800 pc) is outdated",
       "discovered_by": "James Dunlop, 1826 (Parramatta, NSW). Conventional credit: Dunlop",
       "discovered_year": 1826,
-      "description": "HII region and young cluster on the north-west rim of the Carina Nebula, photoionised by O-type systems HD 92206 and CPD-57°3580; the eroded molecular wall is the JWST 'Cosmic Cliffs'."
+      "description": "NGC 3324 is a young cluster in the Gum 31 nebula, near the northwestern edge of the Carina Nebula complex. Radiation from hot stars illuminates and erodes the edge of a dense cloud there, producing a ragged wall that has earned comparisons with both cliffs and a human profile.\n\nThe ridgeline marks a change between a more exposed region of glowing gas and the cloud's denser interior. The James Webb Space Telescope's Cosmic Cliffs view explores a portion of this boundary, where it revealed jets from young stars that are difficult to see in visible light."
     },
     {
       "file": "web/display/NGC3372_SHO_Siril_HMS_final_2400.jpg",
@@ -1476,7 +1476,7 @@
       "distance_note": "2.3 kpc (Smith 2006, expansion parallax of the η Carinae Homunculus)",
       "discovered_by": "Nicolas-Louis de Lacaille, 1751–52 (Cape). Conventional credit: Lacaille",
       "discovered_year": 1751,
-      "description": "Giant HII region and molecular cloud hosting clusters Trumpler 14 and Trumpler 16, about 70 O-type stars (Smith & Brooks 2010), the O2 supergiant HD 93129A, and the luminous blue variable η Carinae, which dominate its ionisation and wind energetics."
+      "description": "Carina is a vast nursery where hot young stars light up the gas they formed from. The bright clouds are broken by dark shapes, including the Keyhole. These are places where thicker dust blocks the light behind it. Along the edges, radiation and winds from nearby stars wear away the exposed material, leaving pillars and ridges.\n\nThe nebula also contains Eta Carinae, a massive pair of stars with a particularly turbulent history. In the 1840s it briefly became one of the brightest stars in the night sky. The material thrown off in that eruption still surrounds the pair."
     },
     {
       "file": "web/display/LRGB_FINAL_Sig_2400.jpg",
@@ -1516,7 +1516,7 @@
       "constellation": "Chamaeleon",
       "discovered_by": "DeLisle Stewart, 1900 (photographic; = Cederblad 112); IC designation in Dreyer's Index Catalogue",
       "discovered_year": 1900,
-      "description": "Brightest reflection nebula in the Chamaeleon I cloud, illuminated by the Herbig Ae/Be pre-main-sequence star HD 97300 (B9V), which is ringed by an infrared dust bubble."
+      "description": "IC 2631 is part of the Chamaeleon I cloud, one of the closer regions where new stars are forming. The diffuse blue glow is not produced by the dust itself: it is light from the young star HD 97300 scattered by the dust around it.\n\nWhere the material is thick enough, the same cloud can turn dark by blocking the light behind it. Look for the transitions between the blue glow and those darker patches. Both reveal the dusty surroundings of young stars, but they show them by opposite effects."
     },
     {
       "file": "web/display/tadpole_statue_wide_2400.jpg",
@@ -1557,7 +1557,7 @@
       "discovered_year": 1834,
       "discovered_by": "John Herschel, 1834-38 (Cape of Good Hope survey)",
       "distance_note": "~2.35 kpc for NGC 3572 / Gum 37. NGC 3576 in the same frame is separately given as 9,100 ly, so this wide field spans both.",
-      "description": "A wide field across the Carina arm taking in the Gum 37 tadpole globules around NGC 3572 and, in the same frame, the pillars of NGC 3576, the Statue of Liberty."
+      "description": "This wide view brings together two parts of Carina's star-forming landscape: the tadpole-like streamers near NGC 3572 and the area of NGC 3576 nicknamed the Statue of Liberty. Both owe their glow to hot young stars, but the resulting shapes vary with the density and arrangement of the original clouds.\n\nNarrow protrusions mark dense material that has resisted erosion, while more diffuse glow traces gas exposed to ultraviolet light. The two regions look close together in the sky; the wider perspective is useful for comparing their structures, not for assuming all the gas lies at the same distance from us."
     },
     {
       "file": "web/display/gum_37_tadpole_sig_2400.jpg",
@@ -1597,7 +1597,7 @@
       "constellation": "Carina",
       "discovered_by": "John Herschel, 1834 (Cape). Conventional credit: J. Herschel",
       "discovered_year": 1834,
-      "description": "Open cluster with associated HII region Gum 37 (RCW 54) in the Carina spiral feature; contains photoevaporating cometary globules ('tadpoles') shaped by cluster OB radiation."
+      "description": "In Carina, the young star cluster NGC 3572 sits amid glowing gas threaded with narrow, tadpole-like clouds. The dense heads can shield material behind them while radiation and winds from hot stars wear away their more exposed sides.\n\nThe tails are clues to how the surrounding cloud is being sculpted, though individual shapes need not all point in a single direction. Look for the contrast between the compact knots and the much smoother glow of the surrounding gas. The knots are not simply decorations on the nebula: they mark places where denser material has survived longer."
     },
     {
       "file": "web/display/Gum-37-NGC3572-17809d4d_2400.jpg",
@@ -1637,7 +1637,7 @@
       "constellation": "Carina",
       "discovered_by": "John Herschel, 1834 (Cape). Conventional credit: J. Herschel",
       "discovered_year": 1834,
-      "description": "Open cluster with associated HII region Gum 37 (RCW 54) in the Carina spiral feature; contains photoevaporating cometary globules shaped by cluster OB radiation."
+      "description": "Gum 37 is a cloud of glowing gas in Carina. A wider view makes it easier to see how the small, dark “tadpoles” fit into the cloud around NGC 3572. Look for the dense heads and the long tails trailing away from the young stars.\n\nTheir intense light heats and erodes the gas on the side that faces them, while the denser knots protect material behind them. The tails are a record of the direction the light is coming from, even though the cloud itself has no hard edge."
     },
     {
       "file": "web/display/NGC_3576_80subs_24000sec_ASI585_PI_2400.jpg",
@@ -1677,7 +1677,7 @@
       "distance_note": "~2.4–3.0 kpc: Persi et al. 1994 ~2.4 kpc; Damineli et al. 2002 ~2.8 kpc. Value ~2.8 kpc (~9,100 ly)",
       "discovered_by": "John Herschel, 1834 (Cape). Conventional credit: J. Herschel",
       "discovered_year": 1834,
-      "description": "Compact HII region (RCW 57A, Gum 38a) with active massive-star formation, PAH emission, and embedded OB stars; physically in front of the more distant giant cluster NGC 3603."
+      "description": "The Statue of Liberty Nebula is a stellar nursery in Carina, named for a shape some people see in its glowing gas. Its most striking structures are looping filaments. Young, massive stars hidden in the cloud drive winds that push into the surrounding material, helping carve the arcs and cavities.\n\nThe loops are easiest to follow where the gas is brightest, but the dark stretches between them are part of the pattern too. They help show how uneven a star-forming cloud can be, with dense pockets beside regions that have already been hollowed out."
     },
     {
       "file": "web/display/ngc3628 hamburger_2400.jpg",
@@ -1718,7 +1718,7 @@
       "discovered_year": 1784,
       "discovered_by": "William Herschel, 1784",
       "distance_note": "~10.7 Mpc. NOT from the deep-research pass - verify.",
-      "description": "An edge-on spiral with a thick, warped dust lane cutting its length. The faintest member of the Leo Triplet with M65 and M66, and tidally distorted by them."
+      "description": "NGC 3628 is a spiral galaxy in the Leo Triplet, alongside M65 and M66. It is seen almost edge-on, so its spiral arms are hard to distinguish and the dusty disc appears as a thick dark stripe across its starlight.\n\nThe edges of the disc flare and bend rather than forming a clean, straight line. That distortion, together with a much fainter tidal tail, is evidence of gravitational encounters in the group. The dust lane gives the galaxy its nickname; the warp is the feature that hints at its history."
     },
     {
       "file": "web/display/runnig chicken hoo_recomb_clone_2400.jpg",
@@ -1758,7 +1758,7 @@
       "distance_note": "~2,331 pc (~7,600 ly), Gaia DR3 (Reipurth et al. 2025) to the OB subgroup; older popular ~6,500 ly (2,000 pc)",
       "discovered_by": "Nebula (IC 2944/2948): Royal H. Frost, 1904 (Bruce telescope, Arequipa); Thackeray's globules: A. D. Thackeray, 1950. Conventional credit for nebula: Frost",
       "discovered_year": 1904,
-      "description": "HII region and open cluster (Collinder 249) around λ Centauri, photoionised by cluster O-stars (e.g. HD 101205), containing the dark Bok globules known as Thackeray's globules."
+      "description": "The Running Chicken Nebula in Centaurus is a cloud of gas lit by young stars. Its nickname comes from a bird-like outline some observers see in the brighter material. Another detail worth looking for is the small dark shapes set against the glow.\n\nThese are dense knots of dust and gas, known as Thackeray’s Globules, seen in silhouette. The young stars nearby are steadily wearing away their surfaces with intense light. Some such knots can shelter developing stars, though it is not clear whether these particular ones will last long enough to do so."
     },
     {
       "file": "web/display/antenna_342x120s_FINAL_2400.jpg",
@@ -1798,7 +1798,7 @@
       "constellation": "Corvus",
       "discovered_by": "William Herschel, 1785. Conventional credit: W. Herschel",
       "discovered_year": 1785,
-      "description": "Prototypical major merger of two gas-rich spirals with long tidal tails and intense, cluster-forming starbursts triggered along the collision interface."
+      "description": "The Antennae are two spiral galaxies in Corvus in the middle of a merger. Their namesake tails are long arcs of stars and gas pulled out by gravity as the galaxies passed one another.\n\nThe tails and the bright concentrations at the hearts of the two galaxies tell different parts of the story: gravity rearranges the stars, while colliding clouds compress gas and spark new star formation. Individual stars are so far apart that direct collisions between them are rare. The encounter is dramatic on the scale of whole galaxies, not a pile-up of individual suns."
     },
     {
       "file": "web/display/doodad_mas_sig_2400.jpg",
@@ -1838,7 +1838,7 @@
       "distance_note": "Musca molecular cloud from Gaia 3D dust: Zucker et al. 2021 ~171–173 pc; Musca filament ~140–150 pc (Franco 1991; Cox et al. 2016). Range ~140–190 pc; midpoint ~165 pc (~538 ly). Supersedes older ~700 ly figures",
       "discovered_by": "Aage Sandqvist, 1977 (Stockholm Observatory; dark-cloud catalogue, from ESO(B) Schmidt plates); nickname 'Dark Doodad' coined by Dennis di Cicco, 1986",
       "discovered_year": 1977,
-      "description": "Long, narrow filamentary dark absorption nebula in the Musca molecular cloud; dense dust extinguishing background starlight, with no significant internal illumination."
+      "description": "The Dark Doodad is a long, narrow streak through the star fields of Musca. It looks like a tear in the sky, but it is a cloud in front of the stars, not a gap between them. Fine grains of dust in the cold molecular gas block much of the visible light behind the filament.\n\nThe edges are useful clues: where the cloud thins, more background stars show through. Filaments like this are common in molecular clouds and can concentrate the gas from which stars form, although not every dark strand is actively making stars."
     },
     {
       "file": "web/display/m104 sombrero_recombine_sig_final_2400.jpg",
@@ -1878,7 +1878,7 @@
       "distance_note": "9.55±0.13(stat)±0.31(syst) Mpc (McQuinn et al. 2016, AJ 152, 144, HST TRGB); consistent with SBF ~9.1 Mpc",
       "discovered_by": "Pierre Méchain, 1781; added to Messier's catalogue (M104) later. Conventional credit: Méchain",
       "discovered_year": 1781,
-      "description": "Massive edge-on Sa spiral with a large bulge, a prominent equatorial dust lane, an extensive globular cluster system (~2,000), and a supermassive-black-hole nucleus."
+      "description": "The Sombrero Galaxy in Virgo is easiest to recognise by its broad central glow and the remarkably sharp dark band across it. The band is not a separate object. It is the galaxy’s own dusty ring, seen almost edge-on and silhouetted against the starlight behind it.\n\nThe bright material above and below the band makes the central bulge look rounder than the thin disc around it. That combination of a prominent bulge and narrow disc is what gives M104 its hat-like profile, and it has made the galaxy an interesting case for classification."
     },
     {
       "file": "web/display/Centaurus a 171x120 L 109x300 ha_2400.jpg",
@@ -1918,7 +1918,7 @@
       "distance_note": "3.8±0.1 Mpc (Harris, Rejkuba & Harris 2010, PASA 27, 457 — best-estimate mean of Cepheid, TRGB, PNLF, SBF and Mira methods)",
       "discovered_by": "James Dunlop, 1826 (Parramatta, NSW). Conventional credit: Dunlop",
       "discovered_year": 1826,
-      "description": "Nearest giant elliptical galaxy, a recent merger with a warped central dust lane, powered by an active galactic nucleus driving relativistic synchrotron radio jets."
+      "description": "Centaurus A is a galaxy with two very different faces. Its broad, pale body looks smooth, but a thick, ragged band of dust cuts across the middle. The dust and gas are evidence of a past merger. Look along the lane for the contrast between clouds blocking older starlight and brighter patches where new stars are forming.\n\nThe centre holds a supermassive black hole. Material falling towards it powers jets that reach far beyond the visible galaxy. Those jets show up especially well in radio and X-ray observations, so this picture in visible light tells only part of the story."
     },
     {
       "file": "web/display/ISS-transit-of-the-Sun-2026_2400.jpg",
@@ -2010,7 +2010,7 @@
       "distance_note": "~4.5–4.9 Mpc: Thim et al. 2003 Cepheid 4.5 Mpc (μ=28.32); Karachentsev et al. 2007 TRGB ~4.9 Mpc (μ=28.56). Midpoint ~4.6 Mpc",
       "discovered_by": "Nicolas-Louis de Lacaille, 1752 (Cape); added to Messier's catalogue (M83) 1781. Conventional credit: Lacaille",
       "discovered_year": 1752,
-      "description": "Nearby barred grand-design starburst spiral (SAB(s)c) with a high supernova rate and vigorous bar-fed nuclear star formation."
+      "description": "M83 is a nearby spiral galaxy in Hydra, seen close to face-on. That angle makes it easy to follow the arms as they curl away from the brighter central region. The arms are places where new stars are forming: hot young stars contribute blue light, while glowing clouds of hydrogen mark concentrated sites of star birth.\n\nDust can also trace darker lanes along the arms. The core’s warmer glow comes in part from older stars. Several supernovae have been observed in M83, another sign of how quickly some of its massive stars live and die."
     },
     {
       "file": "web/display/NGC_5367_Cometary_Globule_sig_2400.jpg",
@@ -2050,7 +2050,7 @@
       "constellation": "Centaurus",
       "discovered_by": "John Herschel, 1834 (nebula NGC 5367); the cometary globule CG 12 was catalogued by Hawarden & Brand, 1976. Conventional credit for NGC 5367: J. Herschel",
       "discovered_year": 1834,
-      "description": "High-galactic-latitude cometary globule hosting reflection nebula NGC 5367, illuminated by the early-B binary h4636; a rare site of intermediate-mass star formation far from the Galactic plane."
+      "description": "NGC 5367 is the reflection nebula in the head of Cometary Globule 12, a cloud in Centaurus. The word cometary describes the rounded head and tapering tail, not an object in motion across the Solar System. In the bright head, dust scatters light from nearby young stars.\n\nIn denser stretches, dust instead shows up by blocking light from stars farther away. That switch from luminous haze to dark silhouette helps trace the shape of the cloud. The head and tail are parts of the same structure, but how the globule acquired its shape is less certain."
     },
     {
       "file": "web/display/Barnard 228 dark_wolf_final_sig_2400.jpg",
@@ -2090,7 +2090,7 @@
       "constellation": "Lupus",
       "discovered_by": "E. E. Barnard (Barnard Catalogue of 349 Dark Objects, published 1927). Conventional credit: Barnard",
       "discovered_year": 1927,
-      "description": "Elongated dark absorption nebula in the Lupus 1 molecular cloud, one of the nearest low-mass star-forming regions; opaque dust silhouetted against the background star field."
+      "description": "Barnard 228 is a dark cloud in the nearby Lupus star-forming region. Its dust absorbs and scatters the light of stars behind it, so the cloud shows up more clearly by hiding things than by shining itself. The darkness isn't empty sky, and the occasional star that seems to sit within it may be on the near side.\n\nThe cloud belongs to a neighbourhood where pockets of cold gas can collapse to form new stars. At visible wavelengths, the contrast between star-rich fields and dark patches reveals where the material for those future stars lies."
     },
     {
       "file": "web/display/ic4601_83_starless_nx_mas_sig_2400.jpg",
@@ -2130,7 +2130,7 @@
       "distance_note": "Part of the Rho Ophiuchi / Upper Scorpius complex; Gaia distances to the association cluster near 140 pc",
       "discovered_by": "Edward Emerson Barnard",
       "discovered_year": 1895,
-      "description": "A reflection nebula on the northern edge of the Rho Ophiuchi complex, one of the closest star-forming regions to the Sun. There is no emission here - the colour is starlight scattered off dust, and dust scatters blue more efficiently than red, which is why reflection nebulae are cold in tone while emission nebulae are red. Dark lanes threading the field are denser parts of the same cloud blocking the stars behind."
+      "description": "The delicate blue cloud belongs to the Rho Ophiuchi region, one of the nearest places where new stars are forming. Here, the colour comes from dust scattering light from nearby stars rather than from gas glowing on its own. Shorter, bluer wavelengths are scattered more readily, giving the cloud its cool colour.\n\nLook for the contrast between the glow and the darker lanes. They can both be made of dust: a layer lit from the side is visible by reflected light, while thicker material hides the stars behind it. The photograph shows both effects in the same part of the sky."
     },
     {
       "file": "web/display/Rho_Mosaic_PI_sig2_2400.jpg",
@@ -2170,7 +2170,7 @@
       "constellation": "Ophiuchus",
       "discovered_by": "Beverly T. Lynds, 1962 (Lynds Dark Nebulae catalogue, from POSS plates). Conventional credit: Lynds",
       "discovered_year": 1962,
-      "description": "Dense core of the nearest low-mass star-forming complex, rich in embedded protostars and prestellar cores; associated reflection nebulosity is lit by nearby B-type stars."
+      "description": "The Rho Ophiuchi complex is a nearby region where new stars are forming in clouds of gas and dust. Its variety comes partly from what the dust does to light. Thin dust can scatter starlight and glow blue, while thicker clouds hide background stars and leave dark lanes.\n\nElsewhere, ultraviolet radiation makes gas itself shine. The result is a field where brightness alone doesn't tell you whether you're seeing a star, dust reflecting light, or glowing gas. The globular cluster M4 lies in this wider patch of sky but is far behind the nearby cloud, not embedded in it."
     },
     {
       "file": "web/display/egg_185x300_FINAL_blue_sig_2400.jpg",
@@ -2210,7 +2210,7 @@
       "constellation": "Norma",
       "discovered_by": "John Herschel, 1834 (NGC 6164); the symmetric bipolar structure was recognised by Karl Henize, 1959. Conventional credit for NGC 6164: J. Herschel",
       "discovered_year": 1834,
-      "description": "Rare bipolar ejecta nebula around the magnetic Of?p O-type star HD 148937; symmetric lobes of stellar-ejected, photoionised gas within a wind-blown shell and Strömgren sphere, likely the product of a stellar merger."
+      "description": "The Dragon’s Egg is the emission nebula NGC 6164/6165 in Norma. Its two lobes give it a roughly hourglass-like shape, centred on the massive stellar pair HD 148937. The gas is material expelled from the system, not the remains of a star that went supernova.\n\nObservations suggest that there were once three stars and that two merged, leaving today’s pair and throwing off the gas now seen as the nebula. That is a leading explanation rather than a direct observation of the event. The lobes are the visible clues to a much less obvious history."
     },
     {
       "file": "web/display/Cosmic_bat2_2400.jpg",
@@ -2250,7 +2250,7 @@
       "distance_note": "~1,400 ly (~430 pc; APOD, Constellation Guide). [UNVERIFIED against a primary source — some studies of associated young stars (RNO 90/91) imply a nearer ~125–140 pc; the two figures are in tension. Constellation confirmed as Ophiuchus from the coordinates]",
       "discovered_by": "Beverly T. Lynds, 1962 (Lynds Dark Nebulae catalogue). Conventional credit: Lynds",
       "discovered_year": 1962,
-      "description": "Dark Bok-globule filament and dense molecular cloud harbouring young stellar objects; obscuring dust with embedded protostars driving outflows and small cometary reflection nebulae."
+      "description": "The Cosmic Bat is a dark molecular cloud in Ophiuchus. Its silhouette is not a hole in the star field: dust in the foreground absorbs and scatters the light of stars behind it.\n\nLess opaque stretches of the cloud let more of that light through, while nearby young stars illuminate some of the surrounding dust. The result is a useful contrast between dust seen in silhouette and dust seen by reflected light. The bat shape is a chance outline, but the materials are the raw ingredients of star formation."
     },
     {
       "file": "web/display/zeta_134_spcc_bx_starless_NX_mas_lh_sig_2400.jpg",
@@ -2325,7 +2325,7 @@
       "distance_note": "~1.3 kpc (~4,300 ly): Arnal et al. 2003; Ara OB1a ~1,320–1,380 pc (Humphreys). Consistent with popular ~4,000 ly",
       "discovered_by": "John Herschel, 1836 (Rim Nebula NGC 6188); the ionising cluster NGC 6193 was recorded by James Dunlop, 1826. Conventional credit for NGC 6188: J. Herschel",
       "discovered_year": 1836,
-      "description": "Bright-rimmed HII region (RCW 108, Gum 53) in Ara OB1, photoionised by the cluster NGC 6193 — chiefly the O-star systems HD 150136 and HD 150135."
+      "description": "NGC 6188 lies in Ara, along the boundary between a molecular cloud and gas lit by young stars in the Ara OB1 association. The rugged shapes that suggest fighting dragons are dense material seen against the brighter emission. Where less dense gas is eroded, stubborn ridges of dust and gas can be left standing.\n\nThe colours separate light from sulphur, hydrogen and oxygen, letting regions with different emission stand out rather than imitating the view through an eyepiece. Look for the changing edges of the dark ridges, where the bright gas makes their outlines easiest to follow."
     },
     {
       "file": "web/display/ngc 6188 hoo_mirror_thumb_2400.jpg",
@@ -2365,7 +2365,7 @@
       "distance_note": "~1.3 kpc (~4,300 ly): Arnal et al. 2003; Ara OB1a ~1,320–1,380 pc",
       "discovered_by": "John Herschel, 1836 (Rim Nebula); cluster NGC 6193 by James Dunlop, 1826. Conventional credit for NGC 6188: J. Herschel",
       "discovered_year": 1836,
-      "description": "Bright-rimmed HII region (RCW 108, Gum 53) in Ara OB1, photoionised by the cluster NGC 6193, chiefly the O-star systems HD 150136 and HD 150135."
+      "description": "The Fighting Dragons trace the edge of a dense cloud in Ara, where young stars are changing the material they formed from. Their light makes the gas on the exposed side glow, while the thicker parts of the cloud resist being worn away.\n\nIn this view, the light emitted by hydrogen and oxygen highlights different parts of the boundary. Follow the brighter rims and then the fainter glow beyond them. The dragons are shapes we recognise in the picture, but the sharp edges tell a real story about where starlight meets cold gas."
     },
     {
       "file": "web/display/sv17 dark_wolf_final_2400.jpg",
@@ -2405,7 +2405,7 @@
       "constellation": "Scorpius",
       "discovered_by": "Aage Sandqvist & Kjell Lindroos, 1976 (catalogued in Sandqvist 1977, from ESO(B) Schmidt plates)",
       "discovered_year": 1976,
-      "description": "Dark absorption nebula silhouetted against the emission nebula RCW 113 / Gum 55, which surrounds the Sco OB1 association and its core cluster NGC 6231."
+      "description": "The wolf-like shape of Sandqvist 17 is a dark cloud in Scorpius, seen against the glow of the nebula RCW 113. Its outline is visible because cold dust in the foreground blocks the light of hydrogen gas farther away.\n\nThe darker parts are not empty patches of sky: they are places where the dust keeps us from seeing what lies behind it. Look for the contrast along the edge of the silhouette. It is the bright background, rather than light from the wolf itself, that lets us trace the shape."
     },
     {
       "file": "web/display/prawn_reintegrate_sig_2400.jpg",
@@ -2445,7 +2445,7 @@
       "distance_note": "~1,640 pc (~5,350 ly) via NGC 6231/Sco OB1 (Sana et al. 2008); popular ~6,000 ly",
       "discovered_by": "E. E. Barnard, ~1900 (photographic); IC designation in Dreyer's Index Catalogue. Conventional credit: Barnard",
       "discovered_year": 1900,
-      "description": "Large HII emission nebula (Gum 56) in the Sagittarius Arm, photoionised by O-stars of the Sco OB1 association and the cluster NGC 6231."
+      "description": "The Prawn Nebula is a sprawling cloud of glowing gas in Scorpius. Young, massive stars in its neighbourhood give off intense ultraviolet light, which energises the gas and makes it shine. Look for the thin rims and wisps against the broader glow.\n\nThey trace surfaces where that light meets uneven clumps of surrounding material. The nebula is large on the sky but faint across much of its area, so its shape is easier to see by following those edges than by looking for one clearly defined outline. The nickname hints at a shape rather than a sharp boundary."
     },
     {
       "file": "web/display/APUS_294_GX_SPCC_bx_starless_nx_curves_ghs_ccompose_sig_2400.jpg",
@@ -2485,7 +2485,7 @@
       "distance_note": "IC 4633 itself; the integrated flux nebula in front of it lies only a few hundred light-years away, inside our own galaxy",
       "discovered_by": "DeLisle Stewart",
       "discovered_year": 1900,
-      "description": "A face-on spiral galaxy in Apus seen through a curtain of integrated flux nebula - dust in our own galaxy's halo, far above the plane, glowing faintly from the combined light of every star in the Milky Way. The two sit at wildly different distances: the dust is a few hundred light-years away, the galaxy around a hundred million. IFN is among the faintest structure amateur equipment can record."
+      "description": "This view in Apus stacks two scenes along the same line of sight. IC 4633 is the spiral galaxy in the distance. The faint, smoky veil is much closer: dust in the Milky Way reflecting the combined light of many stars, rather than being lit by a brightly obvious star nearby.\n\nAstronomers call this faint foreground an integrated flux nebula. A useful way to read the photograph is to look for the organised shape of the spiral against the less orderly dust. The two overlap from Earth, but the clouds aren’t part of the distant galaxy."
     },
     {
       "file": "web/display/cats paw astrowizard_2400.jpg",
@@ -2526,7 +2526,7 @@
       "discovered_year": 1837,
       "discovered_by": "John Herschel, 1837 (Cape of Good Hope survey)",
       "distance_note": "1.34 kpc from VLBI water-maser parallax, Chibueze et al. 2014. Older literature commonly says 5,500 ly. NOT from the deep-research pass - verify.",
-      "description": "A giant star-forming complex whose bright emission knots form the toe-pads of the 'paw'. One of the most active regions of massive star formation within 2 kpc of the Sun."
+      "description": "The Cat’s Paw in Scorpius is a large, active region of star formation. Its rounded patches resemble the pads of a paw, but each is a pocket of gas lit by ultraviolet light from young, massive stars. Dust between the patches absorbs some of the glow and hides many of the stars still forming inside the cloud.\n\nA visible-light view therefore traces the glowing surfaces and the dark intervening material, rather than showing all the activity within. Infrared observations can see through more of that dust and reveal young stars that would otherwise go unnoticed."
     },
     {
       "file": "web/display/lobster_hoo_recompose_sig_2400.jpg",
@@ -2566,7 +2566,7 @@
       "constellation": "Scorpius",
       "discovered_by": "John Herschel, 1837 (Cape). Conventional credit: J. Herschel",
       "discovered_year": 1837,
-      "description": "Giant HII complex (Sh2-11, RCW 131) whose central open cluster Pismis 24 hosts several of the most massive known O-stars (e.g. the Pismis 24-1 system), which dominate its ionisation."
+      "description": "NGC 6357 is a sprawling nursery for young stars in Scorpius. One of its clusters, Pismis 24, contains unusually massive stars whose ultraviolet light makes surrounding gas glow. Their winds and radiation can clear hollows while denser pockets of gas and dust survive as ridges and pillars.\n\nThat juxtaposition gives the Lobster Nebula its jagged, almost carved appearance. A sharp boundary can mark the surface of a cloud being lit and worn away, rather than an abrupt end to the cloud itself. Beyond those bright edges, dust can still hide stars in the process of forming."
     },
     {
       "file": "web/display/trifid_sig_finla_2400.jpg",
@@ -2606,7 +2606,7 @@
       "constellation": "Sagittarius",
       "discovered_by": "Charles Messier, 1764 (catalogued as M20; = NGC 6514). Conventional credit: Messier",
       "discovered_year": 1764,
-      "description": "Young HII region photoionised by the O7.5V star HD 164492A, trisected by dust lanes, with an adjoining blue reflection component to the north."
+      "description": "The Trifid Nebula in Sagittarius shows three different ways gas and dust interact with starlight. Hydrogen gives off light where hot young stars ionise it. Elsewhere, dust scatters starlight and can produce a blue reflection glow.\n\nThicker dust blocks light instead, making the dark lanes that divide the bright nebula into the three sections behind its name. Those lanes are not gaps in the cloud; they are some of its more opaque parts. The contrast between light made by gas, light reflected by dust and light hidden by dust is what makes M20 so distinctive."
     },
     {
       "file": "web/display/lagoon_sho_bx_starless_CC_mas_LH_sig_2400.jpg",
@@ -2681,7 +2681,7 @@
       "distance_note": "~1,250 pc (~4,080 ly), Damiani et al. 2017 (Gaia distance to the embedded cluster NGC 6530); consistent with the current guess",
       "discovered_by": "Cluster NGC 6530 noted by John Flamsteed c.1680; nebula recorded by Giovanni Hodierna before 1654 and catalogued by Charles Messier, 1764 (M8). Conventional credit: Messier",
       "discovered_year": 1764,
-      "description": "Giant HII region and cluster NGC 6530, photoionised mainly by the O4 star 9 Sagittarii, with the compact Hourglass sub-region ionised by Herschel 36 (O7.5V)."
+      "description": "The Lagoon Nebula is a vast stellar nursery in Sagittarius. The dark streak that gives it its name is a lane of dust seen against brighter gas. Much of that gas glows because ultraviolet light from young, hot stars strips electrons from hydrogen; light is released as the electrons recombine.\n\nLook for the contrast between broad luminous clouds and small, sharply outlined knots. Some of the darkest knots are dense globules that can shelter very young stars. Near the intense central region, the hot star Herschel 36 lights the feature known as the Hourglass."
     },
     {
       "file": "web/display/lagoon and dragon wide aw_2400.jpg",
@@ -2724,7 +2724,7 @@
       "discovered_year": 1654,
       "discovered_by": "M8: Giovanni Battista Hodierna, before 1654. NGC 6559: John Herschel, 1837",
       "distance_note": "~1,250 pc, Damiani et al. 2017 (Gaia). Matches the separate M8 and NGC 6559 entries - one physical complex.",
-      "description": "A wide field spanning the whole Sagittarius complex, from the Lagoon Nebula across to the dust and emission of NGC 6559. Both lie at the same distance in the same star-forming cloud."
+      "description": "The Lagoon Nebula and the much smaller NGC 6559 share a crowded stretch of the Milky Way in Sagittarius. The Lagoon is a large region of glowing hydrogen, crossed by dust that blocks the light behind it. NGC 6559 offers a more compact mix: some gas emits its own light, while nearby dust scatters starlight.\n\nA wide view makes it easier to compare those luminous patches with the dark lanes among them. The abundance of stars comes from looking along the Milky Way towards its centre, not from all the stars belonging to the same cloud."
     },
     {
       "file": "web/display/LBN28 chinese dragon AW_2400.jpg",
@@ -2764,7 +2764,7 @@
       "constellation": "Sagittarius",
       "discovered_by": "John Herschel, 1837 (Cape). Conventional credit: J. Herschel",
       "discovered_year": 1837,
-      "description": "Small combined emission and reflection nebula with active star formation east of the Lagoon, lit by young embedded stars amid dark dust lanes."
+      "description": "In NGC 6559, east of the Lagoon Nebula, different materials leave three very different signatures. Hydrogen gas gives off reddish light after being energised by young stars. Dust scatters starlight to produce the softer blue patches.\n\nThe thickest dust appears dark because it blocks light from behind. Follow the winding bands where the three meet and you can see why the field earned the name Chinese Dragon. It is not one object with a neatly defined outline, but a small piece of a much larger region of gas, dust and young stars in Sagittarius."
     },
     {
       "file": "web/display/ngc6618_swan_121_sig_2400.jpg",
@@ -2839,7 +2839,7 @@
       "distance_note": "PN G030.6+06.2. Distance poorly constrained; published values span roughly 1,000-2,300 ly",
       "discovered_by": "Stewart Sharpless",
       "discovered_year": 1959,
-      "description": "A planetary nebula in Serpens, the shed envelope of a dying Sun-like star. Its central white dwarf is moving fast enough through the interstellar medium that the nebula is being left behind and distorted, which is why it looks lopsided rather than like a neat ring. It is extremely faint in both hydrogen and oxygen, so it rewards restraint in processing rather than an aggressive stretch."
+      "description": "The Flaming Skull is the remains of a Sun-like star in Serpens. Near the end of its life, the star shed its outer layers and left behind a white dwarf, the small, hot core that still lights the gas around it. These shells often look round, but this one has been pulled out of shape.\n\nThe star is travelling through the thin gas between stars. The two kinds of material push against each other, leaving the cloud lopsided rather than neatly centred. Its faint rim and ragged interior are reminders that the space around a star is not quite empty."
     },
     {
       "file": "web/display/Anteater_74x180s_final_sig_standard_2400.jpg",
@@ -2879,7 +2879,7 @@
       "constellation": "Corona Australis",
       "discovered_by": "Johann F. J. Schmidt, 1861 (NGC 6726/6727). Conventional credit: Schmidt",
       "discovered_year": 1861,
-      "description": "Reflection nebulae NGC 6726/6727 in the Corona Australis molecular cloud, scattering light from the young stars TY CrA and HD 176386; part of one of the nearest star-forming regions."
+      "description": "The Corona Australis cloud is one of the nearest regions where stars are forming. In this part of the cloud, the bluish reflection nebula NGC 6726 shines by dust scattering starlight, rather than by hot gas producing light of its own.\n\nDark streaks show where thicker dust hides the background stars. Another nebula in the same region, NGC 6729, is associated with the variable young star R Coronae Australis. The area is a good example of how the same dust can look bright near a light source and dark when seen against distant stars."
     },
     {
       "file": "web/display/NGC_6729_30x60R_30x60G_30x60B_50x30L_ASI1600MM_2400.jpg",
@@ -2919,7 +2919,7 @@
       "constellation": "Corona Australis",
       "discovered_by": "Johann F. J. Schmidt, 1861 (variable nebula); independently noted by Albert Marth, 1864. Conventional credit: Schmidt",
       "discovered_year": 1861,
-      "description": "Fan-shaped variable reflection/emission nebula opening from the Herbig pre-main-sequence star R CrA toward T CrA within the Corona Australis molecular cloud."
+      "description": "The dust clouds of Corona Australis look close together in this wide view, but the scene brings together very different distances. The glow around the young star R CrA is light scattered by nearby dust, part of a stellar nursery roughly 400 light-years away.\n\nFollow the glow outwards and it gives way to darker strands, where dust blocks light from behind it. The globular cluster NGC 6723 lies far beyond the cloud. Its tightly packed stars happen to share the same patch of sky, not the same neighbourhood in space."
     },
     {
       "file": "web/display/NGC 6744 Pavo Sig_2400.jpg",
@@ -2959,7 +2959,7 @@
       "distance_note": "9.01±0.38 Mpc (Anand et al. 2021, PHANGS-HST TRGB); NED redshift-independent mean ~7.2 Mpc. TRGB best regarded",
       "discovered_by": "James Dunlop, 1826 (Parramatta, NSW). Conventional credit: Dunlop",
       "discovered_year": 1826,
-      "description": "Large intermediate-type barred spiral (SAB(r)bc) with a flocculent, extended disc, often described as a Milky Way analogue."
+      "description": "NGC 6744 is a spiral galaxy in Pavo whose broad shape looks remarkably like the Milky Way. The bright centre gives way to loose arms dotted with regions where new stars are forming. It is a useful change of perspective: we see our own galaxy from inside its disc, but here we can follow the spiral pattern from the outside.\n\nA small, distorted companion lies nearby. The pairing recalls the Milky Way and its Magellanic Clouds, even though the galaxies are not exact counterparts. NGC 6744 lies about 30 million light-years away."
     },
     {
       "file": "web/display/NGC-6752-Great-Peacock_2400.jpg",
@@ -3039,7 +3039,7 @@
       "distance_note": "Tentative ~215 pc (~700 ly) from association with a high-latitude molecular cloud in the Aquila Rift (Magnani et al. 1985). [UNVERIFIED — the identification with Sh2-63/LBN 82 and this distance could not be confirmed against a primary catalogue entry this session; treat as provisional]",
       "discovered_by": "Stewart Sharpless, 1959 (Sharpless catalogue, as Sh2-63/LBN 82). [Identification UNVERIFIED]",
       "discovered_year": 1959,
-      "description": "High-galactic-latitude faint nebula; the supplied coordinates (19h57.7m, −14°07′) fall within Sagittarius by IAU boundaries (not Aquila or Aquarius), in a region associated with the Aquila Rift complex."
+      "description": "The Eagle Ray Nebula, also catalogued as Sharpless 2-63, is a faint region against the crowded star fields of Sagittarius. The darker forms are interstellar dust seen against the light of more distant stars; where dust scatters nearby starlight rather than blocking it, it can show up as a softer glow.\n\nLook at the change in the background as the shape emerges from the star field. The outline is subtle, and the contrast between crowded patches of stars and the dust that hides them helps make the ray-like form visible."
     },
     {
       "file": "web/display/NGC-6888-Crescent-Nebula_2400.jpg",
@@ -3119,7 +3119,7 @@
       "constellation": "Cygnus",
       "discovered_by": "William Herschel, 1784. Conventional credit: W. Herschel",
       "discovered_year": 1784,
-      "description": "Western filament ('Witch's Broom') of the Cygnus Loop, a middle-aged (~10–20 kyr) supernova remnant emitting via radiative shock excitation as the blast wave sweeps the interstellar medium; 52 Cygni is an unrelated foreground star."
+      "description": "NGC 6960 is the western part of the Veil Nebula, a vast remnant in Cygnus left by a star that exploded thousands of years ago. The blast wave is still travelling through surrounding gas. As shocked material cools, it radiates, making delicate-looking filaments that are very different from the long strands they resemble.\n\nMany are thin sheets whose glow looks strongest where we see the folds edge-on. Other arcs, fainter or more broken, belong to the same expanding remnant. The full Cygnus Loop covers roughly six full-Moon diameters, so a close view shows just a piece of a much larger structure."
     },
     {
       "file": "web/display/east_veil_AW_sig_2400.jpg",
@@ -3194,7 +3194,7 @@
       "distance_note": "~200 pc (655±13 ly), Gaia EDR3 parallax (~5.01 mas) of the central white dwarf WD 2226-210 (Gaia Collaboration 2021)",
       "discovered_by": "Karl Ludwig Harding, before 1824. Conventional credit: Harding",
       "discovered_year": 1824,
-      "description": "One of the nearest planetary nebulae; an expelled AGB envelope photoionised by the ~120,000 K white-dwarf central star, featuring radial cometary knots with ionised tails pointing away from the star."
+      "description": "The Helix Nebula is the glowing envelope shed by a dying Sun-like star. At its centre is a white dwarf, the exposed core, whose ultraviolet radiation still lights up the gas that the star lost. The bright rings and faint outer material can look like a flat bull's-eye, but they are different layers of a three-dimensional structure.\n\nDense pockets of gas in the inner region have tails pointing away from the central star. Known as cometary knots because of their shape, they show how some parts of the old stellar envelope survive longer as radiation and winds reshape it."
     },
     {
       "file": "web/display/Grus_167_GX_BX_SPCC_starless_NX_MAS_LH_recompose_2400.jpg",
@@ -3295,7 +3295,7 @@
       "distance_note": "About 3 million light-years (NASA Hubble Messier Catalog).",
       "discovered_by": "Charles Messier, 1764",
       "discovered_year": 1764,
-      "description": "M33 is a neighbouring galaxy in the Local Group, about three million light-years away. We see it nearly face-on, so its spiral arms are easy to trace. The blue patches are clusters of young stars, and the pink patches are clouds of gas lit by those stars. The bright pink patch just above and to the right of the centre is NGC 604, a stellar nursery nearly 1,500 light-years across."
+      "description": "Triangulum is the third-largest galaxy in the Local Group, after Andromeda and the Milky Way. Its light takes about three million years to reach us. We see the disc nearly face-on, so you can follow its loose spiral arms away from the centre. Blue patches mark groups of young stars; pink knots are clouds of hydrogen glowing in their light.\n\nLook just above and right of the centre for NGC 604, the brightest pink patch. This stellar nursery stretches nearly 1,500 light-years across. The young stars inside are not just lighting the cloud: their winds are carving cavities in it."
     }
   ]
 }
