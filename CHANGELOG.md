@@ -1,7 +1,10 @@
 # Changelog
 
+## 1.6.8 — 2026-11-21
+- Use month-level capture dates; keep photography details in the Gallery facts table.
+
 ## 1.6.7 — 2026-11-21
-- Added M33, the Triangulum Galaxy, captured from Wiruna (GSO 150 + ASI2600MM, LRGB, 7.17 hours of integration over 5–8 November 2026).
+- Added M33, the Triangulum Galaxy, captured from Wiruna (GSO 150 + ASI2600MM, LRGB, 7.17 hours of integration over November 2026).
 
 ## 1.6.6 — 2026-11-18
 - Added NGC 6752 (the Great Peacock), a globular cluster in Pavo, captured from Wiruna (GSO 150 + ASI2600MM).
